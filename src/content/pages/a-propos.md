@@ -11,6 +11,8 @@ L'Institut Pour la Paix est un laboratoire à l'interface de la recherche univer
 - L'IPP se veut également un espace qui travaille à développer de nouveaux contenus d'enseignement qui approchent la paix du point de vue plus large des transformations des conflits.
 - Cette démarche originale en France porte un projet positif de transformation des manières possibles de travailler (à construire) la paix, grâce à la promotion d'un espace d'écoute, d'échanges, de dialogue entre des univers qui se sont construits de manière cloisonnée.
 
+<a class="btn" href="/equipe-reseau/">Découvrez notre réseau</a>
+
 ## L'IPP en 3 minutes
 
 Thomas Hippler, président, Philippe Bonditti, secrétaire général, et Laura Lema Silva, responsable des études, présentent l'IPP, ses objectifs, ses méthodes de travail ainsi que ses axes de recherche.
