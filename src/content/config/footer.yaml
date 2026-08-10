@@ -1,5 +1,23 @@
 text: Institut pour la Paix
 columns:
+  - title: Explorer
+    links:
+      - label: Recherche
+        url: /recherche/
+      - label: Actualités
+        url: /actualites/
+      - label: Agenda
+        url: /agenda/
+      - label: Ressources
+        url: /ressources/
+      - label: Projets
+        url: /projets/
+  - title: Réseau
+    links:
+      - label: Équipe et réseau
+        url: /equipe-reseau/
+      - label: Devenir membre
+        url: /devenir-membre/
   - title: Institut
     links:
       - label: À propos

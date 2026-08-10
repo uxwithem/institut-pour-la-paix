@@ -2,6 +2,17 @@
 title: Concepts de la paix
 status: active
 featured: true
+coordinators:
+  - benjamin-bourcier
+  - thomas-hippler
+participants:
+  - olivier-de-frouville
+  - emmanuel-pasquier
+  - benjamin-bourcier
+  - juliette-lafosse
+  - lyess-bouderbala
+  - isabelle-delpla
+  - valery-pratt
 ---
 
 ## La mission du groupe de travail Concepts de la Paix

@@ -8,7 +8,15 @@ const nav = await getEntry('navigation', 'main');
 
 <header class="site-header">
 	<div class="wrap bar">
-		<a class="brand" href={withBase('/')}>{settings?.data.siteName}</a>
+		<a class="brand" href={withBase('/')} aria-label={settings?.data.siteName}>
+			{
+				settings?.data.logo ? (
+					<img class="brand-logo" src={withBase(settings.data.logo)} alt={settings.data.siteName} />
+				) : (
+					settings?.data.siteName
+				)
+			}
+		</a>
 		<nav class="top-nav" aria-label="Navigation principale">
 			<ul>
 				{
@@ -42,11 +50,17 @@ const nav = await getEntry('navigation', 'main');
 	}
 
 	.brand {
+		display: block;
 		font-family: var(--font-display);
 		font-weight: 600;
 		font-size: 1.1rem;
 		color: var(--color-ink);
 		text-decoration: none;
+	}
+
+	.brand-logo {
+		height: 2.25rem;
+		width: auto;
 	}
 
 	.top-nav {

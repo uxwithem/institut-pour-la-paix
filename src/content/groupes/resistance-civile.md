@@ -3,6 +3,11 @@ title: Résistance civile, non-violence et culture de la paix
 image: /uploads/wp-import/pawel-czerwinski-vYnjAMo8DY8-unsplash-1-1-e1696260608243.jpg
 status: active
 featured: true
+coordinators:
+  - raphael-porteilla
+  - cecile-dubernet
+  - amber-french
+participants: []
 ---
 
 ## La mission du groupe de travail Résistance civile, non-violence et culture de la paix

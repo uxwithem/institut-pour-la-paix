@@ -3,6 +3,9 @@ title: Approches régionales
 image: /uploads/wp-import/approches-regionales-de-la-paix-1-1-1.png
 status: active
 featured: true
+coordinators:
+  - laura-lema-silva
+participants: []
 ---
 
 ## La mission du groupe de travail Approches régionales
