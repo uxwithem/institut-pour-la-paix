@@ -2,17 +2,27 @@
 import { getCollection, getEntry } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import PublicationCard from '../../../components/PublicationCard.astro';
+import FilterTabs from '../../../components/FilterTabs.astro';
 
 const settings = await getEntry('siteSettings', 'main');
 const publications = (await getCollection('publications')).sort(
 	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
+
+const filters = [
+	{ label: 'Tous', url: '/ressources/' },
+	{ label: 'Publications', url: '/ressources/publications/' },
+	{ label: 'Audiovisuelles', url: '/ressources/audiovisuelles/' },
+	{ label: 'Pédagogiques', url: '/ressources/pedagogiques/' },
+];
 ---
 
 <BaseLayout title={`Publications — ${settings?.data.siteName}`}>
 	<section class="section">
 		<div class="wrap">
-			<h1>Publications</h1>
+			<h1>Ressources</h1>
+			<FilterTabs items={filters} />
+			<h2>Publications</h2>
 			<div class="card-grid">
 				{publications.map((publication) => <PublicationCard publication={publication} />)}
 			</div>
