@@ -54,6 +54,15 @@ collections:
         value_field: value
         display_fields: [label]
         required: false
+      - label: Tags
+        name: tags
+        widget: relation
+        collection: tags
+        multiple: true
+        search_fields: [label]
+        value_field: value
+        display_fields: [label]
+        required: false
       - { label: Image mise en avant, name: featuredImage, widget: image, required: false }
       - { label: Extrait, name: excerpt, widget: text, required: false }
       - label: Événement lié

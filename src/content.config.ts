@@ -20,6 +20,7 @@ const actualites = defineCollection({
 		updatedDate: z.coerce.date().optional(),
 		author: reference('personnes').optional(),
 		category: z.string().optional(),
+		tags: z.array(z.string()).default([]),
 		featuredImage: z.string().optional(),
 		excerpt: z.string().optional(),
 		relatedEvent: reference('evenements').optional(),

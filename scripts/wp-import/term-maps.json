@@ -1,0 +1,28 @@
+{
+  "categoryMap": {
+    "5": "concepts-de-la-paix",
+    "6": "paix-conflits-et-environnement",
+    "7": "genre-et-paix",
+    "16": "cat-recherche",
+    "37": "etudes-de-paix",
+    "40": "ipp",
+    "44": "approches-regionales",
+    "65": "resistance-civile-non-violence-et-culture-de-la-paix"
+  },
+  "tagMap": {
+    "9": "concepts-de-la-paix",
+    "14": "colloque",
+    "17": "journee-detudes",
+    "38": "masterclass",
+    "41": "symposium",
+    "45": "cours-en-ligne",
+    "57": "europe",
+    "58": "conference",
+    "86": "entretiens",
+    "91": "seminaire",
+    "94": "journees-detude",
+    "96": "justice",
+    "97": "justice-restaurative",
+    "102": "rencontre"
+  }
+}
