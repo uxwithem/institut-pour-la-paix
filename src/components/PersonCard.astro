@@ -7,9 +7,18 @@ interface Props {
 }
 
 const { person } = Astro.props;
+
+const typeLabels: Record<string, string> = {
+	equipe: 'Équipe',
+	copil: 'Comité de pilotage',
+	'membre-reseau': 'Réseau IPP',
+	chercheur: 'Chercheur associé',
+	partenaire: 'Partenaire',
+};
 ---
 
 <a class="card" href={withBase(`/equipe-reseau/${person.id}/`)}>
+	<span class="eyebrow">{typeLabels[person.data.type] ?? person.data.type}</span>
 	<h3>{person.data.name}</h3>
 	{person.data.role && <p class="meta">{person.data.role}</p>}
 </a>

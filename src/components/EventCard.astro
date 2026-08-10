@@ -15,7 +15,7 @@ const dateLabel = event.data.startDate.toLocaleDateString('fr-FR', {
 ---
 
 <a class="card" href={withBase(`/agenda/${event.id}/`)}>
-	<span class="meta">{dateLabel}{event.data.cancelled && ' · Annulé'}</span>
+	<span class="eyebrow">{dateLabel}{event.data.cancelled && ' · Annulé'}</span>
 	<h3>{event.data.title}</h3>
 	{event.data.location?.name && <p class="meta">{event.data.location.name}</p>}
 </a>

@@ -7,10 +7,16 @@ interface Props {
 }
 
 const { project } = Astro.props;
+
+const statusLabels: Record<string, string> = {
+	upcoming: 'À venir',
+	active: 'En cours',
+	completed: 'Terminé',
+};
 ---
 
 <a class="card" href={withBase(`/projets/${project.id}/`)}>
-	<span class="meta">{project.data.status}</span>
+	<span class="eyebrow">{statusLabels[project.data.status] ?? project.data.status}</span>
 	<h3>{project.data.title}</h3>
 	{project.data.description && <p>{project.data.description}</p>}
 </a>

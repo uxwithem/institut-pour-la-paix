@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ResearchGroupCard from '../components/ResearchGroupCard.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import EventCard from '../components/EventCard.astro';
+import ResourceCard from '../components/ResourceCard.astro';
 import { withBase } from '../lib/url';
 
 const settings = await getEntry('siteSettings', 'main');
@@ -13,24 +14,28 @@ const groups = (await getCollection('groupes', ({ data }) => data.status === 'ac
 const articles = (await getCollection('actualites')).sort(
 	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
-const featuredArticle = articles.find((a) => a.data.featured) ?? articles[0];
+const latestArticles = articles.slice(0, 4);
 
 const now = new Date();
 const upcomingEvents = (await getCollection('evenements'))
-	.filter((e) => e.data.startDate >= now)
+	.filter((e) => e.data.startDate >= now && !e.data.cancelled)
 	.sort((a, b) => a.data.startDate.valueOf() - b.data.startDate.valueOf())
-	.slice(0, 3);
+	.slice(0, 4);
+
+const latestResources = (await getCollection('ressources'))
+	.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+	.slice(0, 4);
 ---
 
 <BaseLayout title={settings?.data.tagline ?? settings?.data.siteName ?? 'Accueil'}>
-	<section class="section hero">
-		<div class="wrap">
-			<p class="eyebrow">{settings?.data.siteName}</p>
+	<section class="hero">
+		<div class="wrap hero-inner">
+			<p class="eyebrow eyebrow-light">{settings?.data.siteName}</p>
 			<h1>{settings?.data.tagline}</h1>
 			<p class="lead">{settings?.data.description}</p>
 			<div class="actions">
 				<a class="btn" href={withBase('/a-propos/')}>Découvrir l'IPP</a>
-				<a class="btn-outline" href={withBase('/recherche/')}>Nos recherches</a>
+				<a class="link-light" href={withBase('/recherche/')}>Nos recherches →</a>
 			</div>
 		</div>
 	</section>
@@ -38,20 +43,25 @@ const upcomingEvents = (await getCollection('evenements'))
 	<section class="section">
 		<div class="wrap">
 			<h2>Nos groupes de recherche</h2>
-			<div class="card-grid">
+			<div class="filmstrip">
 				{groups.map((group) => <ResearchGroupCard group={group} />)}
 			</div>
 		</div>
 	</section>
 
 	{
-		featuredArticle && (
+		latestArticles.length > 0 && (
 			<section class="section">
 				<div class="wrap">
 					<h2>À la une</h2>
-					<div class="card-grid">
-						<ArticleCard article={featuredArticle} />
+					<div class="filmstrip">
+						{latestArticles.map((article) => (
+							<ArticleCard article={article} />
+						))}
 					</div>
+					<p class="more">
+						<a href={withBase('/actualites/')}>Toutes les actualités →</a>
+					</p>
 				</div>
 			</section>
 		)
@@ -62,19 +72,41 @@ const upcomingEvents = (await getCollection('evenements'))
 			<h2>Agenda</h2>
 			{
 				upcomingEvents.length > 0 ? (
-					<div class="card-grid">
-						{upcomingEvents.map((event) => <EventCard event={event} />)}
+					<div class="filmstrip">
+						{upcomingEvents.map((event) => (
+							<EventCard event={event} />
+						))}
 					</div>
 				) : (
 					<p>Aucun événement à venir.</p>
 				)
 			}
-			<p><a href={withBase('/agenda/')}>Voir tout l'agenda →</a></p>
+			<p class="more">
+				<a href={withBase('/agenda/')}>Voir tout l'agenda →</a>
+			</p>
 		</div>
 	</section>
 
-	<section class="section">
-		<div class="wrap cta">
+	{
+		latestResources.length > 0 && (
+			<section class="section">
+				<div class="wrap">
+					<h2>Ressources</h2>
+					<div class="filmstrip">
+						{latestResources.map((resource) => (
+							<ResourceCard resource={resource} />
+						))}
+					</div>
+					<p class="more">
+						<a href={withBase('/ressources/')}>Toutes les ressources →</a>
+					</p>
+				</div>
+			</section>
+		)
+	}
+
+	<section class="cta">
+		<div class="wrap">
 			<h2>Rejoindre le réseau</h2>
 			<p>Devenez membre de l'Institut pour la Paix.</p>
 			<a class="btn" href={withBase('/devenir-membre/')}>Devenir membre</a>
@@ -83,19 +115,81 @@ const upcomingEvents = (await getCollection('evenements'))
 </BaseLayout>
 
 <style>
+	.hero {
+		background: var(--color-indigo);
+		color: #fff;
+	}
+
+	.hero :focus-visible,
+	.cta :focus-visible {
+		outline-color: var(--color-signal-bright);
+	}
+
+	.hero-inner {
+		padding-block: var(--space-5) var(--space-4);
+	}
+
+	@media (min-width: 48rem) {
+		.hero-inner {
+			padding-block: 6rem;
+		}
+	}
+
+	.eyebrow-light {
+		color: #cfccee;
+	}
+
+	.hero h1 {
+		color: #fff;
+		max-width: 24ch;
+	}
+
 	.hero .lead {
-		max-width: 40rem;
-		color: var(--color-muted);
-		font-size: 1.05rem;
+		max-width: 38rem;
+		color: #ded9f6;
+		font-size: 1.1rem;
 	}
 
 	.actions {
 		display: flex;
-		gap: 0.75rem;
-		margin-top: 1.5rem;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 1.5rem;
+		margin-top: 2rem;
+	}
+
+	.link-light {
+		color: #fff;
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	.link-light:hover {
+		color: var(--color-signal-bright);
+	}
+
+	.more {
+		margin-top: 1.25rem;
+	}
+
+	.more a {
+		font-weight: 600;
+		text-decoration: none;
 	}
 
 	.cta {
+		background: var(--color-indigo-deep);
+		color: #fff;
 		text-align: center;
+		padding-block: var(--space-5);
+	}
+
+	.cta h2 {
+		color: #fff;
+	}
+
+	.cta p {
+		color: #ded9f6;
+		margin-bottom: 1.75rem;
 	}
 </style>

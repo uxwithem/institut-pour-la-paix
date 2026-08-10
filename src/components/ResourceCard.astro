@@ -11,7 +11,7 @@ const type = await getEntry('resourceTypes', resource.data.type);
 ---
 
 <a class="card" href={withBase(`/ressources/${resource.id}/`)}>
-	<span class="meta">{type?.data.label ?? resource.data.type}</span>
+	<span class="eyebrow">{type?.data.label ?? resource.data.type}</span>
 	<h3>{resource.data.title}</h3>
 	{resource.data.description && <p>{resource.data.description}</p>}
 </a>

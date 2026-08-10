@@ -9,22 +9,31 @@ const nav = await getEntry('navigation', 'main');
 <header class="site-header">
 	<div class="wrap bar">
 		<a class="brand" href={withBase('/')}>{settings?.data.siteName}</a>
-		<nav>
-			<ul>
-				{
-					nav?.data.items.map((item) => (
-						<li>
-							<a href={withBase(item.url)}>{item.label}</a>
-						</li>
-					))
-				}
-			</ul>
-		</nav>
+		<details class="nav-toggle">
+			<summary aria-label="Menu">
+				<span class="hamburger" aria-hidden="true"></span>
+				Menu
+			</summary>
+			<nav>
+				<ul>
+					{
+						nav?.data.items.map((item) => (
+							<li>
+								<a href={withBase(item.url)}>{item.label}</a>
+							</li>
+						))
+					}
+				</ul>
+			</nav>
+		</details>
 	</div>
 </header>
 
 <style>
 	.site-header {
+		position: sticky;
+		top: 0;
+		z-index: 20;
 		border-bottom: 1px solid var(--color-line);
 		background: var(--color-surface);
 	}
@@ -33,33 +42,153 @@ const nav = await getEntry('navigation', 'main');
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: 1.5rem;
-		padding-block: 1rem;
+		gap: 1rem;
+		padding-block: 0.9rem;
 	}
 
 	.brand {
-		font-family: var(--font-serif);
-		font-weight: 700;
-		font-size: 1.15rem;
+		font-family: var(--font-display);
+		font-weight: 600;
+		font-size: 1.2rem;
 		color: var(--color-ink);
-	}
-
-	.brand:hover {
 		text-decoration: none;
 	}
 
-	nav ul {
-		list-style: none;
-		display: flex;
-		flex-wrap: wrap;
-		gap: 1.25rem;
-		margin: 0;
-		padding: 0;
+	.nav-toggle {
+		position: relative;
 	}
 
-	nav a {
-		color: var(--color-ink);
-		font-size: 0.92rem;
+	.nav-toggle summary {
+		display: flex;
+		align-items: center;
+		gap: 0.6rem;
+		list-style: none;
+		cursor: pointer;
+		font-family: var(--font-mono);
+		font-size: 0.8rem;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
 		font-weight: 500;
+		color: var(--color-ink);
+		padding: 0.5rem 0.25rem;
+	}
+
+	.nav-toggle summary::-webkit-details-marker {
+		display: none;
+	}
+
+	.hamburger,
+	.hamburger::before,
+	.hamburger::after {
+		display: block;
+		width: 1.35rem;
+		height: 2px;
+		background: var(--color-ink);
+	}
+
+	.hamburger {
+		position: relative;
+	}
+
+	.hamburger::before,
+	.hamburger::after {
+		content: '';
+		position: absolute;
+		left: 0;
+	}
+
+	.hamburger::before {
+		top: -0.4rem;
+	}
+
+	.hamburger::after {
+		top: 0.4rem;
+	}
+
+	.nav-toggle[open] .hamburger {
+		background: transparent;
+	}
+
+	.nav-toggle[open] .hamburger::before {
+		top: 0;
+		transform: rotate(45deg);
+		background: var(--color-signal);
+	}
+
+	.nav-toggle[open] .hamburger::after {
+		top: 0;
+		transform: rotate(-45deg);
+		background: var(--color-signal);
+	}
+
+	.nav-toggle nav {
+		position: absolute;
+		inset-inline: -1.25rem;
+		top: calc(100% + 0.9rem);
+		background: var(--color-indigo-deep);
+		padding: 1.5rem 1.25rem 2rem;
+	}
+
+	.nav-toggle ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+	}
+
+	.nav-toggle a {
+		display: block;
+		padding: 0.6rem 0;
+		font-family: var(--font-display);
+		font-size: 1.3rem;
+		color: #fff;
+		text-decoration: none;
+	}
+
+	.nav-toggle a:hover {
+		color: var(--color-signal-bright);
+	}
+
+	@media (max-width: 47.99rem) {
+		.nav-toggle nav :focus-visible {
+			outline-color: var(--color-signal-bright);
+		}
+	}
+
+	@media (min-width: 48rem) {
+		.nav-toggle summary {
+			display: none;
+		}
+
+		.nav-toggle nav {
+			position: static;
+			background: none;
+			padding: 0;
+			inset-inline: auto;
+		}
+
+		.nav-toggle:not([open]) nav {
+			display: block;
+		}
+
+		.nav-toggle ul {
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 1.5rem;
+		}
+
+		.nav-toggle a {
+			padding: 0;
+			font-family: var(--font-sans);
+			font-size: 0.92rem;
+			font-weight: 500;
+			color: var(--color-ink);
+		}
+
+		.nav-toggle a:hover {
+			color: var(--color-signal);
+		}
 	}
 </style>
