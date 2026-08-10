@@ -9,13 +9,14 @@ excerpt: >-
   Retour sur le Workshop & Conférence : « Alliances féministes et visions de co-construction de la
   paix » Organisé par la Plateforme de Recherche sur la Justice et le Genre – 14 Novembre 2025
 featured: false
+relatedResearchGroup: genre-et-paix
 ---
 
 Réflexion et perspectives : Alliances Féministes et Visions de co-Construction de la paix,
 
-_14 Novembre 2025_
+*14 Novembre 2025*
 
-_Clara Etchenique, pour l’IPP._
+*Clara Etchenique, pour l’IPP.*
 
 Lors d’un court séjour aux Pays-Bas, l’IPP a eu l’immense plaisir de participer à une conférence régie par le principe de « Chatham House » sur **alliances féministes et visions de co-construction de la paix**. Cette conférence, plus qu’un simple moment d’échange, constitue la première pierre d’une entreprise collaborative, interdisciplinaire et inclusive regroupant une grande diversité d’acteurs portés par une détermination féministe commune.
 
@@ -70,10 +71,10 @@ Galvanisé.es par cette conférence, nous avons collectivement émis le désir d
 
 Merci aux organisatrices et participant.es de cette belle journée.
 
-![](/uploads/wp-import/WhatsApp-Image-2025-11-19-at-21.17.46_5ed33452-1.jpg)
+![](/institut-pour-la-paix/uploads/wp-import/WhatsApp-Image-2025-11-19-at-21.17.46_5ed33452-1.jpg)
 
-![](/uploads/wp-import/photo-1-768x1024.jpg)
+![](/institut-pour-la-paix/uploads/wp-import/photo-1-768x1024.jpg)
 
-![](/uploads/wp-import/Screenshot-2025-12-01-201903.png)
+![](/institut-pour-la-paix/uploads/wp-import/Screenshot-2025-12-01-201903.png)
 
-![](/uploads/wp-import/Screenshot-2025-12-01-201827.png)
+![](/institut-pour-la-paix/uploads/wp-import/Screenshot-2025-12-01-201827.png)

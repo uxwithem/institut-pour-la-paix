@@ -12,6 +12,8 @@ registrationUrl: >-
 image: /uploads/wp-import/pawel-czerwinski-vYnjAMo8DY8-unsplash-1-1-e1696260608243.jpg
 researchGroups:
   - resistance-civile
+  - genre-et-paix
+  - approches-regionales
 cancelled: false
 featured: false
 ---
@@ -34,7 +36,7 @@ Marshall Ganz est maître de conférences senior Rita E. Hauser en leadership, o
 
 Pour toute question : contact@nonviolent-movements.org
 
-![](/uploads/wp-import/marshall-ganz-affiches-12-juin-matin-212x300.png)
+![](/institut-pour-la-paix/uploads/wp-import/marshall-ganz-affiches-12-juin-matin-212x300.png)
 
 ## Informations pratiques
 
@@ -52,11 +54,11 @@ Lieu : Point Ephémère, 200 Quai de Valmy, Paris 10e
 
 Langues : En anglais avec interprétation française
 
-_Co-organisés par [l’Organization for Nonviolent Movements](https://nonviolent-movements.org/), [Non-violence XXI](https://nonviolence21.org/), [Paris Centre for Democracy (PADEM)](https://pademcentre.org/), [Amis de la Terre](https://www.amisdelaterre.org/), [l’Institut pour la Paix](https://www.institutpourlapaix.org/), et [Leading Change Network](https://leadingchangenetwork.org/)._
+*Co-organisés par [l’Organization for Nonviolent Movements](https://nonviolent-movements.org/), [Non-violence XXI](https://nonviolence21.org/), [Paris Centre for Democracy (PADEM)](https://pademcentre.org/), [Amis de la Terre](https://www.amisdelaterre.org/), [l’Institut pour la Paix](/institut-pour-la-paix/), et [Leading Change Network](https://leadingchangenetwork.org/).*
 
-_#GanzInParis_
+*#GanzInParis*
 
-_\_\_\_\__
+*\_\_\_\_*
 
 **Format :** 
 

@@ -32,6 +32,6 @@ Pour sa première édition, la thématique des pratiques et savoirs locaux dans 
 
 Avec le soutien de :
 
-![](/uploads/wp-import/UPEC_rvb-300x163.jpg) ![](/uploads/wp-import/ERASME_CMJN_LOGO-1-300x238.jpg) ![](/uploads/wp-import/Logotype-rouge-bleu-300x294.jpg)
+![](/institut-pour-la-paix/uploads/wp-import/UPEC_rvb-300x163.jpg) ![](/institut-pour-la-paix/uploads/wp-import/ERASME_CMJN_LOGO-1-300x238.jpg) ![](/institut-pour-la-paix/uploads/wp-import/Logotype-rouge-bleu-300x294.jpg)
 
 Ce programme a bénéficié d’une aide de l’État gérée par l’Agence Nationale de la Recherche au titre du programme d’Investissements d’avenir portant la référence «ANR-21-EXES-0009 ».

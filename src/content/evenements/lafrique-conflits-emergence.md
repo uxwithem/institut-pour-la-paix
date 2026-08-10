@@ -15,12 +15,12 @@ L’Institut Pour la Paix organise une séance de conférence-débat en partenar
 
 ### **Intervenant.e.s**
 
-**Anne-Cécile Robert**, journaliste au _Monde diplomatique_, Présidente de l’Union internationale de la presse francophone.  
+**Anne-Cécile Robert**, journaliste au *Monde diplomatique*, Présidente de l’Union internationale de la presse francophone.  
 **Thomas Deltombe**, journaliste et essayiste.  
 **Kako Nubukpo**, homme politique et économiste, ancien ministre du Togo.  
 **Marc-Antoine Pérouse de Montclos**, politiste, directeur de recherches à l’IRD.
 
-**Séance présentée par Chloé Maurel**, docteure en histoire, rédactrice en chef de la revue _Recherches internationales_.
+**Séance présentée par Chloé Maurel**, docteure en histoire, rédactrice en chef de la revue *Recherches internationales*.
 
 ### Lieu
 

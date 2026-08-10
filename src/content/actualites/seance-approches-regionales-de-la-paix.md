@@ -9,7 +9,7 @@ excerpt: >-
 featured: false
 ---
 
-Le 6 juin dernier le GT « [Approches régionales de la paix](https://www.institutpourlapaix.org/recherche/approches-regionales/) » s’est réuni autour du témoignage d’Abdourrahman Guelleh « TX » président du RADDE. 
+Le 6 juin dernier le GT « [Approches régionales de la paix](/institut-pour-la-paix/recherche/approches-regionales/) » s’est réuni autour du témoignage d’Abdourrahman Guelleh « TX » président du RADDE. 
 
 Abdourrahmane Guelleh nous a présenté la stratégie non violente mise en place par son mouvement dans la lutte contre la dictature en place au Djibouti. Il a notamment expliqué la plus grande efficacité d’une lutte non-violente face à des actions armées ou aux actions d’opposition traditionnelles des partis politiques. 
 

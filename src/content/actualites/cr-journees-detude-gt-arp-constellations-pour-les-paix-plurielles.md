@@ -13,6 +13,7 @@ excerpt: >-
   Paix” d’affiner son projet de création d’une plateforme numérique collaborative sur les sens
   plurielles de la paix.
 featured: false
+relatedResearchGroup: approches-regionales
 ---
 
 Les vendredi 18 et samedi 19 octobre 2024, se sont tenues les journées d’études « Constellations pour la paix » à Paris.  Cet évènement a permis au groupe de travail “Approches Régionales de la Paix” d’affiner son projet de création d’une plateforme transmédia collaborative sur les sens plurielles de la paix.
@@ -27,7 +28,7 @@ La première journée d’étude a commencé par un exercice de respiration et d
 Cet exercice d’approche corporelle a permis aux participants de réfléchir à la paix comme un phénomène pluriel et sensoriel, et non comme un concept formel figé. Ils ont également réfléchi à l’importance de déstabiliser la notion de paix comme quelque chose de commémoratif à travers le silence, par exemple, en relation avec les slogans féministes « Ni un minuto de silencio ».  
 Comment alors faire la paix avec le bruit, les cris ou le chaos ?
 
-![](/uploads/wp-import/20241018_164256-1024x746.jpg)
+![](/institut-pour-la-paix/uploads/wp-import/20241018_164256-1024x746.jpg)
 
 Photo réalisée durant la conférence intitulée "Mettre en image les concepts de paix" le 18 octobre 2024
 
@@ -50,4 +51,4 @@ Au cours de la deuxième journée d’étude, plusieurs ateliers pratiques ont �
 
 En somme cette journée d’étude a permis au groupe de travail “Approches Régionales de la Paix” de mettre en évidence le potentiel des technologies numériques pour relier différentes expériences de résistance, de lutte et de paix, en amplifiant les voix périphériques. En ce qui concerne les étapes futures de la réalisation de la plateforme « Constellations pour les paix », la nécessité d’inclure un contenu multi-formats, centré sur le local et la communauté, avec des fonctionnalités collaboratives et une forte dimension pédagogique paraît à présent évidente.
 
-[Retrouvez toutes les actualités du groupe de travail](https://www.institutpourlapaix.org/recherche/approches-regionales/)
+[Retrouvez toutes les actualités du groupe de travail](/institut-pour-la-paix/recherche/approches-regionales/)

@@ -19,18 +19,18 @@ Rejoignez l’US Institute for Peace pour une discussion sur la dynamique du mil
 **Speakers :**
 
 Jennifer Earl  
-_Professor of Sociology, University of Arizona_
+*Professor of Sociology, University of Arizona*
 
 Isabella Picón  
-_Director of Participation and Alliances, Mi Convive_
+*Director of Participation and Alliances, Mi Convive*
 
 Marwa Louati  
-_Facilitator, Synergizing Nonviolent Action and Peacebuilding, U.S. Institute of Peace_
+*Facilitator, Synergizing Nonviolent Action and Peacebuilding, U.S. Institute of Peace*
 
 Emily Ritter  
-_Associate Professor of Political Science, Vanderbilt University_
+*Associate Professor of Political Science, Vanderbilt University*
 
 Matthew Cebul, moderator  
-_Research Officer, Nonviolent Action and Peacebuilding, U.S. Institute of Peace_
+*Research Officer, Nonviolent Action and Peacebuilding, U.S. Institute of Peace*
 
 **Mardi 10 janvier à 16h00 CET** : [https://www.usip.org/events/women-and-youth-nonviolent-action-campaigns](https://www.usip.org/events/women-and-youth-nonviolent-action-campaigns)

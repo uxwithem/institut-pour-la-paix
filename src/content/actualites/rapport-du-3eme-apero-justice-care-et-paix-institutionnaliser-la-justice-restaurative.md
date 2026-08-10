@@ -23,7 +23,7 @@ featured: false
 
 Le troisième Apéro Justice, care et paix s’est consacré à une question centrale : **que devient la justice restaurative lorsqu’elle entre dans le cadre institutionnel ?** Entre promesses d’accès élargi et risques de normalisation, la séance a ouvert un espace de discussion autour des transformations contemporaines des manières de faire justice.
 
-![](/uploads/wp-import/IMG_8856-1-1024x353.jpg)
+![](/institut-pour-la-paix/uploads/wp-import/IMG_8856-1-1024x353.jpg)
 
 De gauche à droite : Lucie DEKENS, Elisabeth MARMAND, Pénélope DUFOURT et Laetitia BRACONNIER MORENO
 
@@ -33,7 +33,7 @@ Issue d’initiatives longtemps situées à la marge de la justice pénale, la j
 
 Un écart persiste ainsi entre les possibilités prévues par la loi et leur mise en œuvre. Le manque d’information constitue le principal obstacle : beaucoup de personnes découvrent ces dispositifs tardivement. S’y ajoutent des réticences de certains professionnels du droit et des craintes d’instrumentalisation. Malgré cela, les retours des participants soulignent des attentes fortes : être entendu, pouvoir s’exprimer et obtenir une reconnaissance. Là où la justice pénale répare avant tout l’ordre social, la JR répond à des besoins plus individuels, tant du côté des victimes que des auteurs.
 
-![](/uploads/wp-import/IMG_8860-1024x683.jpg)
+![](/institut-pour-la-paix/uploads/wp-import/IMG_8860-1024x683.jpg)
 
 Un aperçu du groupe de participant·es lors du 3ème Apero Justice, care et paix
 
@@ -45,14 +45,14 @@ Les échanges ont également permis de souligner les enjeux éthiques et pratiqu
 
 Enfin, la discussion a ouvert des pistes de réflexion plus larges sur les transformations contemporaines des manières de penser la justice. Entre espace de dialogue, outil de responsabilisation et dispositif de réparation, la justice restaurative interroge les finalités mêmes de la justice pénale, ainsi que ses capacités à répondre aux attentes individuelles. La séance s’est conclue par un temps d’échange collectif, confirmant l’intérêt croissant pour ces pratiques, tout en soulignant les défis à relever pour leur développement et leur accessibilité.
 
-_Les Apéros Justice, Care et Paix sont organisés par_ [_Pénélope Dufourt_](https://www.linkedin.com/in/p%C3%A9n%C3%A9lope-dufourt-054344a6/) _et_ [_Laetitia Braconnier Moreno_](https://www.linkedin.com/in/laetitia-braconnier-moreno-b13a08113/)_, docteures en droit public du Centre de recherches et d’études sur les droits fondamentaux (CREDOF) de l’Université Paris Nanterre. _Contacts: [lbraconnier@unal.edu.co](mailto:lbraconnier@unal.edu.co) et [penelope.dufourt@gmail.com](mailto:penelope.dufourt@gmail.com)__
+*Les Apéros Justice, Care et Paix sont organisés par* [*Pénélope Dufourt*](https://www.linkedin.com/in/p%C3%A9n%C3%A9lope-dufourt-054344a6/) *et* [*Laetitia Braconnier Moreno*](https://www.linkedin.com/in/laetitia-braconnier-moreno-b13a08113/)*, docteures en droit public du Centre de recherches et d’études sur les droits fondamentaux (CREDOF) de l’Université Paris Nanterre. *Contacts: [lbraconnier@unal.edu.co](mailto:lbraconnier@unal.edu.co) et [penelope.dufourt@gmail.com](mailto:penelope.dufourt@gmail.com)**
 
   
-**_Rapport rédigé par_ _Johnatan Londono, assistant recherche et éducation à l’Institut pour la paix._**
+***Rapport rédigé par* *Johnatan Londono, assistant recherche et éducation à l’Institut pour la paix.***
 
 ###### **Pour aller plus loin :**
 
--   Slate Podcasts, _Transfert_, « Retrouver la paix », épisode de podcast, [Écouter l’épisode.](https://www.slate.fr/audio/transfert/retrouver-la-paix-297)
--   [_Je verrai toujours vos visages_](https://www.allocine.fr/film/fichefilm_gen_cfilm=299938.html), film de Jeanne Herry (2023).
+-   Slate Podcasts, *Transfert*, « Retrouver la paix », épisode de podcast, [Écouter l’épisode.](https://www.slate.fr/audio/transfert/retrouver-la-paix-297)
+-   [*Je verrai toujours vos visages*](https://www.allocine.fr/film/fichefilm_gen_cfilm=299938.html), film de Jeanne Herry (2023).
 
-![](/uploads/wp-import/5603857-220x300.jpg)
+![](/institut-pour-la-paix/uploads/wp-import/5603857-220x300.jpg)

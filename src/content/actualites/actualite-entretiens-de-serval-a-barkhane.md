@@ -20,9 +20,9 @@ Les 25 et 26 avril 2024 a eu lieu le colloque international intitulé “De Serv
 \-analyser les tenants et aboutissants des opérations Serval puis Barkhane dans cinq pays francophones de la partie occidentale du Sahel;  
 \-interroger l’absence de bilan critique de la part des autorités de l’intervention française malgré la présence largement répandue d’un sentiment d’échec.
 
-![](/uploads/wp-import/Colloque-IPP-SWS-1024x803.jpg)
+![](/institut-pour-la-paix/uploads/wp-import/Colloque-IPP-SWS-1024x803.jpg)
 
-_Photo du panel « La fin de Barkhane », réalisée le 25.04.2024, Université Paris 1 Panthéon-Sorbonne_
+*Photo du panel « La fin de Barkhane », réalisée le 25.04.2024, Université Paris 1 Panthéon-Sorbonne*
 
 Les entretiens réalisés avec les différents intervenants sont à présent disponibles. Vous pourrez approfondir les sujets abordés durant le colloque avec notamment:  
 – Pierre Boilley, Professeur d’Histoire contemporaine à l’Institut des Mondes Africains  

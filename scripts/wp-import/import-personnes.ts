@@ -87,7 +87,9 @@ for (let i = 0; i < widgets.length; i++) {
 			continue;
 		}
 		if (nextType === 'text-editor.default' && !role) {
-			const text = cleanText($(nextEl).text());
+			// Some entries have stray "xxxx" placeholder runs left over from the
+			// source content (redacted/unfinished text pasted from elsewhere).
+			const text = cleanText($(nextEl).text()).replace(/(\s*x{3,}\s*)+$/gi, '');
 			if (text) role = text;
 			continue;
 		}

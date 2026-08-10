@@ -1,6 +1,7 @@
 ---
 import { getCollection, getEntry, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { withBase } from '../../lib/url';
 
 export async function getStaticPaths() {
 	const articles = await getCollection('actualites');
@@ -21,10 +22,17 @@ const dateLabel = article.data.date.toLocaleDateString('fr-FR', {
 ---
 
 <BaseLayout title={article.data.seoTitle ?? article.data.title} description={article.data.seoDescription ?? article.data.excerpt}>
-	<article class="section wrap">
+	<article class="section wrap-prose">
 		{category && <p class="eyebrow">{category.data.label}</p>}
 		<h1>{article.data.title}</h1>
 		<p class="meta">{dateLabel}</p>
+		{
+			article.data.featuredImage && (
+				<div class="detail-image">
+					<img src={withBase(article.data.featuredImage)} alt="" />
+				</div>
+			)
+		}
 		<div class="prose">
 			<Content />
 		</div>

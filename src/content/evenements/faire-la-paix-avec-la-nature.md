@@ -12,7 +12,7 @@ cancelled: false
 featured: false
 ---
 
-**L’[IPP](https://www.institutpourlapaix.org/) soutient le colloque Faire la paix avec la « nature » – Histoire des représentations et des pratiques symboliques depuis l’Antiquité.**
+**L’[IPP](/institut-pour-la-paix/) soutient le colloque Faire la paix avec la « nature » – Histoire des représentations et des pratiques symboliques depuis l’Antiquité.**
 
 Le colloque propose une réflexion sur les séquences historiques de pacification avec la « nature », succédant à trois types de conflits : les conflits armés entre humains, ce que les sociétés humaines perçoivent comme des attaques de la « nature » à leur encontre (inondations, tremblements de terre, sécheresses, gels tardifs, etc.) et les guerres que les sociétés humaines mènent contre la « nature » (pollutions, déforestations, érosions, extinctions d’espèces, bouleversement climatique, etc.).
 

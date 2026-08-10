@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { withBase } from '../../../lib/url';
 
 export async function getStaticPaths() {
 	const publications = await getCollection('publications');
@@ -22,19 +23,26 @@ const dateLabel = publication.data.date.toLocaleDateString('fr-FR', {
 	title={publication.data.seoTitle ?? publication.data.title}
 	description={publication.data.seoDescription ?? publication.data.description}
 >
-	<article class="section wrap">
+	<article class="section wrap-prose">
 		<h1>{publication.data.title}</h1>
 		<p class="meta">
 			{dateLabel}
 			{publication.data.authors.length > 0 && ` · ${publication.data.authors.join(', ')}`}
 		</p>
+		{
+			publication.data.coverImage && (
+				<div class="detail-image detail-image--portrait">
+					<img src={withBase(publication.data.coverImage)} alt="" />
+				</div>
+			)
+		}
 		<div class="prose">
 			<Content />
 		</div>
 		{
 			(publication.data.file || publication.data.externalUrl) && (
 				<p>
-					<a class="btn" href={publication.data.file ?? publication.data.externalUrl}>
+					<a class="btn" href={publication.data.file ? withBase(publication.data.file) : publication.data.externalUrl}>
 						Consulter la publication
 					</a>
 				</p>

@@ -2,11 +2,11 @@
 title: Politique de confidentialité
 ---
 
-_Cette politique de cookies a été mise à jour pour la dernière fois le 4 août 2023 et s’applique aux citoyens et aux résidents permanents légaux de l’Espace Économique Européen et de la Suisse._  
+*Cette politique de cookies a été mise à jour pour la dernière fois le 4 août 2023 et s’applique aux citoyens et aux résidents permanents légaux de l’Espace Économique Européen et de la Suisse.*  
 
 ## 1\. Introduction
 
-Notre site web, [https://www.institutpourlapaix.org](https://www.institutpourlapaix.org) (ci-après : « le site web ») utilise des cookies et autres technologies liées (par simplification, toutes ces technologies sont désignées par le terme « cookies »). Des cookies sont également placés par des tierces parties que nous avons engagées. Dans le document ci-dessous, nous vous informons de l’utilisation des cookies sur notre site web.
+Notre site web, [/institut-pour-la-paix/) (ci-après : « le site web ») utilise des cookies et autres technologies liées (par simplification, toutes ces technologies sont désignées par le terme « cookies »). Des cookies sont également placés par des tierces parties que nous avons engagées. Dans le document ci-dessous, nous vous informons de l’utilisation des cookies sur notre site web.
 
 ## 2\. Que sont les cookies ?
 
@@ -1613,7 +1613,7 @@ Institut Pour la Paix
 52 Boulevard Magenta  
 75010 Paris  
 France  
-Site web : [https://www.institutpourlapaix.org](https://www.institutpourlapaix.org)  
+Site web : [/institut-pour-la-paix/)  
 E-mail : contact@ex.cominstitutpourlapaix.org  
 Numéro de téléphone : 064585485
 

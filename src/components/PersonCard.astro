@@ -18,7 +18,16 @@ const typeLabels: Record<string, string> = {
 ---
 
 <a class="card" href={withBase(`/equipe-reseau/${person.id}/`)}>
-	<span class="eyebrow">{typeLabels[person.data.type] ?? person.data.type}</span>
-	<h3>{person.data.name}</h3>
-	{person.data.role && <p class="meta">{person.data.role}</p>}
+	{
+		person.data.photo && (
+			<div class="card-media card-media--portrait">
+				<img src={withBase(person.data.photo)} alt="" loading="lazy" />
+			</div>
+		)
+	}
+	<div class="card-body">
+		<span class="eyebrow">{typeLabels[person.data.type] ?? person.data.type}</span>
+		<h3>{person.data.name}</h3>
+		{person.data.role && <p class="meta">{person.data.role}</p>}
+	</div>
 </a>

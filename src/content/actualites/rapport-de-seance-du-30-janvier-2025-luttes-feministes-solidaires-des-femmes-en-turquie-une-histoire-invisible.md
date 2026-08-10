@@ -30,7 +30,7 @@ Ainsi, si la révolte de Gezi a favorisé l’émergence de nouvelles formes de 
 
 2Türkmen, B. (2020). De la Révolte de Gezi à l’opposition discrète en Turquie. Mouvements, 104(4), 129-138.
 
-_**Rapport de séance rédigé par : Clara ETCHENIQUE, chargée d’appui au groupe de travail genre et paix**_
+***Rapport de séance rédigé par : Clara ETCHENIQUE, chargée d’appui au groupe de travail genre et paix***
 
 #### Pour aller plus loin…
 

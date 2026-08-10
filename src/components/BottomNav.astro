@@ -1,0 +1,88 @@
+---
+import { withBase } from '../lib/url';
+
+const items = [
+	{ label: 'Recherche', url: '/recherche/' },
+	{ label: 'Actualités', url: '/actualites/' },
+	{ label: 'Agenda', url: '/agenda/' },
+	{ label: 'Ressources', url: '/ressources/' },
+	{ label: 'Réseau', url: '/equipe-reseau/' },
+];
+
+const currentPath = Astro.url.pathname;
+function isActive(url: string): boolean {
+	const target = withBase(url);
+	return currentPath === target || currentPath.startsWith(target);
+}
+---
+
+<nav class="bottom-nav" aria-label="Navigation principale">
+	<ul>
+		{
+			items.map((item) => (
+				<li>
+					<a href={withBase(item.url)} aria-current={isActive(item.url) ? 'page' : undefined}>
+						<span class="dot" aria-hidden="true" />
+						{item.label}
+					</a>
+				</li>
+			))
+		}
+	</ul>
+</nav>
+
+<style>
+	.bottom-nav {
+		position: fixed;
+		inset-inline: 0;
+		bottom: 0;
+		z-index: 30;
+		background: var(--color-surface);
+		border-top: 1px solid var(--color-line);
+		padding-bottom: env(safe-area-inset-bottom, 0);
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+	}
+
+	a {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.3rem;
+		padding-block: 0.6rem 0.5rem;
+		font-family: var(--font-mono);
+		font-size: 0.62rem;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		font-weight: 500;
+		color: var(--color-muted);
+		text-decoration: none;
+	}
+
+	.dot {
+		width: 5px;
+		height: 5px;
+		border-radius: 50%;
+		background: transparent;
+	}
+
+	a[aria-current='page'] {
+		color: var(--color-ink);
+	}
+
+	a[aria-current='page'] .dot {
+		background: var(--color-signal);
+	}
+
+	@media (min-width: 48rem) {
+		.bottom-nav {
+			display: none;
+		}
+	}
+</style>

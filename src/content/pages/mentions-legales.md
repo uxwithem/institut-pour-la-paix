@@ -8,7 +8,7 @@ Site internet de l’Institut Pour la Paix, association loi 1901 reconnue d’ut
 
 52 Boulevard Magenta – 75014 Paris – France
 
-**Tél :** _06 45 43 93 55_
+**Tél :** *06 45 43 93 55*
 
 **Url :** www.institutpourlapaix.org
 
@@ -18,9 +18,9 @@ Site internet de l’Institut Pour la Paix, association loi 1901 reconnue d’ut
 
 ### **Hébergement et webmastering**
 
-**Hébergeur :  
-OVH – 2, rue Kellermann, 59100 Roubaix  
-**RCS Lille Métropole 424 761 419 00045  
+**Hébergeur :**  
+**OVH – 2, rue Kellermann, 59100 Roubaix**  
+RCS Lille Métropole 424 761 419 00045  
 Code APE 2620Z  
 N° TVA : FR 22 424 761 419
 
@@ -48,7 +48,7 @@ Institut pour la Paix
 
 France
 
-**Tél. :** _06 45 43 93 55_
+**Tél. :** *06 45 43 93 55*
 
 **E-mail : contact@institutpourlapaix.org**
 

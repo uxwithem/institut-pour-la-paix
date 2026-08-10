@@ -14,11 +14,12 @@ excerpt: >-
   constitué une opportunité, proposée à des organisateurs, des formateurs, des bénévoles, des
   étudiant·es engagé·es et des chercheurs, d’engager une conversation de fond autour de
 featured: false
+relatedResearchGroup: resistance-civile
 ---
 
 **Le 12 juin 2026 à Paris, la rencontre « Comment protéger la démocratie tant sur le plan électoral qu’extra-électoral ? » s’est organisée autour de l’intervention de Marshall Ganz. Celle-ci a constitué une opportunité, proposée à des organisateurs, des formateurs, des bénévoles, des étudiant·es engagé·es et des chercheurs, d’engager une conversation de fond autour de la protection de la démocratie et de l’articulation entre stratégies institutionnelles et extra-institutionnelles.**
 
-Marshall Ganz est maître de conférences senior Rita E. Hauser en leadership, organisation (_organizing_), et société civile à la Harvard Kennedy School (HKS). Il enseigne, effectue des recherches et écrit sur le leadership, le récit, la stratégie et l’organisation au sein des mouvements sociaux, des associations civiques et de la politique. Lors de son intervention, Ganz a partagé son expérience de terrain en matière d’organisation, en revenant sur les formes concrètes que peut prendre l’engagement collectif aujourd’hui. À partir de ce parcours, il a proposé un ensemble de repères et de pistes pour penser l’organizing comme une pratique essentielle pour agir, construire du pouvoir et s’inscrire dans la durée dans un contexte démocratique incertain.
+Marshall Ganz est maître de conférences senior Rita E. Hauser en leadership, organisation (*organizing*), et société civile à la Harvard Kennedy School (HKS). Il enseigne, effectue des recherches et écrit sur le leadership, le récit, la stratégie et l’organisation au sein des mouvements sociaux, des associations civiques et de la politique. Lors de son intervention, Ganz a partagé son expérience de terrain en matière d’organisation, en revenant sur les formes concrètes que peut prendre l’engagement collectif aujourd’hui. À partir de ce parcours, il a proposé un ensemble de repères et de pistes pour penser l’organizing comme une pratique essentielle pour agir, construire du pouvoir et s’inscrire dans la durée dans un contexte démocratique incertain.
 
 Ganz a débuté son intervention en insistant sur ce déplacement qu’il juge essentiel. Selon lui, on cherche trop souvent des réponses dans des programmes, des figures providentielles ou des plans à long terme, alors que le véritable point d’appui reste beaucoup plus concret : les relations entre les individus. Il formule cela de manière assez simple : le chemin à suivre ne passe pas par un grand manifeste, mais par les autres. Derrière cette idée, il y a le constat d’une politique qui s’est progressivement déshumanisée, où les citoyens ont été mis à distance, réduits à des catégories ou à des données, au lieu d’être considérés dans leur expérience vécue.
 
@@ -36,18 +37,18 @@ Enfin, il insiste sur l’importance de la structuration. Sans cadre clair, sans
 
 La conférence s’est conclue par une session de coaching en direct avec une organisation engagée dans une lutte non-violente, permettant d’illustrer concrètement les principes abordés. Cet échange a été suivi d’un temps de questions-réponses avec le public, prolongeant la réflexion et ouvrant sur des enjeux très actuels liés à la protection de la démocratie et aux formes d’engagement possibles aujourd’hui.
 
-![](/uploads/wp-import/IMG_8879-768x512.jpg)
+![](/institut-pour-la-paix/uploads/wp-import/IMG_8879-768x512.jpg)
 
-![](/uploads/wp-import/IMG_8880-1024x683.jpg)
+![](/institut-pour-la-paix/uploads/wp-import/IMG_8880-1024x683.jpg)
 
-![](/uploads/wp-import/IMG_8867-1024x683.jpg)
+![](/institut-pour-la-paix/uploads/wp-import/IMG_8867-1024x683.jpg)
 
-![](/uploads/wp-import/IMG_8882-1024x683.jpg)
+![](/institut-pour-la-paix/uploads/wp-import/IMG_8882-1024x683.jpg)
 
 Retour en images sur la rencontre « Comment protéger la démocratie tant sur le plan électoral qu’extra-électoral ? » le 12 juin 2026.
 
 * * *
 
-**Cet événement a été co-organisé par [l’Organization for Nonviolent Movements](https://nonviolent-movements.org/), [Non-violence XXI](https://nonviolence21.org/), [Paris Centre for Democracy (PADEM)](https://pademcentre.org/), [Amis de la Terre](https://www.amisdelaterre.org/), [l’Institut pour la Paix](https://www.institutpourlapaix.org/), et [Leading Change Network](https://leadingchangenetwork.org/).**
+**Cet événement a été co-organisé par [l’Organization for Nonviolent Movements](https://nonviolent-movements.org/), [Non-violence XXI](https://nonviolence21.org/), [Paris Centre for Democracy (PADEM)](https://pademcentre.org/), [Amis de la Terre](https://www.amisdelaterre.org/), [l’Institut pour la Paix](/institut-pour-la-paix/), et [Leading Change Network](https://leadingchangenetwork.org/).**
 
-_Rapport rédigé par Johnatan Londono_
+*Rapport rédigé par Johnatan Londono*

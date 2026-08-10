@@ -7,9 +7,10 @@ excerpt: >-
   Le dossier est consacré au courant de la non-violence comme paradigme qui propose des réflexions
   stimulantes à l’heure de penser la guerre et la violence armée.
 featured: false
+relatedResearchGroup: resistance-civile
 ---
 
-Le dossier de ce nouveau numéro [(126)](https://www.recherches-internationales.fr/RI126.html) de la revue [_Recherches internationales_](https://www.recherches-internationales.fr/) « La non-violence en débat » est coordonné par Raphaël Porteilla, membre du Comité de Pilotage de l’Institut pour la Paix et coordinateur avec Cécile Dubernet et Amber French du Groupe de Travail « Résistance civile, non-violence et culture de la paix », lancé le 26 mai 2023 à l’Institut Catholique de Paris (ICP).
+Le dossier de ce nouveau numéro [(126)](https://www.recherches-internationales.fr/RI126.html) de la revue [*Recherches internationales*](https://www.recherches-internationales.fr/) « La non-violence en débat » est coordonné par Raphaël Porteilla, membre du Comité de Pilotage de l’Institut pour la Paix et coordinateur avec Cécile Dubernet et Amber French du Groupe de Travail « Résistance civile, non-violence et culture de la paix », lancé le 26 mai 2023 à l’Institut Catholique de Paris (ICP).
 
 Le dossier est consacré au courant de la non-violence comme paradigme qui propose des réflexions stimulantes à l’heure de penser la guerre et la violence armée. Pour reprendre les mots de Raphaël Porteilla, le dossier propose « de faire découvrir des contributions qui tentent d’apporter une pierre supplémentaire à la construction d’un champ de recherches en langue française sur la non-violence ».
 

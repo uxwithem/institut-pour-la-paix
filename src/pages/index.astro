@@ -31,13 +31,24 @@ const latestResources = (await getCollection('ressources'))
 	<section class="hero">
 		<div class="wrap hero-inner">
 			<p class="eyebrow eyebrow-light">{settings?.data.siteName}</p>
-			<h1>{settings?.data.tagline}</h1>
+			<h1>Une paix durable. Par la recherche, par l'action.</h1>
 			<p class="lead">{settings?.data.description}</p>
-			<div class="actions">
-				<a class="btn" href={withBase('/a-propos/')}>Découvrir l'IPP</a>
-				<a class="link-light" href={withBase('/recherche/')}>Nos recherches →</a>
-			</div>
 		</div>
+	</section>
+
+	<section class="pillars">
+		<a class="pillar" href={withBase('/recherche/')}>
+			<span class="pillar-index">01</span>
+			<h2>Recherche</h2>
+			<p>Cinq groupes de recherche, des publications, des actualités sur la paix comme objet d'étude.</p>
+			<span class="pillar-go">Explorer la recherche →</span>
+		</a>
+		<a class="pillar pillar-action" href={withBase('/agenda/')}>
+			<span class="pillar-index">02</span>
+			<h2>Agir</h2>
+			<p>Participez à nos événements, rejoignez le réseau, devenez membre de l'Institut.</p>
+			<span class="pillar-go">Voir l'agenda →</span>
+		</a>
 	</section>
 
 	<section class="section">
@@ -121,7 +132,8 @@ const latestResources = (await getCollection('ressources'))
 	}
 
 	.hero :focus-visible,
-	.cta :focus-visible {
+	.cta :focus-visible,
+	.pillar-action:focus-visible {
 		outline-color: var(--color-signal-bright);
 	}
 
@@ -150,22 +162,78 @@ const latestResources = (await getCollection('ressources'))
 		font-size: 1.1rem;
 	}
 
-	.actions {
+	.pillars {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1px;
+		background: var(--color-line);
+		border-bottom: 1px solid var(--color-line);
+	}
+
+	@media (min-width: 40rem) {
+		.pillars {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	.pillar {
 		display: flex;
-		align-items: center;
-		flex-wrap: wrap;
-		gap: 1.5rem;
-		margin-top: 2rem;
-	}
-
-	.link-light {
-		color: #fff;
-		font-weight: 600;
+		flex-direction: column;
+		gap: 0.5rem;
+		background: var(--color-surface);
+		padding: var(--space-3) 1.25rem var(--space-4);
 		text-decoration: none;
+		color: var(--color-ink);
 	}
 
-	.link-light:hover {
+	@media (min-width: 48rem) {
+		.pillar {
+			padding: var(--space-4) 2rem var(--space-5);
+		}
+	}
+
+	.pillar:hover {
+		background: var(--color-paper);
+		color: var(--color-ink);
+	}
+
+	.pillar-action {
+		background: var(--color-indigo);
+		color: #fff;
+	}
+
+	.pillar-action:hover {
+		background: var(--color-indigo-deep);
+		color: #fff;
+	}
+
+	.pillar-index {
+		font-family: var(--font-mono);
+		font-size: 0.8rem;
+		color: var(--color-signal);
+	}
+
+	.pillar-action .pillar-index {
 		color: var(--color-signal-bright);
+	}
+
+	.pillar h2 {
+		margin: 0;
+	}
+
+	.pillar p {
+		margin: 0;
+		max-width: 32ch;
+	}
+
+	.pillar-action p {
+		color: #ded9f6;
+	}
+
+	.pillar-go {
+		margin-top: 0.5rem;
+		font-weight: 600;
+		font-size: 0.92rem;
 	}
 
 	.more {

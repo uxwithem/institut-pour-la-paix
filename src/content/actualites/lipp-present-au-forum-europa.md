@@ -13,7 +13,7 @@ excerpt: >-
 featured: false
 ---
 
-Grâce à l’invitation de [Michel Catala](https://www.univ-nantes.fr/michel-catala-1), professeur d’histoire contemporaine à l’Université de Nantes, le 18 octobre dernier, Laura Lema Silva, responsable des Études à l’Institut pour la Paix, a participé au [F_orum Europa, La Fabrique des idées européennes_](https://forumeuropa.alliance-europa.eu/) qui s’est tenu à la [Maison de l’Europe](http://www.maisoneurope-nantes.eu/) à Nantes.
+Grâce à l’invitation de [Michel Catala](https://www.univ-nantes.fr/michel-catala-1), professeur d’histoire contemporaine à l’Université de Nantes, le 18 octobre dernier, Laura Lema Silva, responsable des Études à l’Institut pour la Paix, a participé au [F*orum Europa, La Fabrique des idées européennes*](https://forumeuropa.alliance-europa.eu/) qui s’est tenu à la [Maison de l’Europe](http://www.maisoneurope-nantes.eu/) à Nantes.
 
 Lors de cette journée de travail collective, conçue à la fois comme un moment de formation d’étudiants de master et comme un espace de réflexion sur la mise en place de projets participatifs autour de l’environnement, de la parité et de la paix, Laura a pu présenter l’Institut Pour la Paix, ses objectifs et ses lignes de recherche et d’action dans une table-ronde consacrée aux problématiques touchant à la construction de la paix en Europe. Cette table-ronde qui a également compté avec la participation de Michel Catala et de [Charlotte Barcat](https://www.univ-nantes.fr/charlotte-barcat), maîtresse de conférences en civilisation britannique, a cherché à répondre aux questions suivantes: comment penser la paix dans le continent? Quels sont les acteurs de la paix? Comment maintenir la paix en Europe?
 

@@ -12,6 +12,9 @@ registrationUrl: >-
 image: /uploads/wp-import/GT-concept.png
 researchGroups:
   - concepts-de-la-paix
+  - genre-et-paix
+  - resistance-civile
+  - approches-regionales
 cancelled: false
 featured: false
 ---

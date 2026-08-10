@@ -18,7 +18,7 @@ L’Institut Pour la Paix a le plaisir de vous inviter aux prochaines journées 
 
 Cet événement portera sur le projet Constelaciones para las paces / Constellations pour les paix plurielles, qui vise à développer une plateforme multimédia interactive pour enrichir le débat démocratique international autour des pratiques, des sensibilités et des langages de construction de paix.
 
-![](/uploads/wp-import/JE-GT-ARP-18-et-19-212x300.jpg)
+![](/institut-pour-la-paix/uploads/wp-import/JE-GT-ARP-18-et-19-212x300.jpg)
 
 [Programme détaillé](https://www.institutpourlapaix.org/wp-content/uploads/2024/10/Programme-constelaciones-para-las-paces-V.1.3.pdf)
 

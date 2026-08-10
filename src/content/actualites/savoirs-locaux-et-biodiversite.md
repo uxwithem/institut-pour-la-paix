@@ -9,6 +9,7 @@ excerpt: >-
   Lors de cette nouvelle séance, Marie-Christine CORMIER-SALEM reviendra sur son expérience au sein
   de l’IPBES pour aborder le rôle de cette structure dans la construction d’un état de paix.
 featured: false
+relatedResearchGroup: paix-conflits-environnement
 ---
 
 ## Savoirs locaux et biodiversité
@@ -19,4 +20,4 @@ Elle interviendra notamment sur les apports des savoirs locaux et de leur reconn
 
 La réunion se tiendra vendredi 20 octobre à 14h00 au [MNHN](https://www.mnhn.fr/fr), Salle Denise Paulme, Musée de l’Homme, 17 place Trocadéro 75016 Paris.
 
-**U****niquement sur inscription (email : [coordination@institutpourlapaix.org](mailto:coordination@institutpourlapaix.org))**
+**Uniquement sur inscription (email : [coordination@institutpourlapaix.org](mailto:coordination@institutpourlapaix.org))**

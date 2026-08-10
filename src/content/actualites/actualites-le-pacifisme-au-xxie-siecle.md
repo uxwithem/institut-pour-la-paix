@@ -19,7 +19,7 @@ Le contexte international de cette dernière décennie est marqué par une tenda
 
 Le présent colloque entend interroger le pacifisme au XXIème siècle en replaçant ce courant dans ses perspectives historique, juridique et conceptuelle afin de mieux en comprendre les enjeux et limites.
 
-![](/uploads/wp-import/IPP-Pacifisme.png)
+![](/institut-pour-la-paix/uploads/wp-import/IPP-Pacifisme.png)
 
 Au programme de ces deux journées:
 

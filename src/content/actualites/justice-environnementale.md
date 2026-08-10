@@ -7,6 +7,7 @@ excerpt: >-
   Le Groupe de travail « Paix, conflit, environnement » poursuit ses travaux avec l’ouverture de
   l’axe « justice environnementale » de son séminaire, qui occupera le 1er semestre 2024.
 featured: false
+relatedResearchGroup: paix-conflits-environnement
 ---
 
 Le Groupe de travail « Paix, conflit, environnement » poursuit ses travaux avec l’ouverture de l’axe « justice environnementale » de son séminaire, qui occupera le 1er semestre 2024.

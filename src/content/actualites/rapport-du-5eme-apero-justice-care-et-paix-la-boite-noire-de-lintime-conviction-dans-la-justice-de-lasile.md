@@ -23,10 +23,9 @@ featured: false
 
 **Le 24 juin 2026,** à l’Institut pour la Paix
 
-**Le cinquième Apéro Justice, care et paix s’est attaché à explorer un moment central et pourtant largement invisible de la justice de l’asile : la formation de l’intime conviction. Derrière cette notion, souvent présentée comme le cœur de la décision judiciaire, se joue une série d’opérations complexes, traversées par des affects, des représentations et des contraintes institutionnelles.  
-**
+**Le cinquième Apéro Justice, care et paix s’est attaché à explorer un moment central et pourtant largement invisible de la justice de l’asile : la formation de l’intime conviction. Derrière cette notion, souvent présentée comme le cœur de la décision judiciaire, se joue une série d’opérations complexes, traversées par des affects, des représentations et des contraintes institutionnelles.**  
 
-![](/uploads/wp-import/IMG_8984-1024x401.jpg)
+![](/institut-pour-la-paix/uploads/wp-import/IMG_8984-1024x401.jpg)
 
 Retour en images sur le cinquième Apéro Justice care et paix, le 24 juin 2026
 
@@ -38,7 +37,7 @@ Le jugement de la crédibilité des récits de demande d’asile par les juges p
 
 La séance a également ouvert une réflexion sur le cadre même dans lequel les personnes demandant l’asile sont reçues. Plusieurs interventions ont souligné que la difficulté ne tient pas uniquement au contenu des récits, mais à l’environnement dans lequel ils sont produits : temporalité contrainte, format de l’audition, posture des professionnels. Dans ces conditions, la parole ne peut être comprise indépendamment du dispositif qui la rend possible —ou qui, au contraire, la limite.
 
-![](/uploads/wp-import/IMG_8979-1024x340.jpg)
+![](/institut-pour-la-paix/uploads/wp-import/IMG_8979-1024x340.jpg)
 
 Retour en images sur le cinquième Apéro Justice care et paix, le 24 juin 2026
 
@@ -54,13 +53,13 @@ L’idéal d’impartialité doit être concilié avec la prise en compte des se
 
 En somme, la séance a fait ressortir une tension persistante : comment évaluer des récits marqués par le traumatisme dans un cadre qui en contraint l’expression ? Plus largement, comment penser une justice de l’asile capable d’intégrer les vulnérabilités sans renoncer à ses exigences ? Cette séance invite à reconnaître que l’intime conviction des juges ne se forme pas en dehors du contexte, mais au cœur d’interactions situées. Elle ouvre ainsi la voie à une réflexion sur les conditions d’une justice plus attentive, capable d’articuler rigueur juridique et compréhension des expériences humaines.
 
-**_Les Apéros Justice, care et paix sont organisés par_ [_Pénélope Dufourt_](https://www.linkedin.com/in/p%C3%A9n%C3%A9lope-dufourt-054344a6/) _et_ [_Laetitia Braconnier Moreno_](https://www.linkedin.com/in/laetitia-braconnier-moreno-b13a08113/)_, docteures en droit public du Centre de recherches et d’études sur les droits fondamentaux (CREDOF) de l’Université Paris Nanterre._**
+***Les Apéros Justice, care et paix sont organisés par* [*Pénélope Dufourt*](https://www.linkedin.com/in/p%C3%A9n%C3%A9lope-dufourt-054344a6/) *et* [*Laetitia Braconnier Moreno*](https://www.linkedin.com/in/laetitia-braconnier-moreno-b13a08113/)*, docteures en droit public du Centre de recherches et d’études sur les droits fondamentaux (CREDOF) de l’Université Paris Nanterre.***
 
-_Rapport rédigé par_ _Johnatan Londono_
+*Rapport rédigé par* *Johnatan Londono*
 
 * * *
 
 ##### Pour approfondir les réflexions abordées lors de cette séance :
 
--   Marie-Caroline Saglio-Yatzimirsky, _La Voix de ceux qui crient : Rencontre avec des demandeurs d’asile_ (Paris : Albin Michel, 2018).
--   Emmanuel Jeuland, _La justice à l’aune des émotions argumentées : Les jumelles du juge_ (Paris : Dalloz, 2026).
+-   Marie-Caroline Saglio-Yatzimirsky, *La Voix de ceux qui crient : Rencontre avec des demandeurs d’asile* (Paris : Albin Michel, 2018).
+-   Emmanuel Jeuland, *La justice à l’aune des émotions argumentées : Les jumelles du juge* (Paris : Dalloz, 2026).

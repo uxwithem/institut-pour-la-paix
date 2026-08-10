@@ -22,8 +22,8 @@ Ce film documentaire met en lumière un parcours singulier, à la croisée des q
 
 Pour découvrir la bande annonce
 
-![](/uploads/wp-import/Capture-decran-2025-04-18-114302.png)
+![](/institut-pour-la-paix/uploads/wp-import/Capture-decran-2025-04-18-114302.png)
 
-_Partenaires : ACAT (Action des Chrétiens pour l’Abolition de la Torture) ; AFPS (Association France Palestine Solidarité) ; AMNESTY INTERNATIONAL ; ARTISANS DU MONDE ; CASP (Centre d’Action Sociale Protestant) ; CEMEA ( Centre d’Entrainement aux méthodes d’éducation active) ; CHRÉTIENS DE LA MÉDITERRANÉE ; CITOYENS DU MONDE ;  GROW (Génération for Rights Over the World) ;  INSTITUT POUR LA PAIX ; MOUVEMENT DE LA PAIX ; MRAP (Mouvement contre le Racisme et pour l’Amitié entre les Peuples) ; PAX CHRISTI ; UJFP (Union Juive Française pour  la Paix)_ 
+*Partenaires : ACAT (Action des Chrétiens pour l’Abolition de la Torture) ; AFPS (Association France Palestine Solidarité) ; AMNESTY INTERNATIONAL ; ARTISANS DU MONDE ; CASP (Centre d’Action Sociale Protestant) ; CEMEA ( Centre d’Entrainement aux méthodes d’éducation active) ; CHRÉTIENS DE LA MÉDITERRANÉE ; CITOYENS DU MONDE ;  GROW (Génération for Rights Over the World) ;  INSTITUT POUR LA PAIX ; MOUVEMENT DE LA PAIX ; MRAP (Mouvement contre le Racisme et pour l’Amitié entre les Peuples) ; PAX CHRISTI ; UJFP (Union Juive Française pour  la Paix)* 
 
-_Avec le soutien de : LES AMIS DU MONDE DIPLOMATIQUE ; CVPR PO (Comité de Vigilance pour une PaixRéelle au Proche-Orient)_
+*Avec le soutien de : LES AMIS DU MONDE DIPLOMATIQUE ; CVPR PO (Comité de Vigilance pour une PaixRéelle au Proche-Orient)*

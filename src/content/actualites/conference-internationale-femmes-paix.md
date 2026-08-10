@@ -11,13 +11,14 @@ excerpt: >-
   des Pays-Bas et l’Institut international des sciences sociales, cette conférence se tiendra à
   l’Institut international des sciences sociales de La Haye (Pays-Bas).
 featured: false
+relatedResearchGroup: genre-et-paix
 ---
 
 Les 9 et 10 décembre 2025 aura lieu la conférence internationale femmes et paix “Dans les pas de Bertha Von Suttner: Quel héritage ? Quelles perspectives ?”. Organisée par l’Alliance française des Pays-Bas et l’Institut international des sciences sociales, cette conférence se tiendra à l’Institut international des sciences sociales de La Haye (Pays-Bas).
 
 Ces deux jours de rencontres et d’ateliers seront riches d’interventions politiques et universitaires sur l’héritage de Bertha Von Suttner, activiste pionnière contre la guerre et la militarisation de la société. Contributrice de la création du prix Nobel, de la Société des Nations ainsi que des mouvements de non-violence, la vie de Bertha Von Suttner interroge la place des femmes dans les processus de paix aujourd’hui.
 
-![](/uploads/wp-import/image-article-conf-von-stunner-768x541.png)
+![](/institut-pour-la-paix/uploads/wp-import/image-article-conf-von-stunner-768x541.png)
 
 Avec l’Ambassade de France aux Pays-Bas, l’Alliance française des Pays-Bas, le Forum Mondial Normandie pour la paix ainsi que d’autres collaborateur·ices diplomatiques, médiatiques et universitaires, l’Institut Pour la Paix vous donne rendez-vous durant les deux jours de la conférence:
 

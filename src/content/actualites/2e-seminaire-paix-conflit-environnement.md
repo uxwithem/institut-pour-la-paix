@@ -7,11 +7,12 @@ excerpt: >-
   La deuxième séance de l’Axe Savoirs du Séminaire du GT Paix, Conflit et Environnement visera à
   approfondir, par l’exemple, les modalités d’inscription des savoirs dans le pluralisme culturel.
 featured: false
+relatedResearchGroup: paix-conflits-environnement
 ---
 
-La deuxième séance de l’**Axe** **_Savoirs_** **du Séminaire du [GT Paix, Conflit et Environnement](https://www.institutpourlapaix.org/recherche/paix-conflits-environnement/)** visera à approfondir, par l’exemple, les modalités d’inscription des savoirs dans le pluralisme culturel. 
+La deuxième séance de l’**Axe** ***Savoirs*** **du Séminaire du [GT Paix, Conflit et Environnement](/institut-pour-la-paix/recherche/paix-conflits-environnement/)** visera à approfondir, par l’exemple, les modalités d’inscription des savoirs dans le pluralisme culturel. 
 
-Elle montrera comment des savoirs intimement liés à des modes de vivre, de faire, de dire le territoire, loin d’essentialiser une relation apaisée au (mi)lieu, met en relief les déterminants d’une la reconnaissance des cultures _autres_ – vecteur de paix.
+Elle montrera comment des savoirs intimement liés à des modes de vivre, de faire, de dire le territoire, loin d’essentialiser une relation apaisée au (mi)lieu, met en relief les déterminants d’une la reconnaissance des cultures *autres* – vecteur de paix.
 
 **Laura Lema Silva**, Responsable d’études à L’institut pour la Paix, docteure en études hispano-américaines de l[’Université Lumière Lyon 2](https://www.univ-lyon2.fr/), membre associée du laboratoire LCE (Lettres et Civilisations Étrangères) de l’Université Lyon 2 ainsi que du centre de pensée “Pluralizar la Paz” de l’[Université Nationale de Colombie](https://unal.edu.co/), co-commissaire de l’exposition “Sanaduría, médiations pour tisser des sens pluriels de la paix”.
 

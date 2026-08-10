@@ -46,8 +46,8 @@ Le groupe de travail se caractérise par sa **pluridisciplinarité**, puisqu’i
 
   
 
-Le groupe doit continuer à échanger ces prochaines semaines afin d’affiner ses axes de recherche, plusieurs activités à moyen terme ont été planifiées, dont l’**organisation d’un colloque international  
-de lancement officiel du GT fin 2023** – qui servira de base pour une future publication.
+Le groupe doit continuer à échanger ces prochaines semaines afin d’affiner ses axes de recherche, plusieurs activités à moyen terme ont été planifiées, dont l’**organisation d’un colloque international**  
+**de lancement officiel du GT fin 2023** – qui servira de base pour une future publication.
 
   
 

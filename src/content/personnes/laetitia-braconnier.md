@@ -12,4 +12,4 @@ Elle préside la Commission justice transitionnelle de l’Association des Ju
 
 Elle est assesseure pour le Haut-Commissariat des Nations Unies pour les réfugiés et responsable d’une petite association œuvrant pour la sécurité alimentaire (Eje Cafetero, Colombie).
 
-Dernière publication : « La juridiction spéciale pour la paix en Colombie. Un laboratoire de justice transitionnelle-restaurative », co-écrit avec Sharon Weill, pour le dossier Guerre, paix, justice : le brouillage des frontières, _Les cahiers de la justice_, ENM-Dalloz, #2025/1.
+Dernière publication : « La juridiction spéciale pour la paix en Colombie. Un laboratoire de justice transitionnelle-restaurative », co-écrit avec Sharon Weill, pour le dossier Guerre, paix, justice : le brouillage des frontières, *Les cahiers de la justice*, ENM-Dalloz, #2025/1.

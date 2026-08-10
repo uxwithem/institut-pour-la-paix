@@ -6,4 +6,4 @@ type: membre-reseau
 active: true
 ---
 
-Il est titulaire d’un Ph.D en Science Politique et est spécialisé sur les problématiques relatives à la Sociologie politique et à la Sociologie de la paix. Il est par ailleurs membre de l’_International Peace Research Association (IPRA)_ et de l’_American Political Science Association (APSA)_.
+Il est titulaire d’un Ph.D en Science Politique et est spécialisé sur les problématiques relatives à la Sociologie politique et à la Sociologie de la paix. Il est par ailleurs membre de l’*International Peace Research Association (IPRA)* et de l’*American Political Science Association (APSA)*.

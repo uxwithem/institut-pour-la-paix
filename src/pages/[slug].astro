@@ -15,7 +15,7 @@ const { Content } = await render(page);
 ---
 
 <BaseLayout title={page.data.seoTitle ?? page.data.title} description={page.data.seoDescription}>
-	<article class="section wrap">
+	<article class="section wrap-prose">
 		<h1>{page.data.title}</h1>
 		<div class="prose">
 			<Content />

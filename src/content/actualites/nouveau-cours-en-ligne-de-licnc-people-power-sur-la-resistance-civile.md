@@ -13,7 +13,7 @@ excerpt: >-
 featured: false
 ---
 
-For the 11th year, the International Center on Nonviolent Conflict (ICNC) will host its annual free, moderated online course, _People Power: The Strategic Dynamics of Civil Resistance._
+For the 11th year, the International Center on Nonviolent Conflict (ICNC) will host its annual free, moderated online course, *People Power: The Strategic Dynamics of Civil Resistance.*
 
 In this course, over 50 highly motivated and collaborative participants from around the world will join with selected moderators to:
 

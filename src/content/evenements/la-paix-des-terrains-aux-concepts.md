@@ -12,7 +12,7 @@ cancelled: false
 featured: false
 ---
 
-Partant du constat que, malgré une présence de la thématique de la paix dans le débat public, la recherche et le débat français peinent à puiser dans le réservoir d’expériences multiples du champ des _peace studies_, l’objectif de ces rencontres de la paix est de faire remonter partages d’expériences, méthodes mais également sensibilités et arts face à cet enjeu. Favoriser un dialogue entre universitaires, praticiens (diplomates, militaires, monde de la culture), artistes et militants permettra également de croiser les regards.
+Partant du constat que, malgré une présence de la thématique de la paix dans le débat public, la recherche et le débat français peinent à puiser dans le réservoir d’expériences multiples du champ des *peace studies*, l’objectif de ces rencontres de la paix est de faire remonter partages d’expériences, méthodes mais également sensibilités et arts face à cet enjeu. Favoriser un dialogue entre universitaires, praticiens (diplomates, militaires, monde de la culture), artistes et militants permettra également de croiser les regards.
 
 Les rencontres “**La paix des terrains aux concepts – partages et méthodes**” poseront la question de la méthodologie à adopter dans la construction des études de paix. Elle cherchera ainsi à encourager des dialogues entre universitaires, praticiens et militants et à entrelacer la réflexion universitaire, la pratique militante sur la paix et la création artistique afin d’engager une réflexion sur la représentation de la paix : est-il possible de le faire au-delà d’une représentation des violences ou de la guerre ? En quoi l’art peut-il contribuer à la construction de grammaires plurielles de la paix ? Les publics de ces rencontres seront également invités à apporter leur propre contribution tout au long des deux journées grâce à l’existence d’une production participative autour des « mots de la paix ».
 
@@ -38,7 +38,7 @@ Les rencontres “**La paix des terrains aux concepts – partages et méthodes*
 -   14h00-15h30 – **Table ronde : Sensibilité et paix**
 -   15h45 – **Clôture festive**
 
-Les rencontres annuelles de l’IPP sont organisées conjointement avec le [CERI-Sciences Po](https://www.sciencespo.fr/ceri/fr " - Nouvelle fenêtre"), avec le soutien de la [Maison des arts et de la création](https://www.sciencespo.fr/fr/vie-a-sciences-po/maison-des-arts-et-de-la-creation " - Nouvelle fenêtre") de Sciences Po, la Fondation Charles Léopold Meyer pour le Progrès de l’Homme, le Centre de pensée « _Pluralizar la Paz_ » de l’Université Nationale de Colombie, le CNRS et la [Fondation Gabriel Péri](https://gabrielperi.fr/).
+Les rencontres annuelles de l’IPP sont organisées conjointement avec le [CERI-Sciences Po](https://www.sciencespo.fr/ceri/fr " - Nouvelle fenêtre"), avec le soutien de la [Maison des arts et de la création](https://www.sciencespo.fr/fr/vie-a-sciences-po/maison-des-arts-et-de-la-creation " - Nouvelle fenêtre") de Sciences Po, la Fondation Charles Léopold Meyer pour le Progrès de l’Homme, le Centre de pensée « *Pluralizar la Paz* » de l’Université Nationale de Colombie, le CNRS et la [Fondation Gabriel Péri](https://gabrielperi.fr/).
 
 [Voir le programme détaillé](https://www.institutpourlapaix.org/wp-content/uploads/2023/10/Programme-rencontres-annuelles-IPP-02.10.2023.pdf)
 

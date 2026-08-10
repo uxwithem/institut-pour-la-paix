@@ -40,21 +40,69 @@ export async function wpFetchAll<T>(pathname: string, params: Record<string, str
 	return results;
 }
 
-const turndown = new TurndownService({ headingStyle: 'atx', bulletListMarker: '-', codeBlockStyle: 'fenced' });
+const turndown = new TurndownService({
+	headingStyle: 'atx',
+	bulletListMarker: '-',
+	codeBlockStyle: 'fenced',
+	// CommonMark suppresses `_..._` emphasis inside a word (e.g. "Ta_ï_wan" won't
+	// render), which real WP content hits often (a single accented letter styled
+	// italic mid-word). `*...*` has no such restriction.
+	emDelimiter: '*',
+});
+
+/** WP sometimes wraps a heading's text across a <br>, which breaks ATX headings
+ * (single-line only) into a heading with a stray unclosed "**" on the next line. */
+function stripBreaksInsideHeadings(html: string): string {
+	return html.replace(/(<h[1-6][^>]*>)([\s\S]*?)(<\/h[1-6]>)/gi, (_m, open, inner, close) => {
+		return open + inner.replace(/<br\s*\/?>/gi, ' ') + close;
+	});
+}
+
+/** A <strong>/<em> run containing a <br> becomes "**a<br>b**" in Markdown, and
+ * CommonMark's flanking rules reject a "**" as a closer right after a line
+ * break — it's treated as literal text instead of closing the emphasis. Split
+ * the tag around each <br> into several tags of its own line, so each pair
+ * is fully closed before the break. */
+function splitEmphasisAcrossBreaks(html: string): string {
+	for (const tag of ['strong', 'em', 'b', 'i']) {
+		// The opening tag may carry attributes (WP/Elementor content often inlines
+		// style="..."), so match up to the first ">" rather than requiring a bare tag.
+		const re = new RegExp(`<${tag}(?:\\s[^>]*)?>([\\s\\S]*?)</${tag}>`, 'gi');
+		html = html.replace(re, (m, inner) => {
+			if (!/<br\s*\/?>/i.test(inner)) return m;
+			return inner
+				.split(/<br\s*\/?>/i)
+				.map((part: string) => (part.trim() ? `<${tag}>${part}</${tag}>` : ''))
+				.join('<br>');
+		});
+	}
+	return html;
+}
+
+function preprocessHtml(html: string): string {
+	return splitEmphasisAcrossBreaks(stripBreaksInsideHeadings(html));
+}
+
+/** Collapses markdown artifacts from adjacent inline spans in the source HTML
+ * (e.g. two back-to-back <strong> tags produce "**a****b**", which most
+ * parsers don't merge back into one run). */
+function collapseAdjacentEmphasis(markdown: string): string {
+	return markdown.replace(/\*{4}/g, '').replace(/_{4}/g, '');
+}
 
 /** Strips tags/decodes entities from a short WP "rendered" string (title, excerpt) without producing Markdown syntax. */
 export function decodeWpText(html: string): string {
 	return turndown
-		.turndown(html)
+		.turndown(preprocessHtml(html))
 		.replace(/\\([*_[\]()#>`~-])/g, '$1')
+		.replace(/[*_]/g, '')
 		.replace(/\s+/g, ' ')
 		.trim();
 }
 
 /** Converts a WP content.rendered HTML blob to Markdown. Image URLs should already be localized before calling. */
 export function htmlToMarkdown(html: string): string {
-	return turndown
-		.turndown(html)
+	return collapseAdjacentEmphasis(turndown.turndown(preprocessHtml(html)))
 		.replace(/\n{3,}/g, '\n\n')
 		.trim();
 }
@@ -90,13 +138,19 @@ export async function downloadImage(sourceUrl: string | undefined | null): Promi
 	return publicPath;
 }
 
+// astro.config.mjs `base` — frontmatter image fields get this prefix applied at
+// render time via withBase(), but images embedded directly in body Markdown are
+// plain <img>/![]() output with no component in between, so it must be baked in
+// here instead.
+const SITE_BASE = '/institut-pour-la-paix';
+
 /** Rewrites all <img src> in an HTML blob to local downloaded copies. Call before htmlToMarkdown. */
 export async function localizeImages(html: string): Promise<string> {
 	const srcs = [...html.matchAll(/<img[^>]+src="([^"]+)"/g)].map((m) => m[1]);
 	let out = html;
 	for (const src of new Set(srcs)) {
 		const local = await downloadImage(src);
-		if (local) out = out.split(src).join(local);
+		if (local) out = out.split(src).join(SITE_BASE + local);
 	}
 	// Drop srcset (points at remote sizes we didn't download) to avoid broken responsive images.
 	out = out.replace(/\s+srcset="[^"]*"/g, '').replace(/\s+sizes="[^"]*"/g, '');

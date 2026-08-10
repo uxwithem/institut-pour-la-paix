@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { withBase } from '../../lib/url';
 
 export async function getStaticPaths() {
 	const events = await getCollection('evenements');
@@ -21,7 +22,7 @@ const dateLabel = event.data.startDate.toLocaleDateString('fr-FR', {
 ---
 
 <BaseLayout title={event.data.title} description={event.data.description}>
-	<article class="section wrap">
+	<article class="section wrap-prose">
 		{event.data.cancelled && <p class="eyebrow">Événement annulé</p>}
 		<h1>{event.data.title}</h1>
 		<p class="meta">
@@ -30,6 +31,13 @@ const dateLabel = event.data.startDate.toLocaleDateString('fr-FR', {
 		</p>
 		{event.data.location?.name && <p class="meta">{event.data.location.name}</p>}
 		{event.data.description && <p>{event.data.description}</p>}
+		{
+			event.data.image && (
+				<div class="detail-image">
+					<img src={withBase(event.data.image)} alt="" />
+				</div>
+			)
+		}
 		<div class="prose">
 			<Content />
 		</div>

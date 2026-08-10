@@ -11,14 +11,14 @@ excerpt: >-
 featured: false
 ---
 
-_Qui pense la paix en France ? Quels sont les orientations des études de paix françaises ?_ L’IPP et la fondation Friedrich Ebert s’associent pour proposer quelques pistes de réflexion.
+*Qui pense la paix en France ? Quels sont les orientations des études de paix françaises ?* L’IPP et la fondation Friedrich Ebert s’associent pour proposer quelques pistes de réflexion.
 
 Pour des raisons historiques et culturelles, la réflexion sur les questions stratégiques et de sécurité est fortement développée en France, contrairement à celle sur les champs de la paix.  
 Les Etudes de Paix demeurent être un domaine peu structuré et essentiellement porté par des acteurs de la société civile et du monde universitaire.
 
 Face à ce constat, l’Institut pour la Paix et la fondation [Friedrich Ebert](https://paris.fes.de) se sont associés pour mener une réflexion sur les acteurs qui pensent la paix en France, ainsi que sur les termes dans lesquels la question de la paix y est abordée.
 
-![](/uploads/wp-import/Cover-V.5.png)
+![](/institut-pour-la-paix/uploads/wp-import/Cover-V.5.png)
 
 L’analyse développée amène à se questionner sur la nécessité pour les grandes puissances de conduire une réflexion renouvelée en France sur la question de la paix.
 

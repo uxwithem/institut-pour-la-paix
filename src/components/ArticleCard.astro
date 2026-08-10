@@ -15,7 +15,16 @@ const dateLabel = article.data.date.toLocaleDateString('fr-FR', {
 ---
 
 <a class="card" href={withBase(`/actualites/${article.id}/`)}>
-	<span class="eyebrow">{dateLabel}</span>
-	<h3>{article.data.title}</h3>
-	{article.data.excerpt && <p>{article.data.excerpt}</p>}
+	{
+		article.data.featuredImage && (
+			<div class="card-media">
+				<img src={withBase(article.data.featuredImage)} alt="" loading="lazy" />
+			</div>
+		)
+	}
+	<div class="card-body">
+		<span class="eyebrow">{dateLabel}</span>
+		<h3>{article.data.title}</h3>
+		{article.data.excerpt && <p>{article.data.excerpt}</p>}
+	</div>
 </a>

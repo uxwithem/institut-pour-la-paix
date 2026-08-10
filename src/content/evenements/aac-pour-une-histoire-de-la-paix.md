@@ -28,7 +28,7 @@ Les propositions sont à envoyer d’ici le **1er février 2026** à l’adress
 
 ### Informations pratiques
 
-**Date des journées d’étude** **:** 18 et 19 juin 2026
+**Date des journées d’étude** **:** 18 et 19 juin 2026  
 
 **Lieu** : La Contemporaine, Université Paris Nanterre
 
@@ -40,4 +40,4 @@ Thomas Hippler (Université de Caen Normandie, ERLIS)
 
 Valérie Pouzol (Université Paris 8, CRESPPA)
 
-![](/uploads/wp-import/Pour-une-histoire-de-la-paix-AAC-V.1.4_Page_5-300x163.jpg)
+![](/institut-pour-la-paix/uploads/wp-import/Pour-une-histoire-de-la-paix-AAC-V.1.4_Page_5-300x163.jpg)

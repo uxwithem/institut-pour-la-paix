@@ -16,7 +16,16 @@ const statusLabels: Record<string, string> = {
 ---
 
 <a class="card" href={withBase(`/projets/${project.id}/`)}>
-	<span class="eyebrow">{statusLabels[project.data.status] ?? project.data.status}</span>
-	<h3>{project.data.title}</h3>
-	{project.data.description && <p>{project.data.description}</p>}
+	{
+		project.data.image && (
+			<div class="card-media">
+				<img src={withBase(project.data.image)} alt="" loading="lazy" />
+			</div>
+		)
+	}
+	<div class="card-body">
+		<span class="eyebrow">{statusLabels[project.data.status] ?? project.data.status}</span>
+		<h3>{project.data.title}</h3>
+		{project.data.description && <p>{project.data.description}</p>}
+	</div>
 </a>

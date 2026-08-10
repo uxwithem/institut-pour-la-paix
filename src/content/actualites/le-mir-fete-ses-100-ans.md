@@ -12,9 +12,10 @@ excerpt: >-
   présenter ce nouveau mouvement né en 1914 et organisé en 1919. De cette rencontre naît la branche
   française du Mouvement international de la Réconciliation (MIR). À l’occasion de ce
 featured: false
+relatedResearchGroup: resistance-civile
 ---
 
-En 1923, un groupe d’étudiants de la Faculté de théologie protestante de Paris invite Oliver Dryer, secrétaire général de l’_International Fellowship of Reconciliation_ (IFOR), à venir leur présenter ce nouveau mouvement né en 1914 et organisé en 1919. De cette rencontre naît la branche française du Mouvement international de la Réconciliation (MIR).
+En 1923, un groupe d’étudiants de la Faculté de théologie protestante de Paris invite Oliver Dryer, secrétaire général de l’*International Fellowship of Reconciliation* (IFOR), à venir leur présenter ce nouveau mouvement né en 1914 et organisé en 1919. De cette rencontre naît la branche française du Mouvement international de la Réconciliation (MIR).
 
 À l’occasion de ce centenaire, **un colloque historique est organisé à Paris les 9 et 10 juin 2023 avec pour ambition de faire le point sur l’histoire de ce mouvement pacifiste chrétien et non-violent** marqué par un refus radical de la guerre et tout ce qui la prépare.
 
@@ -24,4 +25,4 @@ L’Institut Pour la Paix s’associe à cet évènement auquel il apporte son s
 
 [Vous inscrire au colloque](https://www.institutpourlapaix.org/wp-content/uploads/2023/05/Bulletin-dinscription-Universite-Colloque-Centenaire-MIR-A4.pdf)
 
-_Crédit photo :_ _Irak, Samarra, Le minaret en spirale de la Malouya. Le minaret hélicoïdal (la Malwiya) de la Grande Mosquée._
+*Crédit photo :* *Irak, Samarra, Le minaret en spirale de la Malouya. Le minaret hélicoïdal (la Malwiya) de la Grande Mosquée.*

@@ -12,7 +12,7 @@ excerpt: >-
 featured: false
 ---
 
-_Date et Lieu : 2 Juin 2022 à l´Université de Dijon et en ligne_
+*Date et Lieu : 2 Juin 2022 à l´Université de Dijon et en ligne*
 
 La Journée d’études (JE) sur la **perspective africaines des approches de la paix** qui s’est tenue à Dijon le 2 Juin 2022, coorganisée par le Credespo et l’IPP, a réuni une vingtaine de participant.e.s, dont certain.e.s depuis plusieurs pays africains (Sénégal, Gabon, Côte d’Ivoire).
 

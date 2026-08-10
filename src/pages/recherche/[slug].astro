@@ -7,6 +7,7 @@ import PublicationCard from '../../components/PublicationCard.astro';
 import EventCard from '../../components/EventCard.astro';
 import ProjectCard from '../../components/ProjectCard.astro';
 import ResearchGroupCard from '../../components/ResearchGroupCard.astro';
+import { withBase } from '../../lib/url';
 
 export async function getStaticPaths() {
 	const groups = await getCollection('groupes');
@@ -38,10 +39,17 @@ const associatedGroups = allGroups.filter((g) => g.id !== group.id && g.data.sta
 ---
 
 <BaseLayout title={group.data.seoTitle ?? group.data.title} description={group.data.seoDescription ?? group.data.intro}>
-	<section class="section wrap">
+	<section class="section wrap-prose">
 		<p class="eyebrow">Groupe de recherche</p>
 		<h1>{group.data.title}</h1>
 		{group.data.mission && <p class="lead">{group.data.mission}</p>}
+		{
+			group.data.image && (
+				<div class="detail-image">
+					<img src={withBase(group.data.image)} alt="" />
+				</div>
+			)
+		}
 		<div class="prose">
 			<Content />
 		</div>

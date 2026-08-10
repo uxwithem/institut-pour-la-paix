@@ -29,11 +29,11 @@ Dans le prolongement de cette critique, Carole Mann nous invite également à no
 
 Ainsi, le compromis entre recherche académique et travail humanitaire serait-il moins bancal, si les parties prenantes prenaient note des erreurs du passé et collaboraient plus étroitement avec les membres des communautés locales.  Car si la [résistance](https://www.liberation.fr/international/asie-pacifique/en-afghanistan-les-ecoles-clandestines-pour-femmes-defient-les-interdits-20241024_TKN6YUEW6RGLXODEUO5DHH6B5Q/) en Afghanistan est silencieuse, elle continue de s’organiser dans l’intimité des femmes des villages, qui, dans la clandestinité, enseignent aux plus jeunes le pouvoir de l’éducation dans leur quête de liberté.
 
-_Rapport de séance rédigé par : Clara ETCHENIQUE, Chargée d’appui au séminaire Genre et Paix_
+*Rapport de séance rédigé par : Clara ETCHENIQUE, Chargée d’appui au séminaire Genre et Paix*
 
 ###### **Pour aller plus loin…**
 
--   Podcast [France Culture](https://www.radiofrance.fr/franceculture/podcasts/serie-la-longue-histoire-de-l-afghanistan), _La Longue Histoire de l’Afghanistan._  
--   Blog [Médiapart Carol Mann](https://blogs.mediapart.fr/carol-mann/blog/210425/quand-des-adolescentes-resistent-0#_ftn1), _Quand des adolescentes résistent._
--   Amnesty International[, Interview de Carol Mann](https://www.youtube.com/watch?v=AKTLgBEM8iQ), _Les Femmes Afghanes et le Conflit Armé._
--   NGO 2 GAP, [Interview de Carol Mann](https://www.youtube.com/watch?v=DjZdLMtnqsM), _L’Université en Exil._
+-   Podcast [France Culture](https://www.radiofrance.fr/franceculture/podcasts/serie-la-longue-histoire-de-l-afghanistan), *La Longue Histoire de l’Afghanistan.*  
+-   Blog [Médiapart Carol Mann](https://blogs.mediapart.fr/carol-mann/blog/210425/quand-des-adolescentes-resistent-0#_ftn1), *Quand des adolescentes résistent.*
+-   Amnesty International[, Interview de Carol Mann](https://www.youtube.com/watch?v=AKTLgBEM8iQ), *Les Femmes Afghanes et le Conflit Armé.*
+-   NGO 2 GAP, [Interview de Carol Mann](https://www.youtube.com/watch?v=DjZdLMtnqsM), *L’Université en Exil.*

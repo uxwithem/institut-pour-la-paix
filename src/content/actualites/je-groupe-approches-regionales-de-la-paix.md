@@ -12,13 +12,14 @@ excerpt: >-
   développer une plateforme multimédia interactive pour enrichir le débat démocratique international
   autour des pratiques, des sensibilités et des langages de construction de paix.
 featured: false
+relatedResearchGroup: approches-regionales
 ---
 
 L’Institut Pour la Paix a le plaisir de vous inviter aux prochaines journées d’études, les 18 et 19 octobre 2024, du groupe de travail “approches régionales de la paix”.
 
 Cet événement portera sur le projet Constelaciones para las paces / Constellations pour les paix plurielles, qui vise à développer une plateforme multimédia interactive pour enrichir le débat démocratique international autour des pratiques, des sensibilités et des langages de construction de paix.
 
-![](/uploads/wp-import/JE-GT-ARP-18-et-19.jpg)
+![](/institut-pour-la-paix/uploads/wp-import/JE-GT-ARP-18-et-19.jpg)
 
 **Inscription gratuite, mais obligatoire via l’adresse :**
 

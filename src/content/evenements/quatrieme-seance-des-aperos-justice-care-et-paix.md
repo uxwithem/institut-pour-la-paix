@@ -12,7 +12,7 @@ cancelled: false
 featured: false
 ---
 
-Le quatrième Apéro « Justice, _care_ et paix » de l’Institut Pour la Paix, organisé par Pénélope Dufourt et Laetitia Braconnier Moreno, se tiendra le mercredi 22 avril !
+Le quatrième Apéro « Justice, *care* et paix » de l’Institut Pour la Paix, organisé par Pénélope Dufourt et Laetitia Braconnier Moreno, se tiendra le mercredi 22 avril !
 
 Ce sera la première présentation de la toute récente recherche ethnographique de la Cour nationale du droit d’asile intitulée « Justice d’asile. Entre crise et routine de crise », dirigée par Sharon Weill et Sara Dezalay et financée par l’Institut Robert Badinter.
 
@@ -20,7 +20,7 @@ Nous aurons la chance de partager ce moment avec Sharon Weill, enseignante-cherc
 
 Nous aborderons ensemble le fonctionnement de la justice de l’asile en analysant le rôle de ses acteur.ice.s: comment les décisions concernant des justiciables particulièrement vulnérables sont-elles prises?
 
-Cet espace est ouvert à toutes les personnes souhaitant partager leur expérience de cette justice – mais aussi à toutes celles qui souhaitent réfléchir à la manière d’y mener des pratiques judiciaires orientées vers le _care_.
+Cet espace est ouvert à toutes les personnes souhaitant partager leur expérience de cette justice – mais aussi à toutes celles qui souhaitent réfléchir à la manière d’y mener des pratiques judiciaires orientées vers le *care*.
 
 ### Informations pratiques
 

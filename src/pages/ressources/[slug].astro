@@ -1,6 +1,7 @@
 ---
 import { getCollection, getEntry, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { withBase } from '../../lib/url';
 
 export async function getStaticPaths() {
 	const resources = await getCollection('ressources');
@@ -13,22 +14,50 @@ export async function getStaticPaths() {
 const { resource } = Astro.props;
 const { Content } = await render(resource);
 const type = await getEntry('resourceTypes', resource.data.type);
-const externalLink = resource.data.externalUrl ?? resource.data.youtubeUrl ?? resource.data.audioUrl ?? resource.data.file;
+
+function youtubeEmbedUrl(url: string): string | undefined {
+	const m = url.match(/(?:v=|youtu\.be\/|embed\/)([\w-]{11})/);
+	return m ? `https://www.youtube.com/embed/${m[1]}` : undefined;
+}
+
+const embedUrl = resource.data.youtubeUrl ? youtubeEmbedUrl(resource.data.youtubeUrl) : undefined;
+const downloadLink = resource.data.externalUrl ?? (resource.data.file ? withBase(resource.data.file) : undefined);
 ---
 
 <BaseLayout title={resource.data.title} description={resource.data.description}>
-	<article class="section wrap">
+	<article class="section wrap-prose">
 		<p class="eyebrow">{type?.data.label ?? resource.data.type}</p>
 		<h1>{resource.data.title}</h1>
 		{resource.data.authors.length > 0 && <p class="meta">{resource.data.authors.join(', ')}</p>}
+		{
+			resource.data.thumbnail && !embedUrl && (
+				<div class="detail-image">
+					<img src={withBase(resource.data.thumbnail)} alt="" />
+				</div>
+			)
+		}
+		{
+			embedUrl && (
+				<div class="video-embed">
+					<iframe
+						src={embedUrl}
+						title={resource.data.title}
+						loading="lazy"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					/>
+				</div>
+			)
+		}
+		{resource.data.audioUrl && <audio controls src={resource.data.audioUrl} />}
 		{resource.data.description && <p>{resource.data.description}</p>}
 		<div class="prose">
 			<Content />
 		</div>
 		{
-			externalLink && (
+			downloadLink && (
 				<p>
-					<a class="btn" href={externalLink}>
+					<a class="btn" href={downloadLink}>
 						Accéder à la ressource
 					</a>
 				</p>
@@ -36,3 +65,26 @@ const externalLink = resource.data.externalUrl ?? resource.data.youtubeUrl ?? re
 		}
 	</article>
 </BaseLayout>
+
+<style>
+	.video-embed {
+		position: relative;
+		aspect-ratio: 16 / 9;
+		margin-block: 1.5rem;
+		border-radius: var(--radius);
+		overflow: hidden;
+	}
+
+	.video-embed iframe {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		border: 0;
+	}
+
+	audio {
+		display: block;
+		margin-block: 1.25rem;
+	}
+</style>

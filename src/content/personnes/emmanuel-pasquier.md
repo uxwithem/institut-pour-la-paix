@@ -6,7 +6,7 @@ type: membre-reseau
 active: true
 ---
 
-Emmanuel Pasquier, né en 1970, est professeur agrégé, Docteur en Philosophie. Il a soutenu sa thèse sur le sujet « Le droit international chez Hans Kelsen et Carl Schmitt » (Université Paris 1 – Panthéon Sorbonne, sous la direction du Professeur J.-F. Kervégan), publiée sous le titre _De Genève à Nuremberg. Le droit international chez Hans Kelsen et Carl Schmitt_, éditions Classiques Garnier, Paris, 2012.
+Emmanuel Pasquier, né en 1970, est professeur agrégé, Docteur en Philosophie. Il a soutenu sa thèse sur le sujet « Le droit international chez Hans Kelsen et Carl Schmitt » (Université Paris 1 – Panthéon Sorbonne, sous la direction du Professeur J.-F. Kervégan), publiée sous le titre *De Genève à Nuremberg. Le droit international chez Hans Kelsen et Carl Schmitt*, éditions Classiques Garnier, Paris, 2012.
 
 Professeur à Paris en classes préparatoires, il est associé au laboratoire de recherche NoSoPhi, « Normes, Sociétés, Philosophie », Université Panthéon Sorbonne, et chargé de cours en Master à l’université Paris Nanterre.
 

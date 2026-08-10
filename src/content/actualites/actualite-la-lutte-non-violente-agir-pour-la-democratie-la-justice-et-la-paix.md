@@ -11,6 +11,7 @@ excerpt: >-
   changement (RDC), cette formation propose d’explorer les outils de la lutte non-violente à travers
   8 modules 100 % en ligne.
 featured: false
+relatedResearchGroup: resistance-civile
 ---
 
 La formation “La lutte non-violente : agir pour la démocratie, la justice et la paix” est désormais disponible !
@@ -36,8 +37,8 @@ Cette formation invite les participant·e·s à découvrir la richesse des actio
 
 8\. Et maintenant, que faire ? Les premiers pas vers un monde meilleur
 
-![](/uploads/wp-import/Capture-decran-2025-04-03-090152.png)
+![](/institut-pour-la-paix/uploads/wp-import/Capture-decran-2025-04-03-090152.png)
 
 [Inscription gratuite et obligatoire](https://icnc.learnworlds.com/course/lutte-non-violente-agir-democratie-justice-paix?register=true)
 
-![](/uploads/wp-import/8fd950537d52411c68a1dc57726e8324-1024x724.png)
+![](/institut-pour-la-paix/uploads/wp-import/8fd950537d52411c68a1dc57726e8324-1024x724.png)

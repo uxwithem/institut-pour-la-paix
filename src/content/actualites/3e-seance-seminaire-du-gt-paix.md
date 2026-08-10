@@ -8,6 +8,7 @@ excerpt: >-
   naturelle à Paris. Marie-Christine Cormier Salem interviendra à cette occasion avec une
   présentation intitulée “Violences environnementales en Casamance : de la résistance à l’entraide”.
 featured: false
+relatedResearchGroup: paix-conflits-environnement
 ---
 
 **La prochaine séance du séminaire du GT aura lieu le 29 septembre à 14h au [Musée d’histoire naturelle à Paris](https://www.mnhn.fr/fr). Marie-Christine Cormier Salem (PALOC-IRD/MNHN) interviendra à cette occasion avec une présentation intitulée “Violences environnementales en Casamance : de la résistance à l’entraide” dans le cadre de l’axe “Savoirs” du séminaire.**
@@ -16,13 +17,13 @@ Proposition d’intervention de Marie-Christine Cormier-Salem, PALOC, IRD/MNHN, 
 
 ## Violences environnementales en Casamance : de la résistance à l’entraide
 
-Les trois termes du groupe de travail « [Paix, conflits, environnement](https://www.institutpourlapaix.org/recherche/paix-conflits-environnement/) » prennent une résonance particulière dans le contexte de la Casamance marquée par des années, voire des siècles de résistances et recompositions sociales. De longue date, cette région méridionale du Sénégal est un espace territorial « à part », qualifié tantôt de paradis vert ou grenier à riz du Sénégal, tantôt de refuge pour des rebelles à toute ingérence étrangère. 
+Les trois termes du groupe de travail « [Paix, conflits, environnement](/institut-pour-la-paix/recherche/paix-conflits-environnement/) » prennent une résonance particulière dans le contexte de la Casamance marquée par des années, voire des siècles de résistances et recompositions sociales. De longue date, cette région méridionale du Sénégal est un espace territorial « à part », qualifié tantôt de paradis vert ou grenier à riz du Sénégal, tantôt de refuge pour des rebelles à toute ingérence étrangère. 
 
 Ce particularisme est relevé dans les 1ères sources écrites des navigateurs portugais de la fin du 15ème siècle, les rapports des agents coloniaux français de la fin du 19ème siècle ou encore les récits des « Nordistes », entrepreneurs et élites de Dakar attirés par ses richesses tout au long du 20ème siècle et dont l’arrivée s’est amplifiée à partir de l’Indépendance.
 
 Les guerres, conflits et mouvements de population sont un trait marquant de cette région, commun avec son voisin bissau-guinéen. Les événements des années 1980s-2010s ont déjà fait l’objet de nombreuses analyses, s’interrogeant sur leurs ressorts et profondeur historique et sur la façon de les qualifier politiquement (Roche, 1976 ; Darbon, 1984, 1985 ; Cormier-Salem, 1993 ; Marut, 1999, 2016 ; Foucher, 2005).
 
-Mon propos, à travers une approche de _policital ecology_, est de m’interroger sur les stratégies des acteurs locaux face à la globalisation, avec un focus sur les femmes _joola_ qui habitent dans et vivent de la mangrove, et notamment de l’exploitation des huîtres.
+Mon propos, à travers une approche de *policital ecology*, est de m’interroger sur les stratégies des acteurs locaux face à la globalisation, avec un focus sur les femmes *joola* qui habitent dans et vivent de la mangrove, et notamment de l’exploitation des huîtres.
 
 Mon hypothèse est que ces femmes ont longtemps été invisibilisées et leurs activités (savoirs et pratiques) tenues pour marginales. Dans le contexte de crise systémique, à partir des années 1990s, elles sont devenues puissantes (Jalais, 2010 ; Cormier-Salem, 2017 ; Frangoudes & Gerrard, 2018) et bien souvent les pivots de la famille.
 

@@ -1,7 +1,7 @@
 ---
 title: Soigner les douleurs historiques depuis la racine (Sanando dolores históricos desde la raíz)
-startDate: '2026-05-30T19:30:00+02:00'
-endDate: '2026-05-30T22:00:00+02:00'
+startDate: '2026-05-27T19:30:00+02:00'
+endDate: '2026-05-27T22:00:00+02:00'
 startTime: '19:30'
 endTime: '22:00'
 location:
@@ -24,8 +24,8 @@ Deux ateliers sur la guérison psycho-spirituelle ancestrale afro-colombienne so
 
 **Dates** : Mercredi 27 mai (17h – 20h) ou samedi 30 mai (9h30 – 12h30)
 
-**Inscription sur le mail suivant** : _yensisb8@gmail.com_
+**Inscription sur le mail suivant** : *yensisb8@gmail.com*
 
 **Frais d’inscription** : 20€ | à régler sur le QR code ci-dessous
 
-![](/uploads/wp-import/qrcode.png)
+![](/institut-pour-la-paix/uploads/wp-import/qrcode.png)

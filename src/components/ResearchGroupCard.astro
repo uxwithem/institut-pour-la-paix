@@ -10,7 +10,16 @@ const { group } = Astro.props;
 ---
 
 <a class="card" href={withBase(`/recherche/${group.id}/`)}>
-	<span class="eyebrow">Groupe de recherche</span>
-	<h3>{group.data.title}</h3>
-	{group.data.intro && <p>{group.data.intro}</p>}
+	{
+		group.data.image && (
+			<div class="card-media">
+				<img src={withBase(group.data.image)} alt="" loading="lazy" />
+			</div>
+		)
+	}
+	<div class="card-body">
+		<span class="eyebrow">Groupe de recherche</span>
+		<h3>{group.data.title}</h3>
+		{group.data.intro && <p>{group.data.intro}</p>}
+	</div>
 </a>

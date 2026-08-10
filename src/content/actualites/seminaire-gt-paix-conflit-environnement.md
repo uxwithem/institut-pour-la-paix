@@ -8,6 +8,7 @@ excerpt: >-
   humain et non-humain, afin d’interroger ce qui fait lien social, ce qui fait paix – en tant
   qu’état et non comme l’absence de guerre.
 featured: false
+relatedResearchGroup: paix-conflits-environnement
 ---
 
 Les chercheur.e.s réunis s’intéresseront aux différentes manières de dire le lien à l’autre, humain et non-humain, afin d’interroger ce qui fait lien social, ce qui fait paix – en tant qu’état et non comme l’absence de guerre.
@@ -16,7 +17,7 @@ Les chercheur.e.s réunis s’intéresseront aux différentes manières de dire
 
 Ils s’appuieront sur des travaux menés sur les savoirs « experts / profanes », les savoirs bioculturels et les relations savoirs-territoires.
 
-La première séance du séminaire [GT Paix, Conflits et Environnement](https://www.institutpourlapaix.org/recherche/paix-conflits-environnement/) mobilisera les savoirs bioculturels et posera, ainsi, les jalons de cet axe.
+La première séance du séminaire [GT Paix, Conflits et Environnement](/institut-pour-la-paix/recherche/paix-conflits-environnement/) mobilisera les savoirs bioculturels et posera, ainsi, les jalons de cet axe.
 
 Issus d’une approche écocentrique, les savoirs bioculturels s’inscrivent dans le pluralisme culturel et s’articulent à la prise en compte de populations (minorités, communautés, peuples autochtones) dont la sauvegarde de la culture résulte de combats historiques et politiques menés dans une perspective décoloniale.  
 
@@ -36,6 +37,6 @@ S’intéresser aux dialogues implique nécessairement la prise en compte des pr
 
 Les aspects linguistique et rhétorique des discours qui entrent en dialogue permettent d’éclairer les dynamiques prétendument binaires qui retiendront notre attention lors de la séance : savoir scientifique – savoir autochtone ; diversité biologique – diversité culturelle et finalement aussi, confrontation – médiation ; conflit – paix.
 
-## Date et lieu du séminaire GT Paix, Conflit et Environnement, axe Savoirs  
+## Date et lieu du séminaire GT Paix, Conflit et Environnement, axe Savoirs
 
 Le séminaire aura lieu à 14h dans la salle Jean Freyss de la Fondation Charles Léopold Mayer (38 rue Saint Sabin, 75011). Si vous souhaitez participer, merci d’envoyer un mail à Laura Lema Silva à [coordination@institutpourlapaix.org](mailto:coordination@institutpourlapaix.org).

@@ -10,11 +10,12 @@ excerpt: >-
   Grincourt, entièrement dédié à la journée d’étude du groupe de travail (GT) IPP « Résistance
   civile, non-violence et culture de la paix » qui a eu lieu le 26 mai 2023.
 featured: false
+relatedResearchGroup: resistance-civile
 ---
 
 ## On parle de nous !
 
-Le 27 juin 2023 est sorti un épisode du podcast « La Force de la non-violence » par Célia Grincourt, entièrement dédié à la journée d’étude du groupe de travail (GT) IPP « [Résistance civile, non-violence et culture de la paix](https://www.institutpourlapaix.org/recherche/resistance-civile/) » qui a eu lieu le 26 mai 2023.
+Le 27 juin 2023 est sorti un épisode du podcast « La Force de la non-violence » par Célia Grincourt, entièrement dédié à la journée d’étude du groupe de travail (GT) IPP « [Résistance civile, non-violence et culture de la paix](/institut-pour-la-paix/recherche/resistance-civile/) » qui a eu lieu le 26 mai 2023.
 
 L’épisode, intitulé « [**La non-violence entre à l’université**](https://force-nonviolence.fr/2023/06/quand-la-non-violence-entre-a-luniversite/)« , offre une synthèse des échanges entre universitaires et praticiens qui ont eu lieu lors de cette journée. La rencontre, qui a officiellement lancé le GT, était une première : les sujets abordés sont méconnus dans le monde universitaire. 
 

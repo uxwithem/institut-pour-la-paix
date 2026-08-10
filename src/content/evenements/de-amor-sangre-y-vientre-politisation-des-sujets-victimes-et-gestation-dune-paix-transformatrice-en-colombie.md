@@ -22,4 +22,4 @@ Rejoignez nous le mercredi 7 mai à 16h pour la présentation du livre « De amo
 
 Autour de ce livre profond et sensible, nous donnerons également la parole à des organisations emblématiques de survivant·es et militant·es pour la paix.
 
-![](/uploads/wp-import/Affiche-ouvrage-de-Diana-V.2.1.3-724x1024.png)
+![](/institut-pour-la-paix/uploads/wp-import/Affiche-ouvrage-de-Diana-V.2.1.3-724x1024.png)

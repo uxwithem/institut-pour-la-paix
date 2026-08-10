@@ -11,6 +11,7 @@ excerpt: >-
   XXIe siècle. Elle doit être la première, la première priorité pour tout le monde, partout »,
   déclarait le Secrétaire général des
 featured: false
+relatedResearchGroup: paix-conflits-environnement
 ---
 
 L’Institut Pour la Paix s’associe à l’Université de Caen pour l’organisation du colloque qui aura lieu les 9 et 10 novembre prochains.

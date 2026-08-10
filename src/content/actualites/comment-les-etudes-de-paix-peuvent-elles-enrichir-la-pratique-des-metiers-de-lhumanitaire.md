@@ -1,5 +1,5 @@
 ---
-title: Comment les études de paix peuvent-elles enrichir la pratique des métiers de l**‘**humanitaire ?
+title: Comment les études de paix peuvent-elles enrichir la pratique des métiers de l‘humanitaire ?
 date: '2023-01-20T18:45:17'
 category: ipp
 tags:

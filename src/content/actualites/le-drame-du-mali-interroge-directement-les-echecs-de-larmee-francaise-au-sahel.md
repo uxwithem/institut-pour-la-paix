@@ -27,6 +27,6 @@ La perte de la ville de Kidal et l’assassinat du numéro deux de la junte mili
 
 [Cliquez ici pour lire l'article](https://www.lemonde.fr/idees/article/2026/05/04/le-drame-du-mali-interroge-directement-les-echecs-de-l-armee-francaise-au-sahel_6685406_3232.html)
 
-![](/uploads/wp-import/marc-antoine-perouse-de-montclos-150x150.jpeg)
+![](/institut-pour-la-paix/uploads/wp-import/marc-antoine-perouse-de-montclos-150x150.jpeg)
 
-**Marc-Antoine Pérouse de Montclos** _est directeur de recherches au Centre population et développement (Ceped). Il est l’auteur notamment d’« Un djihad sans foi ni loi. Ou la guerre contre le terrorisme à l’épreuve des réalités africaines » (PUF, 2022)._
+**Marc-Antoine Pérouse de Montclos** *est directeur de recherches au Centre population et développement (Ceped). Il est l’auteur notamment d’« Un djihad sans foi ni loi. Ou la guerre contre le terrorisme à l’épreuve des réalités africaines » (PUF, 2022).*

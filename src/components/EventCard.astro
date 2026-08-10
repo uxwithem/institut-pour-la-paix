@@ -15,7 +15,16 @@ const dateLabel = event.data.startDate.toLocaleDateString('fr-FR', {
 ---
 
 <a class="card" href={withBase(`/agenda/${event.id}/`)}>
-	<span class="eyebrow">{dateLabel}{event.data.cancelled && ' · Annulé'}</span>
-	<h3>{event.data.title}</h3>
-	{event.data.location?.name && <p class="meta">{event.data.location.name}</p>}
+	{
+		event.data.image && (
+			<div class="card-media">
+				<img src={withBase(event.data.image)} alt="" loading="lazy" />
+			</div>
+		)
+	}
+	<div class="card-body">
+		<span class="eyebrow">{dateLabel}{event.data.cancelled && ' · Annulé'}</span>
+		<h3>{event.data.title}</h3>
+		{event.data.location?.name && <p class="meta">{event.data.location.name}</p>}
+	</div>
 </a>

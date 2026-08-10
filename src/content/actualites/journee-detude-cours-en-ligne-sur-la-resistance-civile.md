@@ -10,13 +10,14 @@ excerpt: >-
   à Paris pour son nouveau projet en partenariat avec l’ICNC: la création d’un cours en ligne
   portant sur la Résistance civile.
 featured: false
+relatedResearchGroup: resistance-civile
 ---
 
 Le groupe de travail “Résistance civile, non-violence et culture de paix” s’est réuni en juin 2024 à Paris pour son nouveau projet en partenariat avec l’ICNC : la création d’un cours en ligne portant sur la Résistance civile.
 
 Ce séminaire avait pour objectif l’élaboration conceptuelle d’un cours francophone en ligne sur la résistance civile, intégrant des retours d’expériences d’une large consultation d’acteurs partenaires issus de plusieurs pays et abordant des thèmes variés autour de la non-violence.
 
-![](/uploads/wp-import/PXL_20240628_0840196552-e1725282178578-1024x565.jpg)
+![](/institut-pour-la-paix/uploads/wp-import/PXL_20240628_0840196552-e1725282178578-1024x565.jpg)
 
 Allocution du directeur exécutif d’ICNC, Ivan Marovic, lors du séminaire de travail à l’Institut catholique de Paris, Juin 2024
 
@@ -26,4 +27,4 @@ Le groupe de travail de l’Institut pour la Paix (IPP), intitulé « Résistanc
 
 Suivez nos actualités pour vous tenir informés du lancement du e-learning sur:
 
-[Actualités du groupe de travail](https://www.institutpourlapaix.org/recherche/resistance-civile/)
+[Actualités du groupe de travail](/institut-pour-la-paix/recherche/resistance-civile/)

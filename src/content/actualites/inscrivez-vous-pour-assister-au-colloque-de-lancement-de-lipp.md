@@ -36,7 +36,7 @@ Je serai présent.e au colloque: \*
 -   En distanciel
 -   En présentiel à ESPOL
 
-Envoyer![Chargement en cours](/uploads/wp-import/submit-spin.svg)
+Envoyer![Chargement en cours](/institut-pour-la-paix/uploads/wp-import/submit-spin.svg)
 
 Merci de noter que l´accès au bâtiment d´ESPOL est limité. L´inscription préalable au colloque est donc obligatoire.
 

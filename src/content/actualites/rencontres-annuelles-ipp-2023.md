@@ -44,4 +44,4 @@ Les rencontres “La paix des terrains aux concepts – partages et méthodes”
 
 ## [INSCRIPTION OBLIGATOIRE ICI.](https://www.sciencespo.fr/agenda/fr/ceri?event=4659&typ=9%20)
 
-_\*Pour information, les salles des rencontres sont difficilement accessibles pour les personnes à mobilité réduite._
+*\*Pour information, les salles des rencontres sont difficilement accessibles pour les personnes à mobilité réduite.*

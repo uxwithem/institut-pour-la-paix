@@ -11,7 +11,7 @@ excerpt: >-
 featured: false
 ---
 
-Le dossier de ce [nouveau numéro (125)](https://www.institutpourlapaix.org/wp-content/uploads/2023/04/Pub-RI-125-2.pdf) de la revue _[Recherches internationales](https://www.recherches-internationales.fr/RI125.html)_, coordonné par Philippe Bonditti, Thomas Hippler et Laura Lema Silva rassemble des contributions issues du colloque de lancement de l’Institut Pour la Paix « Les paix en conflit ? » qui a eu lieu du le 20 et le 21 octobre 2022 à l’ESPOL-ICL de Lille et rend compte également des recherches en cours au sein des Groupes de Travail de l’IPP, en particulier des GT « Paix, conflit et genre » et « Approches régionales de la paix ».
+Le dossier de ce [nouveau numéro (125)](https://www.institutpourlapaix.org/wp-content/uploads/2023/04/Pub-RI-125-2.pdf) de la revue *[Recherches internationales](https://www.recherches-internationales.fr/RI125.html)*, coordonné par Philippe Bonditti, Thomas Hippler et Laura Lema Silva rassemble des contributions issues du colloque de lancement de l’Institut Pour la Paix « Les paix en conflit ? » qui a eu lieu du le 20 et le 21 octobre 2022 à l’ESPOL-ICL de Lille et rend compte également des recherches en cours au sein des Groupes de Travail de l’IPP, en particulier des GT « Paix, conflit et genre » et « Approches régionales de la paix ».
 
 L’Institut Pour la Paix cherche à **mieux installer la “paix” comme objet d’étude et d’analyse dans le champ universitaire, et à promouvoir le dialogue avec les praticiens (militaires, du travail humanitaire, de la haute administration, des mondes de la culture) et militants impliqués et concernés par la paix dans ses rapports continuellement transformés à la guerre, aux conflits et aux violences plus généralement**.
 
@@ -21,7 +21,7 @@ Le dossier rend compte des défis auxquels fait face l’IPP dans la promotion d
 
 Thomas Hippler, La France et les études de paix
 
-Didier Bigo, Grands débats dans un petit monde ? _Bis repetita._
+Didier Bigo, Grands débats dans un petit monde ? *Bis repetita.*
 
 Camille Boutron, Le genre entreguerre et paix : vieux objets, nouvelles perspectives ?
 

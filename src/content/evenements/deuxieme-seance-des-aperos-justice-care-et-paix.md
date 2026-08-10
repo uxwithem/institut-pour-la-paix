@@ -14,7 +14,7 @@ cancelled: false
 featured: false
 ---
 
-Rejoignez nous mercredi 18 février pour la deuxième séance des **Apéros Justice, _care_ et paix**.
+Rejoignez nous mercredi 18 février pour la deuxième séance des **Apéros Justice, *care* et paix**.
 
 A cette occasion, nous accueillerons chaleureusement les trois autrices de l’ouvrage Dans la tête des juges –  La part psychique du travail de justice :
 

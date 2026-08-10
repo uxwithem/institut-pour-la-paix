@@ -5,6 +5,7 @@ import PersonCard from '../../components/PersonCard.astro';
 import ResourceCard from '../../components/ResourceCard.astro';
 import EventCard from '../../components/EventCard.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
+import { withBase } from '../../lib/url';
 
 export async function getStaticPaths() {
 	const projects = await getCollection('projets');
@@ -26,10 +27,17 @@ const [team, resources, events, articles] = await Promise.all([
 ---
 
 <BaseLayout title={project.data.title} description={project.data.description}>
-	<article class="section wrap">
+	<article class="section wrap-prose">
 		<p class="eyebrow">Projet · {project.data.status}</p>
 		<h1>{project.data.title}</h1>
 		{project.data.description && <p class="lead">{project.data.description}</p>}
+		{
+			project.data.image && (
+				<div class="detail-image">
+					<img src={withBase(project.data.image)} alt="" />
+				</div>
+			)
+		}
 		<div class="prose">
 			<Content />
 		</div>

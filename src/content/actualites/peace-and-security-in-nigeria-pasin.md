@@ -16,7 +16,7 @@ featured: false
 
 Du 11 au 15 mars s’est tenue la dernière session de la formation Peace And Security Studies In Nigeria (PASIN) à l’Université d’Ibidan.
 
-![](/uploads/wp-import/DSC_0229.jpeg)
+![](/institut-pour-la-paix/uploads/wp-import/DSC_0229.jpeg)
 
 En partenariat avec l’Institut de Recherche pour le Développement (IRD), l’Institut Français de Recherche en Afrique (IFRA) et l’IPP, le projet PASIN offre une formation visant à développer les études de paix et de sécurité au Nigeria. Il œuvre à apporter aux étudiants des compétences méthodologiques dans le domaine de l’analyse de données, de production de statistiques et de rédaction d’articles.
 

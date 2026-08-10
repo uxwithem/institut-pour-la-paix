@@ -28,13 +28,13 @@ En retraçant la pluralité des mémoires et des violences de guerre au Pérou �
 
   
 
-_Rapport de séance rédigé par : Clara ETCHENIQUE, Chargée d’appui au séminaire Genre et Paix_
+*Rapport de séance rédigé par : Clara ETCHENIQUE, Chargée d’appui au séminaire Genre et Paix*
 
 ###### **Pour aller plus loin…**
 
--   [Université Paris Nanterre](https://www.youtube.com/watch?v=pVFlYLb93d4) _Entretien avec Tania Romeiro Barrios, Le projet Warmikuna_
--   [Reportage AFP](https://www.youtube.com/watch?v=3lYUolYsStI), _Pérou: 350 mètres d’écharpe pour se souvenir des disparus_
--   [La Revue de Presse Internationale](https://www.radiofrance.fr/franceculture/podcasts/la-revue-de-presse-internationale/la-revue-de-presse-internationale-emission-du-vendredi-01-novembre-2024-8600602) sur France Culture, _Pérou : la stérilisation forcée de 325 000 autochtones dans les années 90, « potentiel crime contre l’humanité »_
+-   [Université Paris Nanterre](https://www.youtube.com/watch?v=pVFlYLb93d4) *Entretien avec Tania Romeiro Barrios, Le projet Warmikuna*
+-   [Reportage AFP](https://www.youtube.com/watch?v=3lYUolYsStI), *Pérou: 350 mètres d’écharpe pour se souvenir des disparus*
+-   [La Revue de Presse Internationale](https://www.radiofrance.fr/franceculture/podcasts/la-revue-de-presse-internationale/la-revue-de-presse-internationale-emission-du-vendredi-01-novembre-2024-8600602) sur France Culture, *Pérou : la stérilisation forcée de 325 000 autochtones dans les années 90, « potentiel crime contre l’humanité »*
 
 ###### **Événement à venir**
 

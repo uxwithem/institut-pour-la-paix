@@ -8,7 +8,7 @@ title: Contact
 
 contact@institutpourlapaix.org
 
-![icone IPP](/uploads/wp-import/FILET-RVB-03-123x300.webp)
+![icone IPP](/institut-pour-la-paix/uploads/wp-import/FILET-RVB-03-123x300.webp)
 
 ## Ecrivez-nous
 
@@ -20,7 +20,7 @@ Mail \*
 
 Message \*
 
-Envoyer![Chargement en cours](/uploads/wp-import/submit-spin.svg)
+Envoyer![Chargement en cours](/institut-pour-la-paix/uploads/wp-import/submit-spin.svg)
 
 ### Contribuez
 

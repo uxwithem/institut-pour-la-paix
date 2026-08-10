@@ -16,7 +16,7 @@ featured: false
 
 À l´occasion de ce colloque qui se tiendra les 9 et 10 juin 2023 à Paris, le MIR lance un appel à communications.
 
-_Les propositions sont à adresser à Christian Renoux (Université d’Orléans-POLEN) avant le 31 décembre 2022_ .
+*Les propositions sont à adresser à Christian Renoux (Université d’Orléans-POLEN) avant le 31 décembre 2022* .
 
 L´Institut Pour la Paix s´associe à cet évènement auquel il apporte son soutien et participe à son comité scientifique, via son directeur Thomas Hippler.
 

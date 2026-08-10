@@ -43,16 +43,16 @@ Pour autant, la séance n’a pas uniquement dressé un constat critique. Elle a
 
 En filigrane, la réflexion rejoint les préoccupations centrales des Apéros Justice, Care et Paix : comment intégrer les émotions dans la justice sans renoncer à l’impartialité ? Et comment construire une justice capable de résister à la logique de crise permanente, pour redevenir un espace d’attention aux personnes et aux situations ?
 
-![](/uploads/wp-import/IMG_20260422_201346959-2--474x324.jpg)
+![](/institut-pour-la-paix/uploads/wp-import/IMG_20260422_201346959-2--474x324.jpg)
 
 Retour en images sur le quatrième Apéro Justicecare et paix, le 22 avril 2026
 
-**_Les Apéros Justice, Care et Paix sont organisés par_ [_Pénélope Dufourt_](https://www.linkedin.com/in/p%C3%A9n%C3%A9lope-dufourt-054344a6/) _et_ [_Laetitia Braconnier Moreno_](https://www.linkedin.com/in/laetitia-braconnier-moreno-b13a08113/)_, docteures en droit public du Centre de recherches et d’études sur les droits fondamentaux (CREDOF) de l’Université Paris Nanterre._**
+***Les Apéros Justice, Care et Paix sont organisés par* [*Pénélope Dufourt*](https://www.linkedin.com/in/p%C3%A9n%C3%A9lope-dufourt-054344a6/) *et* [*Laetitia Braconnier Moreno*](https://www.linkedin.com/in/laetitia-braconnier-moreno-b13a08113/)*, docteures en droit public du Centre de recherches et d’études sur les droits fondamentaux (CREDOF) de l’Université Paris Nanterre.***
 
-_Rapport rédigé par_ _Johnatan Londono_
+*Rapport rédigé par* *Johnatan Londono*
 
 * * *
 
 ##### Pour avoir accès à l’ensemble du rapport veuillez cliquer sur le lien ci-dessous :
 
--   [_JUSTICE D’ASILE : ENTRE CRISE ET ROUTINE DE CRISE. Une Ethnographie de la Cour Nationale du Droit d’Asile. Mars 2026_](https://www.aup.edu/sites/default/files/upload/Rapport%20CNDA%20_Dezalay%20et%20Weill%202026.pdf)
+-   [*JUSTICE D’ASILE : ENTRE CRISE ET ROUTINE DE CRISE. Une Ethnographie de la Cour Nationale du Droit d’Asile. Mars 2026*](https://www.aup.edu/sites/default/files/upload/Rapport%20CNDA%20_Dezalay%20et%20Weill%202026.pdf)

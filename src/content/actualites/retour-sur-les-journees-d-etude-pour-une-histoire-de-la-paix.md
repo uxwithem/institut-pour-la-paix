@@ -13,6 +13,7 @@ excerpt: >-
   (Université Paris Nanterre), les journées d’étude « Pour une histoire de la paix. Place et enjeux
   de la paix dans l’historiographie francophone » ont proposé
 featured: false
+relatedResearchGroup: concepts-de-la-paix
 ---
 
 **18-19 juin 2026 à La Contemporaine, Université Paris Nanterre**
@@ -35,12 +36,12 @@ La discussion finale a insisté sur la nécessité de poursuivre cette dynamique
 
 Ces journées ont ainsi montré que l’histoire de la paix constitue un champ particulièrement fécond pour renouveler les manières d’appréhender les sociétés humaines, en déplaçant le regard de la seule étude des conflits vers l’analyse des pratiques, des acteurs et des institutions qui rendent possible leur dépassement.
 
-![](/uploads/wp-import/IMG_8938-1024x683.jpg)
+![](/institut-pour-la-paix/uploads/wp-import/IMG_8938-1024x683.jpg)
 
-![](/uploads/wp-import/IMG_8902-300x400.jpg)
+![](/institut-pour-la-paix/uploads/wp-import/IMG_8902-300x400.jpg)
 
-![](/uploads/wp-import/IMG_8961-1024x683.jpg)
+![](/institut-pour-la-paix/uploads/wp-import/IMG_8961-1024x683.jpg)
 
-![](/uploads/wp-import/IMG_8973-1024x683.jpg)
+![](/institut-pour-la-paix/uploads/wp-import/IMG_8973-1024x683.jpg)
 
-_Retour en images sur les journées d’étude « Pour une histoire de la paix. Place et enjeux de la paix dans l’historiographie francophone » le 18-19 juin 2026 à La Contemporaine, Université Paris Nanterre_
+*Retour en images sur les journées d’étude « Pour une histoire de la paix. Place et enjeux de la paix dans l’historiographie francophone » le 18-19 juin 2026 à La Contemporaine, Université Paris Nanterre*

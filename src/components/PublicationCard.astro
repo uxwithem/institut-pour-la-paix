@@ -14,8 +14,17 @@ const dateLabel = publication.data.date.toLocaleDateString('fr-FR', {
 ---
 
 <a class="card" href={withBase(`/ressources/publications/${publication.id}/`)}>
-	<span class="eyebrow">{dateLabel}</span>
-	<h3>{publication.data.title}</h3>
-	{publication.data.authors.length > 0 && <p class="meta">{publication.data.authors.join(', ')}</p>}
-	{publication.data.description && <p>{publication.data.description}</p>}
+	{
+		publication.data.coverImage && (
+			<div class="card-media card-media--portrait">
+				<img src={withBase(publication.data.coverImage)} alt="" loading="lazy" />
+			</div>
+		)
+	}
+	<div class="card-body">
+		<span class="eyebrow">{dateLabel}</span>
+		<h3>{publication.data.title}</h3>
+		{publication.data.authors.length > 0 && <p class="meta">{publication.data.authors.join(', ')}</p>}
+		{publication.data.description && <p>{publication.data.description}</p>}
+	</div>
 </a>
