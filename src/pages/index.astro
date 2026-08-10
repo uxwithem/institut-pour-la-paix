@@ -1,0 +1,101 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ResearchGroupCard from '../components/ResearchGroupCard.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import EventCard from '../components/EventCard.astro';
+import { withBase } from '../lib/url';
+
+const settings = await getEntry('siteSettings', 'main');
+
+const groups = (await getCollection('groupes', ({ data }) => data.status === 'active')).slice(0, 5);
+
+const articles = (await getCollection('actualites')).sort(
+	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+const featuredArticle = articles.find((a) => a.data.featured) ?? articles[0];
+
+const now = new Date();
+const upcomingEvents = (await getCollection('evenements'))
+	.filter((e) => e.data.startDate >= now)
+	.sort((a, b) => a.data.startDate.valueOf() - b.data.startDate.valueOf())
+	.slice(0, 3);
+---
+
+<BaseLayout title={settings?.data.tagline ?? settings?.data.siteName ?? 'Accueil'}>
+	<section class="section hero">
+		<div class="wrap">
+			<p class="eyebrow">{settings?.data.siteName}</p>
+			<h1>{settings?.data.tagline}</h1>
+			<p class="lead">{settings?.data.description}</p>
+			<div class="actions">
+				<a class="btn" href={withBase('/a-propos/')}>Découvrir l'IPP</a>
+				<a class="btn-outline" href={withBase('/recherche/')}>Nos recherches</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="wrap">
+			<h2>Nos groupes de recherche</h2>
+			<div class="card-grid">
+				{groups.map((group) => <ResearchGroupCard group={group} />)}
+			</div>
+		</div>
+	</section>
+
+	{
+		featuredArticle && (
+			<section class="section">
+				<div class="wrap">
+					<h2>À la une</h2>
+					<div class="card-grid">
+						<ArticleCard article={featuredArticle} />
+					</div>
+				</div>
+			</section>
+		)
+	}
+
+	<section class="section">
+		<div class="wrap">
+			<h2>Agenda</h2>
+			{
+				upcomingEvents.length > 0 ? (
+					<div class="card-grid">
+						{upcomingEvents.map((event) => <EventCard event={event} />)}
+					</div>
+				) : (
+					<p>Aucun événement à venir.</p>
+				)
+			}
+			<p><a href={withBase('/agenda/')}>Voir tout l'agenda →</a></p>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="wrap cta">
+			<h2>Rejoindre le réseau</h2>
+			<p>Devenez membre de l'Institut pour la Paix.</p>
+			<a class="btn" href={withBase('/devenir-membre/')}>Devenir membre</a>
+		</div>
+	</section>
+</BaseLayout>
+
+<style>
+	.hero .lead {
+		max-width: 40rem;
+		color: var(--color-muted);
+		font-size: 1.05rem;
+	}
+
+	.actions {
+		display: flex;
+		gap: 0.75rem;
+		margin-top: 1.5rem;
+	}
+
+	.cta {
+		text-align: center;
+	}
+</style>

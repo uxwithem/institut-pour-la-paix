@@ -1,0 +1,56 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EventCard from '../../components/EventCard.astro';
+
+const settings = await getEntry('siteSettings', 'main');
+const now = new Date();
+const events = await getCollection('evenements');
+
+const upcoming = events
+	.filter((e) => e.data.startDate >= now)
+	.sort((a, b) => a.data.startDate.valueOf() - b.data.startDate.valueOf());
+const past = events
+	.filter((e) => e.data.startDate < now)
+	.sort((a, b) => b.data.startDate.valueOf() - a.data.startDate.valueOf());
+---
+
+<BaseLayout title={`Agenda — ${settings?.data.siteName}`}>
+	<section class="section">
+		<div class="wrap">
+			<h1>Agenda</h1>
+
+			<h2>À venir</h2>
+			{
+				upcoming.length > 0 ? (
+					<div class="card-grid">
+						{upcoming.map((event) => <EventCard event={event} />)}
+					</div>
+				) : (
+					<p>
+						Aucun événement à venir.
+						{past.length > 0 && (
+							<>
+								{' '}
+								<a href="#evenements-passes">Voir les événements passés →</a>
+							</>
+						)}
+					</p>
+				)
+			}
+
+			{
+				past.length > 0 && (
+					<>
+						<h2 id="evenements-passes">Événements passés</h2>
+						<div class="card-grid">
+							{past.map((event) => (
+								<EventCard event={event} />
+							))}
+						</div>
+					</>
+				)
+			}
+		</div>
+	</section>
+</BaseLayout>

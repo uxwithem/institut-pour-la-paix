@@ -1,0 +1,548 @@
+backend:
+  name: github
+  repo: uxwithem/institut-pour-la-paix
+  branch: main
+  # GitHub Pages has no server to run the GitHub OAuth handshake, so
+  # production login at /admin/ will not work until an OAuth provider is
+  # deployed. See docs/DECAP_CMS.md for local editing in the meantime and
+  # the production setup steps.
+  # base_url: https://your-oauth-provider.example.com
+  # auth_endpoint: auth
+
+# Lets editors run `npx decap-server` locally and log in via "local backend"
+# without needing GitHub OAuth. Ignored in production.
+local_backend: true
+
+publish_mode: simple
+
+media_folder: public/uploads
+public_folder: /uploads
+
+site_url: https://uxwithem.github.io/institut-pour-la-paix/
+display_url: https://uxwithem.github.io/institut-pour-la-paix/
+logo_url: /institut-pour-la-paix/favicon.svg
+
+locale: "fr"
+
+collections:
+  - name: actualites
+    label: Actualités
+    label_singular: Actualité
+    description: Articles et brèves publiés sur le site.
+    folder: src/content/actualites
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    summary: "{{title}} — {{date}}"
+    fields:
+      - { label: Titre, name: title, widget: string }
+      - { label: Date, name: date, widget: datetime }
+      - { label: Date de mise à jour, name: updatedDate, widget: datetime, required: false }
+      - label: Auteur
+        name: author
+        widget: relation
+        collection: personnes
+        search_fields: [name]
+        value_field: "{{slug}}"
+        display_fields: [name]
+        required: false
+      - label: Catégorie
+        name: category
+        widget: relation
+        collection: categories
+        search_fields: [label]
+        value_field: value
+        display_fields: [label]
+        required: false
+      - { label: Image mise en avant, name: featuredImage, widget: image, required: false }
+      - { label: Extrait, name: excerpt, widget: text, required: false }
+      - label: Événement lié
+        name: relatedEvent
+        widget: relation
+        collection: evenements
+        search_fields: [title]
+        value_field: "{{slug}}"
+        display_fields: [title]
+        required: false
+      - label: Groupe de recherche lié
+        name: relatedResearchGroup
+        widget: relation
+        collection: groupes
+        search_fields: [title]
+        value_field: "{{slug}}"
+        display_fields: [title]
+        required: false
+      - label: Projet lié
+        name: relatedProject
+        widget: relation
+        collection: projets
+        search_fields: [title]
+        value_field: "{{slug}}"
+        display_fields: [title]
+        required: false
+      - { label: Lien externe, name: externalLink, widget: string, required: false }
+      - label: Pièces jointes
+        name: attachments
+        widget: list
+        field: { label: Fichier, name: file, widget: file }
+        required: false
+      - { label: À la une, name: featured, widget: boolean, default: false }
+      - { label: Titre SEO, name: seoTitle, widget: string, required: false }
+      - { label: Description SEO, name: seoDescription, widget: text, required: false }
+      - { label: Contenu, name: body, widget: markdown }
+
+  - name: evenements
+    label: Événements
+    label_singular: Événement
+    description: Agenda de l'IPP — colloques, ateliers, rencontres.
+    folder: src/content/evenements
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    summary: "{{title}} — {{startDate}}"
+    fields:
+      - { label: Titre, name: title, widget: string }
+      - { label: Date de début, name: startDate, widget: datetime }
+      - { label: Date de fin, name: endDate, widget: datetime, required: false }
+      - { label: Heure de début, name: startTime, widget: string, required: false, hint: "Format HH:MM" }
+      - { label: Heure de fin, name: endTime, widget: string, required: false, hint: "Format HH:MM" }
+      - label: Lieu
+        name: location
+        widget: object
+        required: false
+        collapsed: false
+        fields:
+          - { label: Nom, name: name, widget: string, required: false }
+          - { label: Adresse, name: address, widget: string, required: false }
+          - { label: Ville, name: city, widget: string, required: false }
+      - { label: Description, name: description, widget: text, required: false }
+      - { label: URL d'inscription, name: registrationUrl, widget: string, required: false }
+      - { label: Lien externe, name: externalUrl, widget: string, required: false }
+      - { label: Image, name: image, widget: image, required: false }
+      - label: Organisateurs
+        name: organizers
+        widget: list
+        field: { label: Nom, name: name, widget: string }
+        required: false
+      - label: Partenaires
+        name: partners
+        widget: list
+        field: { label: Nom, name: name, widget: string }
+        required: false
+      - label: Groupes de recherche
+        name: researchGroups
+        widget: relation
+        collection: groupes
+        multiple: true
+        search_fields: [title]
+        value_field: "{{slug}}"
+        display_fields: [title]
+        required: false
+      - { label: Annulé, name: cancelled, widget: boolean, default: false }
+      - { label: À la une, name: featured, widget: boolean, default: false }
+      - label: Pièces jointes
+        name: attachments
+        widget: list
+        field: { label: Fichier, name: file, widget: file }
+        required: false
+      - { label: Programme / détails, name: body, widget: markdown, required: false }
+
+  - name: groupes
+    label: Groupes de recherche
+    label_singular: Groupe de recherche
+    folder: src/content/groupes
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    fields:
+      - { label: Titre, name: title, widget: string }
+      - { label: Titre court, name: shortTitle, widget: string, required: false }
+      - { label: Introduction, name: intro, widget: text, required: false }
+      - { label: Mission, name: mission, widget: text, required: false }
+      - label: Axes de recherche
+        name: axes
+        widget: list
+        required: false
+        fields:
+          - { label: Titre, name: title, widget: string }
+          - { label: Description, name: description, widget: text, required: false }
+      - label: Coordination
+        name: coordinators
+        widget: relation
+        collection: personnes
+        multiple: true
+        search_fields: [name]
+        value_field: "{{slug}}"
+        display_fields: [name]
+        required: false
+      - label: Participants
+        name: participants
+        widget: relation
+        collection: personnes
+        multiple: true
+        search_fields: [name]
+        value_field: "{{slug}}"
+        display_fields: [name]
+        required: false
+      - { label: Image, name: image, widget: image, required: false }
+      - { label: Statut, name: status, widget: select, options: [active, archived], default: active }
+      - { label: À la une, name: featured, widget: boolean, default: false }
+      - { label: Titre SEO, name: seoTitle, widget: string, required: false }
+      - { label: Description SEO, name: seoDescription, widget: text, required: false }
+      - { label: Description complète, name: body, widget: markdown, required: false }
+
+  - name: personnes
+    label: Personnes
+    label_singular: Personne
+    description: Équipe, comité de pilotage, réseau scientifique et partenaires.
+    folder: src/content/personnes
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    summary: "{{name}} ({{type}})"
+    fields:
+      - { label: Nom, name: name, widget: string }
+      - { label: Photo, name: photo, widget: image, required: false }
+      - { label: Rôle, name: role, widget: string, required: false }
+      - { label: Organisation, name: organization, widget: string, required: false }
+      - { label: Fonction, name: position, widget: string, required: false }
+      - label: Type
+        name: type
+        widget: select
+        options:
+          - { label: Équipe, value: equipe }
+          - { label: Comité de pilotage, value: copil }
+          - { label: Partenaire, value: partenaire }
+          - { label: Chercheur, value: chercheur }
+          - { label: Membre du réseau, value: membre-reseau }
+      - label: Domaines de recherche
+        name: researchInterests
+        widget: list
+        field: { label: Domaine, name: domain, widget: string }
+        required: false
+      - { label: Email, name: email, widget: string, required: false }
+      - { label: Site web, name: website, widget: string, required: false }
+      - { label: LinkedIn, name: linkedin, widget: string, required: false }
+      - label: Publications
+        name: publications
+        widget: relation
+        collection: publications
+        multiple: true
+        search_fields: [title]
+        value_field: "{{slug}}"
+        display_fields: [title]
+        required: false
+      - { label: Actif, name: active, widget: boolean, default: true }
+      - { label: Biographie, name: body, widget: markdown, required: false }
+
+  - name: publications
+    label: Publications
+    label_singular: Publication
+    description: Ressources de recherche persistantes (voir docs/BRIEF.md §9).
+    folder: src/content/publications
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    summary: "{{title}} — {{date}}"
+    fields:
+      - { label: Titre, name: title, widget: string }
+      - { label: Date, name: date, widget: datetime }
+      - label: Auteurs
+        name: authors
+        widget: list
+        field: { label: Nom, name: name, widget: string }
+        required: false
+      - { label: Description, name: description, widget: text, required: false }
+      - { label: Image de couverture, name: coverImage, widget: image, required: false }
+      - { label: Fichier, name: file, widget: file, required: false }
+      - { label: Lien externe, name: externalUrl, widget: string, required: false }
+      - { label: Éditeur, name: publisher, widget: string, required: false }
+      - { label: ISBN, name: isbn, widget: string, required: false }
+      - { label: DOI, name: doi, widget: string, required: false }
+      - label: Groupe de recherche
+        name: researchGroup
+        widget: relation
+        collection: groupes
+        search_fields: [title]
+        value_field: "{{slug}}"
+        display_fields: [title]
+        required: false
+      - label: Projet
+        name: project
+        widget: relation
+        collection: projets
+        search_fields: [title]
+        value_field: "{{slug}}"
+        display_fields: [title]
+        required: false
+      - label: Tags
+        name: tags
+        widget: relation
+        collection: tags
+        multiple: true
+        search_fields: [label]
+        value_field: value
+        display_fields: [label]
+        required: false
+      - { label: À la une, name: featured, widget: boolean, default: false }
+      - { label: Titre SEO, name: seoTitle, widget: string, required: false }
+      - { label: Description SEO, name: seoDescription, widget: text, required: false }
+      - { label: Résumé étendu, name: body, widget: markdown, required: false }
+
+  - name: ressources
+    label: Ressources
+    label_singular: Ressource
+    description: Vidéos, audios, podcasts, rapports et ressources pédagogiques.
+    folder: src/content/ressources
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    summary: "{{title}} — {{type}}"
+    fields:
+      - { label: Titre, name: title, widget: string }
+      - { label: Type, name: type, widget: select, options: [video, audio, pedagogical, report, podcast, document] }
+      - { label: Date, name: date, widget: datetime }
+      - label: Auteurs
+        name: authors
+        widget: list
+        field: { label: Nom, name: name, widget: string }
+        required: false
+      - { label: Description, name: description, widget: text, required: false }
+      - { label: Vignette, name: thumbnail, widget: image, required: false }
+      - { label: Fichier, name: file, widget: file, required: false }
+      - { label: Lien externe, name: externalUrl, widget: string, required: false }
+      - { label: URL YouTube, name: youtubeUrl, widget: string, required: false }
+      - { label: URL audio, name: audioUrl, widget: string, required: false }
+      - label: Groupe de recherche
+        name: researchGroup
+        widget: relation
+        collection: groupes
+        search_fields: [title]
+        value_field: "{{slug}}"
+        display_fields: [title]
+        required: false
+      - label: Projet
+        name: project
+        widget: relation
+        collection: projets
+        search_fields: [title]
+        value_field: "{{slug}}"
+        display_fields: [title]
+        required: false
+      - label: Tags
+        name: tags
+        widget: relation
+        collection: tags
+        multiple: true
+        search_fields: [label]
+        value_field: value
+        display_fields: [label]
+        required: false
+      - { label: À la une, name: featured, widget: boolean, default: false }
+      - { label: Description complète, name: body, widget: markdown, required: false }
+
+  - name: projets
+    label: Projets
+    label_singular: Projet
+    description: Projets de recherche transversaux et de long cours (voir docs/BRIEF.md §11).
+    folder: src/content/projets
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    fields:
+      - { label: Titre, name: title, widget: string }
+      - { label: Description, name: description, widget: text, required: false }
+      - { label: Statut, name: status, widget: select, options: [upcoming, active, completed], default: active }
+      - { label: Date de début, name: startDate, widget: datetime, required: false }
+      - { label: Date de fin, name: endDate, widget: datetime, required: false }
+      - label: Groupe de recherche
+        name: researchGroup
+        widget: relation
+        collection: groupes
+        search_fields: [title]
+        value_field: "{{slug}}"
+        display_fields: [title]
+        required: false
+      - label: Partenaires
+        name: partners
+        widget: list
+        field: { label: Nom, name: name, widget: string }
+        required: false
+      - label: Équipe
+        name: team
+        widget: relation
+        collection: personnes
+        multiple: true
+        search_fields: [name]
+        value_field: "{{slug}}"
+        display_fields: [name]
+        required: false
+      - { label: Site web, name: website, widget: string, required: false }
+      - { label: Image, name: image, widget: image, required: false }
+      - label: Ressources liées
+        name: resources
+        widget: relation
+        collection: ressources
+        multiple: true
+        search_fields: [title]
+        value_field: "{{slug}}"
+        display_fields: [title]
+        required: false
+      - label: Événements liés
+        name: events
+        widget: relation
+        collection: evenements
+        multiple: true
+        search_fields: [title]
+        value_field: "{{slug}}"
+        display_fields: [title]
+        required: false
+      - label: Articles liés
+        name: articles
+        widget: relation
+        collection: actualites
+        multiple: true
+        search_fields: [title]
+        value_field: "{{slug}}"
+        display_fields: [title]
+        required: false
+      - { label: Description complète, name: body, widget: markdown, required: false }
+
+  - name: pages
+    label: Pages
+    label_singular: Page
+    description: Pages institutionnelles génériques (voir docs/BRIEF.md §12).
+    folder: src/content/pages
+    create: true
+    delete: false
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    fields:
+      - { label: Titre, name: title, widget: string }
+      - { label: Template, name: template, widget: string, required: false }
+      - { label: "Image d'en-tête", name: heroImage, widget: image, required: false }
+      - { label: Titre SEO, name: seoTitle, widget: string, required: false }
+      - { label: Description SEO, name: seoDescription, widget: text, required: false }
+      - { label: Contenu, name: body, widget: markdown }
+
+  - name: categories
+    label: Taxonomie — Catégories
+    label_singular: Catégorie
+    folder: src/content/taxonomies/categories
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: yaml
+    format: yaml
+    summary: "{{label}}"
+    fields:
+      - { label: Libellé, name: label, widget: string }
+      - { label: Valeur, name: value, widget: string, hint: "Identifiant technique, sans espaces ni accents" }
+
+  - name: tags
+    label: Taxonomie — Tags
+    label_singular: Tag
+    folder: src/content/taxonomies/tags
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: yaml
+    format: yaml
+    summary: "{{label}}"
+    fields:
+      - { label: Libellé, name: label, widget: string }
+      - { label: Valeur, name: value, widget: string, hint: "Identifiant technique, sans espaces ni accents" }
+
+  - name: resourceTypes
+    label: Taxonomie — Types de ressources
+    label_singular: Type de ressource
+    folder: src/content/taxonomies/resource-types
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: yaml
+    format: yaml
+    summary: "{{label}}"
+    fields:
+      - { label: Libellé, name: label, widget: string }
+      - { label: Valeur, name: value, widget: string, hint: "Identifiant technique, sans espaces ni accents" }
+
+  - name: config
+    label: Configuration du site
+    editor:
+      preview: false
+    files:
+      - name: siteSettings
+        label: Paramètres du site
+        file: src/content/config/site-settings.yaml
+        fields:
+          - { label: Nom du site, name: siteName, widget: string }
+          - { label: Slogan, name: tagline, widget: string, required: false }
+          - { label: Description, name: description, widget: text, required: false }
+          - { label: Logo, name: logo, widget: image, required: false }
+          - { label: Email, name: email, widget: string, required: false }
+          - { label: Téléphone, name: phone, widget: string, required: false }
+          - { label: Adresse, name: address, widget: string, required: false }
+      - name: navigation
+        label: Navigation
+        file: src/content/config/navigation.yaml
+        fields:
+          - label: Éléments de navigation
+            name: items
+            widget: list
+            fields:
+              - { label: Libellé, name: label, widget: string }
+              - { label: URL, name: url, widget: string }
+      - name: footer
+        label: Footer
+        file: src/content/config/footer.yaml
+        fields:
+          - { label: Texte, name: text, widget: string, required: false }
+          - label: Colonnes
+            name: columns
+            widget: list
+            required: false
+            fields:
+              - { label: Titre, name: title, widget: string }
+              - label: Liens
+                name: links
+                widget: list
+                fields:
+                  - { label: Libellé, name: label, widget: string }
+                  - { label: URL, name: url, widget: string }
+      - name: socialLinks
+        label: Réseaux sociaux
+        file: src/content/config/social-links.yaml
+        fields:
+          - label: Liens
+            name: items
+            widget: list
+            required: false
+            fields:
+              - { label: Plateforme, name: platform, widget: string }
+              - { label: URL, name: url, widget: string }
+      - name: newsletter
+        label: Newsletter
+        file: src/content/config/newsletter.yaml
+        fields:
+          - { label: Titre, name: heading, widget: string, required: false }
+          - { label: Description, name: description, widget: text, required: false }
+          - { label: Fournisseur, name: provider, widget: string, required: false }
+          - { label: Action du formulaire, name: formAction, widget: string, required: false }
+      - name: seoDefaults
+        label: SEO par défaut
+        file: src/content/config/seo-defaults.yaml
+        fields:
+          - { label: Titre par défaut, name: defaultTitle, widget: string, required: false }
+          - {
+              label: Modèle de titre,
+              name: titleTemplate,
+              widget: string,
+              required: false,
+              hint: "Utilisez %s pour représenter le titre de la page",
+            }
+          - { label: Description par défaut, name: defaultDescription, widget: text, required: false }
+          - { label: Image par défaut, name: defaultImage, widget: image, required: false }
+          - { label: Compte Twitter/X, name: twitterHandle, widget: string, required: false }

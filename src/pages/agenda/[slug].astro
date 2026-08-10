@@ -1,0 +1,46 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+	const events = await getCollection('evenements');
+	return events.map((event) => ({
+		params: { slug: event.id },
+		props: { event },
+	}));
+}
+
+const { event } = Astro.props;
+const { Content } = await render(event);
+
+const dateLabel = event.data.startDate.toLocaleDateString('fr-FR', {
+	day: 'numeric',
+	month: 'long',
+	year: 'numeric',
+});
+---
+
+<BaseLayout title={event.data.title} description={event.data.description}>
+	<article class="section wrap">
+		{event.data.cancelled && <p class="eyebrow">Événement annulé</p>}
+		<h1>{event.data.title}</h1>
+		<p class="meta">
+			{dateLabel}
+			{event.data.startTime && ` · ${event.data.startTime}${event.data.endTime ? ` → ${event.data.endTime}` : ''}`}
+		</p>
+		{event.data.location?.name && <p class="meta">{event.data.location.name}</p>}
+		{event.data.description && <p>{event.data.description}</p>}
+		<div class="prose">
+			<Content />
+		</div>
+		{
+			event.data.registrationUrl && (
+				<p>
+					<a class="btn" href={event.data.registrationUrl}>
+						S'inscrire
+					</a>
+				</p>
+			)
+		}
+	</article>
+</BaseLayout>

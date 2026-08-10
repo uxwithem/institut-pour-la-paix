@@ -1,0 +1,50 @@
+---
+import { getCollection, getEntries, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PublicationCard from '../../components/PublicationCard.astro';
+
+export async function getStaticPaths() {
+	const people = await getCollection('personnes');
+	return people.map((person) => ({
+		params: { slug: person.id },
+		props: { person },
+	}));
+}
+
+const { person } = Astro.props;
+const { Content } = await render(person);
+const publications = await getEntries(person.data.publications);
+---
+
+<BaseLayout title={person.data.name}>
+	<article class="section wrap">
+		<h1>{person.data.name}</h1>
+		{person.data.role && <p class="meta">{person.data.role}{person.data.organization && ` · ${person.data.organization}`}</p>}
+		<div class="prose">
+			<Content />
+		</div>
+		{
+			person.data.researchInterests.length > 0 && (
+				<p class="meta">{person.data.researchInterests.join(', ')}</p>
+			)
+		}
+		<ul class="links">
+			{person.data.email && <li><a href={`mailto:${person.data.email}`}>Email</a></li>}
+			{person.data.website && <li><a href={person.data.website}>Site web</a></li>}
+			{person.data.linkedin && <li><a href={person.data.linkedin}>LinkedIn</a></li>}
+		</ul>
+	</article>
+
+	{
+		publications.length > 0 && (
+			<section class="section wrap">
+				<h2>Publications</h2>
+				<div class="card-grid">
+					{publications.map((publication) => (
+						<PublicationCard publication={publication} />
+					))}
+				</div>
+			</section>
+		)
+	}
+</BaseLayout>

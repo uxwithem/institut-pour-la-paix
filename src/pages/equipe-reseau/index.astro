@@ -1,0 +1,45 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PersonCard from '../../components/PersonCard.astro';
+
+const settings = await getEntry('siteSettings', 'main');
+const people = await getCollection('personnes', ({ data }) => data.active);
+
+const groupLabels: Record<string, string> = {
+	equipe: 'Équipe',
+	copil: 'Comité de pilotage',
+	'membre-reseau': 'Réseau scientifique',
+	chercheur: 'Chercheurs associés',
+	partenaire: 'Partenaires',
+};
+
+const groupOrder = ['equipe', 'copil', 'membre-reseau', 'chercheur', 'partenaire'] as const;
+const groups = groupOrder
+	.map((type) => ({ type, label: groupLabels[type], people: people.filter((p) => p.data.type === type) }))
+	.filter((group) => group.people.length > 0);
+---
+
+<BaseLayout title={`Équipe et réseau — ${settings?.data.siteName}`}>
+	<section class="section">
+		<div class="wrap">
+			<h1>Équipe & réseau</h1>
+			<p class="lead">Notre fonctionnement repose sur une équipe permanente, un comité de pilotage et un réseau scientifique élargi.</p>
+		</div>
+	</section>
+
+	{
+		groups.map((group) => (
+			<section class="section">
+				<div class="wrap">
+					<h2>{group.label}</h2>
+					<div class="card-grid">
+						{group.people.map((person) => (
+							<PersonCard person={person} />
+						))}
+					</div>
+				</div>
+			</section>
+		))
+	}
+</BaseLayout>

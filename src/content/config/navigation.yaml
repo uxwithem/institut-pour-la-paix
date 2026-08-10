@@ -1,0 +1,13 @@
+items:
+  - label: Recherche
+    url: /recherche/
+  - label: Actualités
+    url: /actualites/
+  - label: Agenda
+    url: /agenda/
+  - label: Ressources
+    url: /ressources/
+  - label: Équipe et réseau
+    url: /equipe-reseau/
+  - label: Devenir membre
+    url: /devenir-membre/

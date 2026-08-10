@@ -1,0 +1,17 @@
+---
+import { getEntry, type CollectionEntry } from 'astro:content';
+import { withBase } from '../lib/url';
+
+interface Props {
+	resource: CollectionEntry<'ressources'>;
+}
+
+const { resource } = Astro.props;
+const type = await getEntry('resourceTypes', resource.data.type);
+---
+
+<a class="card" href={withBase(`/ressources/${resource.id}/`)}>
+	<span class="meta">{type?.data.label ?? resource.data.type}</span>
+	<h3>{resource.data.title}</h3>
+	{resource.data.description && <p>{resource.data.description}</p>}
+</a>

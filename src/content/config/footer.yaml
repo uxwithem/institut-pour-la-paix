@@ -1,0 +1,14 @@
+text: Institut pour la Paix
+columns:
+  - title: Institut
+    links:
+      - label: À propos
+        url: /a-propos/
+      - label: Contact
+        url: /contact/
+  - title: Légal
+    links:
+      - label: Mentions légales
+        url: /mentions-legales/
+      - label: Politique de confidentialité
+        url: /politique-de-confidentialite/

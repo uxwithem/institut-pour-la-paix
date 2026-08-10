@@ -1,0 +1,16 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { withBase } from '../lib/url';
+
+interface Props {
+	project: CollectionEntry<'projets'>;
+}
+
+const { project } = Astro.props;
+---
+
+<a class="card" href={withBase(`/projets/${project.id}/`)}>
+	<span class="meta">{project.data.status}</span>
+	<h3>{project.data.title}</h3>
+	{project.data.description && <p>{project.data.description}</p>}
+</a>

@@ -1,0 +1,19 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+
+const settings = await getEntry('siteSettings', 'main');
+const projects = await getCollection('projets');
+---
+
+<BaseLayout title={`Projets — ${settings?.data.siteName}`}>
+	<section class="section">
+		<div class="wrap">
+			<h1>Projets</h1>
+			<div class="card-grid">
+				{projects.map((project) => <ProjectCard project={project} />)}
+			</div>
+		</div>
+	</section>
+</BaseLayout>

@@ -1,0 +1,21 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ResourceCard from '../../../components/ResourceCard.astro';
+
+const settings = await getEntry('siteSettings', 'main');
+const resources = await getCollection('ressources', ({ data }) =>
+	['video', 'audio', 'podcast'].includes(data.type),
+);
+---
+
+<BaseLayout title={`Ressources audiovisuelles — ${settings?.data.siteName}`}>
+	<section class="section">
+		<div class="wrap">
+			<h1>Ressources audiovisuelles</h1>
+			<div class="card-grid">
+				{resources.map((resource) => <ResourceCard resource={resource} />)}
+			</div>
+		</div>
+	</section>
+</BaseLayout>

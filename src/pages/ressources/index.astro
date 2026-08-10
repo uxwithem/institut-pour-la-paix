@@ -1,0 +1,61 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PublicationCard from '../../components/PublicationCard.astro';
+import ResourceCard from '../../components/ResourceCard.astro';
+import { withBase } from '../../lib/url';
+
+const settings = await getEntry('siteSettings', 'main');
+const publications = await getCollection('publications');
+const resources = await getCollection('ressources');
+
+const filters = [
+	{ label: 'Tous', url: '/ressources/' },
+	{ label: 'Publications', url: '/ressources/publications/' },
+	{ label: 'Audiovisuelles', url: '/ressources/audiovisuelles/' },
+	{ label: 'Pédagogiques', url: '/ressources/pedagogiques/' },
+];
+---
+
+<BaseLayout title={`Ressources — ${settings?.data.siteName}`}>
+	<section class="section">
+		<div class="wrap">
+			<h1>Ressources</h1>
+			<nav class="filters">
+				{filters.map((filter) => <a href={withBase(filter.url)}>{filter.label}</a>)}
+			</nav>
+
+			<h2>Publications</h2>
+			<div class="card-grid">
+				{publications.map((publication) => <PublicationCard publication={publication} />)}
+			</div>
+
+			<h2>Autres ressources</h2>
+			<div class="card-grid">
+				{resources.map((resource) => <ResourceCard resource={resource} />)}
+			</div>
+		</div>
+	</section>
+</BaseLayout>
+
+<style>
+	.filters {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+		margin: 1rem 0 2rem;
+	}
+
+	.filters a {
+		border: 1px solid var(--color-line);
+		border-radius: 999px;
+		padding: 0.35rem 0.9rem;
+		font-size: 0.85rem;
+		color: var(--color-ink);
+	}
+
+	.filters a:hover {
+		border-color: var(--color-primary);
+		text-decoration: none;
+	}
+</style>

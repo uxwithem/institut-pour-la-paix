@@ -1,0 +1,21 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { withBase } from '../lib/url';
+
+interface Props {
+	article: CollectionEntry<'actualites'>;
+}
+
+const { article } = Astro.props;
+const dateLabel = article.data.date.toLocaleDateString('fr-FR', {
+	day: 'numeric',
+	month: 'long',
+	year: 'numeric',
+});
+---
+
+<a class="card" href={withBase(`/actualites/${article.id}/`)}>
+	<span class="meta">{dateLabel}</span>
+	<h3>{article.data.title}</h3>
+	{article.data.excerpt && <p>{article.data.excerpt}</p>}
+</a>

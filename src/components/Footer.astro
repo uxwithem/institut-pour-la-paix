@@ -1,0 +1,100 @@
+---
+import { getEntry } from 'astro:content';
+import { withBase } from '../lib/url';
+
+const footer = await getEntry('footer', 'main');
+const social = await getEntry('socialLinks', 'main');
+const newsletter = await getEntry('newsletter', 'main');
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+	<div class="wrap grid">
+		<div class="about">
+			<p>{footer?.data.text}</p>
+			{
+				social?.data.items.length ? (
+					<ul class="social">
+						{social.data.items.map((item) => (
+							<li>
+								<a href={item.url} rel="noopener noreferrer" target="_blank">
+									{item.platform}
+								</a>
+							</li>
+						))}
+					</ul>
+				) : null
+			}
+		</div>
+		{
+			footer?.data.columns.map((column) => (
+				<div class="col">
+					<h4>{column.title}</h4>
+					<ul>
+						{column.links.map((link) => (
+							<li>
+								<a href={withBase(link.url)}>{link.label}</a>
+							</li>
+						))}
+					</ul>
+				</div>
+			))
+		}
+		{
+			newsletter && (newsletter.data.heading || newsletter.data.description) && (
+				<div class="col">
+					<h4>{newsletter.data.heading}</h4>
+					<p>{newsletter.data.description}</p>
+				</div>
+			)
+		}
+	</div>
+	<div class="wrap copyright">
+		<p>&copy; {year} {footer?.data.text}</p>
+	</div>
+</footer>
+
+<style>
+	.site-footer {
+		border-top: 1px solid var(--color-line);
+		background: var(--color-surface);
+		margin-top: 3rem;
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+		gap: 2rem;
+		padding-block: 2.5rem;
+	}
+
+	h4 {
+		font-family: var(--font-sans);
+		font-size: 0.85rem;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		color: var(--color-muted);
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.4rem;
+	}
+
+	.social {
+		flex-direction: row;
+		gap: 1rem;
+		margin-top: 0.75rem;
+	}
+
+	.copyright {
+		border-top: 1px solid var(--color-line);
+		padding-block: 1rem;
+		font-size: 0.82rem;
+		color: var(--color-muted);
+	}
+</style>

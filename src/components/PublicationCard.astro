@@ -1,0 +1,21 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { withBase } from '../lib/url';
+
+interface Props {
+	publication: CollectionEntry<'publications'>;
+}
+
+const { publication } = Astro.props;
+const dateLabel = publication.data.date.toLocaleDateString('fr-FR', {
+	year: 'numeric',
+	month: 'long',
+});
+---
+
+<a class="card" href={withBase(`/ressources/publications/${publication.id}/`)}>
+	<span class="meta">{dateLabel}</span>
+	<h3>{publication.data.title}</h3>
+	{publication.data.authors.length > 0 && <p class="meta">{publication.data.authors.join(', ')}</p>}
+	{publication.data.description && <p>{publication.data.description}</p>}
+</a>

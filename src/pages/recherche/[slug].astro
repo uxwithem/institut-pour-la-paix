@@ -1,0 +1,156 @@
+---
+import { getCollection, getEntries, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PersonCard from '../../components/PersonCard.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import PublicationCard from '../../components/PublicationCard.astro';
+import EventCard from '../../components/EventCard.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import ResearchGroupCard from '../../components/ResearchGroupCard.astro';
+
+export async function getStaticPaths() {
+	const groups = await getCollection('groupes');
+	return groups.map((group) => ({
+		params: { slug: group.id },
+		props: { group },
+	}));
+}
+
+const { group } = Astro.props;
+const { Content } = await render(group);
+
+const [coordinators, participants, allGroups, allArticles, allPublications, allEvents, allProjects] =
+	await Promise.all([
+		getEntries(group.data.coordinators),
+		getEntries(group.data.participants),
+		getCollection('groupes'),
+		getCollection('actualites'),
+		getCollection('publications'),
+		getCollection('evenements'),
+		getCollection('projets'),
+	]);
+
+const relatedArticles = allArticles.filter((a) => a.data.relatedResearchGroup?.id === group.id);
+const relatedPublications = allPublications.filter((p) => p.data.researchGroup?.id === group.id);
+const relatedEvents = allEvents.filter((e) => e.data.researchGroups.some((g) => g.id === group.id));
+const relatedProjects = allProjects.filter((p) => p.data.researchGroup?.id === group.id);
+const associatedGroups = allGroups.filter((g) => g.id !== group.id && g.data.status === 'active').slice(0, 3);
+---
+
+<BaseLayout title={group.data.seoTitle ?? group.data.title} description={group.data.seoDescription ?? group.data.intro}>
+	<section class="section wrap">
+		<p class="eyebrow">Groupe de recherche</p>
+		<h1>{group.data.title}</h1>
+		{group.data.mission && <p class="lead">{group.data.mission}</p>}
+		<div class="prose">
+			<Content />
+		</div>
+	</section>
+
+	{
+		group.data.axes.length > 0 && (
+			<section class="section wrap">
+				<h2>Axes de recherche</h2>
+				<div class="card-grid">
+					{group.data.axes.map((axis) => (
+						<div class="card">
+							<h3>{axis.title}</h3>
+							{axis.description && <p>{axis.description}</p>}
+						</div>
+					))}
+				</div>
+			</section>
+		)
+	}
+
+	{
+		coordinators.length > 0 && (
+			<section class="section wrap">
+				<h2>Coordination</h2>
+				<div class="card-grid">
+					{coordinators.map((person) => (
+						<PersonCard person={person} />
+					))}
+				</div>
+			</section>
+		)
+	}
+
+	{
+		participants.length > 0 && (
+			<section class="section wrap">
+				<h2>Participants</h2>
+				<div class="card-grid">
+					{participants.map((person) => (
+						<PersonCard person={person} />
+					))}
+				</div>
+			</section>
+		)
+	}
+
+	{
+		relatedArticles.length > 0 && (
+			<section class="section wrap">
+				<h2>Actualités</h2>
+				<div class="card-grid">
+					{relatedArticles.map((article) => (
+						<ArticleCard article={article} />
+					))}
+				</div>
+			</section>
+		)
+	}
+
+	{
+		relatedPublications.length > 0 && (
+			<section class="section wrap">
+				<h2>Publications</h2>
+				<div class="card-grid">
+					{relatedPublications.map((publication) => (
+						<PublicationCard publication={publication} />
+					))}
+				</div>
+			</section>
+		)
+	}
+
+	{
+		relatedEvents.length > 0 && (
+			<section class="section wrap">
+				<h2>Événements</h2>
+				<div class="card-grid">
+					{relatedEvents.map((event) => (
+						<EventCard event={event} />
+					))}
+				</div>
+			</section>
+		)
+	}
+
+	{
+		relatedProjects.length > 0 && (
+			<section class="section wrap">
+				<h2>Projets</h2>
+				<div class="card-grid">
+					{relatedProjects.map((project) => (
+						<ProjectCard project={project} />
+					))}
+				</div>
+			</section>
+		)
+	}
+
+	{
+		associatedGroups.length > 0 && (
+			<section class="section wrap">
+				<h2>Groupes associés</h2>
+				<div class="card-grid">
+					{associatedGroups.map((associated) => (
+						<ResearchGroupCard group={associated} />
+					))}
+				</div>
+			</section>
+		)
+	}
+</BaseLayout>

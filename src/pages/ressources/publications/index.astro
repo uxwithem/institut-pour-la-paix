@@ -1,0 +1,21 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PublicationCard from '../../../components/PublicationCard.astro';
+
+const settings = await getEntry('siteSettings', 'main');
+const publications = (await getCollection('publications')).sort(
+	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+---
+
+<BaseLayout title={`Publications — ${settings?.data.siteName}`}>
+	<section class="section">
+		<div class="wrap">
+			<h1>Publications</h1>
+			<div class="card-grid">
+				{publications.map((publication) => <PublicationCard publication={publication} />)}
+			</div>
+		</div>
+	</section>
+</BaseLayout>

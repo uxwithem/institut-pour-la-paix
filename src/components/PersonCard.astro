@@ -1,0 +1,15 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { withBase } from '../lib/url';
+
+interface Props {
+	person: CollectionEntry<'personnes'>;
+}
+
+const { person } = Astro.props;
+---
+
+<a class="card" href={withBase(`/equipe-reseau/${person.id}/`)}>
+	<h3>{person.data.name}</h3>
+	{person.data.role && <p class="meta">{person.data.role}</p>}
+</a>

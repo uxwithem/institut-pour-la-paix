@@ -1,0 +1,21 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { withBase } from '../lib/url';
+
+interface Props {
+	event: CollectionEntry<'evenements'>;
+}
+
+const { event } = Astro.props;
+const dateLabel = event.data.startDate.toLocaleDateString('fr-FR', {
+	day: 'numeric',
+	month: 'long',
+	year: 'numeric',
+});
+---
+
+<a class="card" href={withBase(`/agenda/${event.id}/`)}>
+	<span class="meta">{dateLabel}{event.data.cancelled && ' · Annulé'}</span>
+	<h3>{event.data.title}</h3>
+	{event.data.location?.name && <p class="meta">{event.data.location.name}</p>}
+</a>

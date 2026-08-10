@@ -1,0 +1,98 @@
+---
+import { getCollection, getEntries, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PersonCard from '../../components/PersonCard.astro';
+import ResourceCard from '../../components/ResourceCard.astro';
+import EventCard from '../../components/EventCard.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+
+export async function getStaticPaths() {
+	const projects = await getCollection('projets');
+	return projects.map((project) => ({
+		params: { slug: project.id },
+		props: { project },
+	}));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+
+const [team, resources, events, articles] = await Promise.all([
+	getEntries(project.data.team),
+	getEntries(project.data.resources),
+	getEntries(project.data.events),
+	getEntries(project.data.articles),
+]);
+---
+
+<BaseLayout title={project.data.title} description={project.data.description}>
+	<article class="section wrap">
+		<p class="eyebrow">Projet · {project.data.status}</p>
+		<h1>{project.data.title}</h1>
+		{project.data.description && <p class="lead">{project.data.description}</p>}
+		<div class="prose">
+			<Content />
+		</div>
+		{
+			project.data.website && (
+				<p>
+					<a class="btn" href={project.data.website}>
+						Site du projet
+					</a>
+				</p>
+			)
+		}
+	</article>
+
+	{
+		team.length > 0 && (
+			<section class="section wrap">
+				<h2>Équipe</h2>
+				<div class="card-grid">
+					{team.map((person) => (
+						<PersonCard person={person} />
+					))}
+				</div>
+			</section>
+		)
+	}
+
+	{
+		articles.length > 0 && (
+			<section class="section wrap">
+				<h2>Actualités</h2>
+				<div class="card-grid">
+					{articles.map((article) => (
+						<ArticleCard article={article} />
+					))}
+				</div>
+			</section>
+		)
+	}
+
+	{
+		events.length > 0 && (
+			<section class="section wrap">
+				<h2>Événements</h2>
+				<div class="card-grid">
+					{events.map((event) => (
+						<EventCard event={event} />
+					))}
+				</div>
+			</section>
+		)
+	}
+
+	{
+		resources.length > 0 && (
+			<section class="section wrap">
+				<h2>Ressources</h2>
+				<div class="card-grid">
+					{resources.map((resource) => (
+						<ResourceCard resource={resource} />
+					))}
+				</div>
+			</section>
+		)
+	}
+</BaseLayout>

@@ -1,0 +1,15 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { withBase } from '../lib/url';
+
+interface Props {
+	group: CollectionEntry<'groupes'>;
+}
+
+const { group } = Astro.props;
+---
+
+<a class="card" href={withBase(`/recherche/${group.id}/`)}>
+	<h3>{group.data.title}</h3>
+	{group.data.intro && <p>{group.data.intro}</p>}
+</a>

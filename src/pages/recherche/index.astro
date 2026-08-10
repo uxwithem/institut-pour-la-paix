@@ -1,0 +1,46 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ResearchGroupCard from '../../components/ResearchGroupCard.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+
+const settings = await getEntry('siteSettings', 'main');
+const groups = await getCollection('groupes', ({ data }) => data.status === 'active');
+const projects = await getCollection('projets');
+---
+
+<BaseLayout title={`Recherche — ${settings?.data.siteName}`}>
+	<section class="section">
+		<div class="wrap">
+			<h1>La paix comme objet d'étude</h1>
+			<p class="lead">
+				L'Institut pour la Paix développe une approche pluridisciplinaire de la paix, articulée
+				autour de plusieurs groupes de recherche.
+			</p>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="wrap">
+			<h2>Nos groupes de recherche</h2>
+			<div class="card-grid">
+				{groups.map((group) => <ResearchGroupCard group={group} />)}
+			</div>
+		</div>
+	</section>
+
+	{
+		projects.length > 0 && (
+			<section class="section">
+				<div class="wrap">
+					<h2>Projets transversaux</h2>
+					<div class="card-grid">
+						{projects.map((project) => (
+							<ProjectCard project={project} />
+						))}
+					</div>
+				</div>
+			</section>
+		)
+	}
+</BaseLayout>

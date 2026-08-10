@@ -1,0 +1,19 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ResourceCard from '../../../components/ResourceCard.astro';
+
+const settings = await getEntry('siteSettings', 'main');
+const resources = await getCollection('ressources', ({ data }) => data.type === 'pedagogical');
+---
+
+<BaseLayout title={`Ressources pédagogiques — ${settings?.data.siteName}`}>
+	<section class="section">
+		<div class="wrap">
+			<h1>Ressources pédagogiques</h1>
+			<div class="card-grid">
+				{resources.map((resource) => <ResourceCard resource={resource} />)}
+			</div>
+		</div>
+	</section>
+</BaseLayout>
