@@ -5,7 +5,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 const settings = await getEntry('siteSettings', 'main');
 ---
 
-<BaseLayout title={`Rechercher — ${settings?.data.siteName}`}>
+<BaseLayout title={`Rechercher — ${settings?.data.siteName}`} breadcrumb={[{ label: 'Rechercher' }]}>
 	<section class="section wrap-prose">
 		<h1>Rechercher</h1>
 		<p class="lead">

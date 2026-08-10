@@ -19,7 +19,11 @@ const monthYear = event.data.startDate.toLocaleDateString('fr-FR', { month: 'lon
 const weekday = event.data.startDate.toLocaleDateString('fr-FR', { weekday: 'long' });
 ---
 
-<BaseLayout title={event.data.title} description={event.data.description}>
+<BaseLayout
+	title={event.data.title}
+	description={event.data.description}
+	breadcrumb={[{ label: 'Agenda', url: '/agenda/' }, { label: event.data.title }]}
+>
 	<article class="section wrap-prose">
 		<div class="event-header">
 			<div class="date-block">

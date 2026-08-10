@@ -24,7 +24,10 @@ const initials = person.data.name
 	.toUpperCase();
 ---
 
-<BaseLayout title={person.data.name}>
+<BaseLayout
+	title={person.data.name}
+	breadcrumb={[{ label: 'Équipe et réseau', url: '/equipe-reseau/' }, { label: person.data.name }]}
+>
 	<article class="section wrap-prose">
 		<div class="profile-header">
 			<div class="avatar">

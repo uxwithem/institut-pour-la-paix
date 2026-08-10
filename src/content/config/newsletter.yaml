@@ -1,4 +1,6 @@
-heading: Newsletter
-description: Recevez l'actualité de l'Institut pour la Paix.
-provider: ""
-formAction: ""
+heading: Recevez les actualités de l'Institut Pour la Paix
+description: >-
+  Abonnez-vous pour recevoir régulièrement par mail nos actualités afin de ne rien
+  manquer des dernières informations, événements et publications de l'IPP.
+provider: systeme.io
+formAction: https://systeme.io/embedded/5450254/subscription

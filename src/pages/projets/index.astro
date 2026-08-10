@@ -7,7 +7,7 @@ const settings = await getEntry('siteSettings', 'main');
 const projects = await getCollection('projets');
 ---
 
-<BaseLayout title={`Projets — ${settings?.data.siteName}`}>
+<BaseLayout title={`Projets — ${settings?.data.siteName}`} breadcrumb={[{ label: 'Projets' }]}>
 	<section class="section">
 		<div class="wrap">
 			<h1>Projets</h1>

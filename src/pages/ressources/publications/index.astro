@@ -17,15 +17,26 @@ const filters = [
 ];
 ---
 
-<BaseLayout title={`Publications — ${settings?.data.siteName}`}>
+<BaseLayout
+	title={`Publications — ${settings?.data.siteName}`}
+	breadcrumb={[{ label: 'Ressources', url: '/ressources/' }, { label: 'Publications' }]}
+>
 	<section class="section">
 		<div class="wrap">
 			<h1>Ressources</h1>
 			<FilterTabs items={filters} />
 			<h2>Publications</h2>
-			<div class="card-grid">
-				{publications.map((publication) => <PublicationCard publication={publication} />)}
-			</div>
+			{
+				publications.length > 0 ? (
+					<div class="card-grid">
+						{publications.map((publication) => (
+							<PublicationCard publication={publication} />
+						))}
+					</div>
+				) : (
+					<p>Aucune publication publiée pour le moment.</p>
+				)
+			}
 		</div>
 	</section>
 </BaseLayout>

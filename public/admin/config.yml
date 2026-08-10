@@ -491,9 +491,27 @@ collections:
           - { label: Slogan, name: tagline, widget: string, required: false }
           - { label: Description, name: description, widget: text, required: false }
           - { label: Logo, name: logo, widget: image, required: false }
+          - {
+              label: "Favicon (icône du site, carrée)",
+              name: favicon,
+              widget: image,
+              required: false,
+            }
           - { label: Email, name: email, widget: string, required: false }
           - { label: Téléphone, name: phone, widget: string, required: false }
           - { label: Adresse, name: address, widget: string, required: false }
+          - {
+              label: "Vidéo de présentation (URL YouTube)",
+              name: presentationVideoUrl,
+              widget: string,
+              required: false,
+            }
+          - {
+              label: Légende de la vidéo,
+              name: presentationVideoCaption,
+              widget: text,
+              required: false,
+            }
       - name: navigation
         label: Navigation
         file: src/content/config/navigation.yaml

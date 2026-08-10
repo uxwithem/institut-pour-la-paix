@@ -3,15 +3,24 @@ import { getEntry } from 'astro:content';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import BottomNav from '../components/BottomNav.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import { withBase } from '../lib/url';
 import '../styles/global.css';
+
+interface Crumb {
+	label: string;
+	url?: string;
+}
 
 interface Props {
 	title: string;
 	description?: string;
+	breadcrumb?: Crumb[];
 }
 
-const { title, description } = Astro.props;
+const { title, description, breadcrumb } = Astro.props;
 const seo = await getEntry('seoDefaults', 'main');
+const settings = await getEntry('siteSettings', 'main');
 
 const pageTitle = seo?.data.titleTemplate ? seo.data.titleTemplate.replace('%s', title) : title;
 const pageDescription = description ?? seo?.data.defaultDescription;
@@ -24,6 +33,14 @@ const pageDescription = description ?? seo?.data.defaultDescription;
 		<title>{pageTitle}</title>
 		{pageDescription && <meta name="description" content={pageDescription} />}
 		<meta name="generator" content={Astro.generator} />
+		{
+			settings?.data.favicon && (
+				<>
+					<link rel="icon" href={withBase(settings.data.favicon)} />
+					<link rel="apple-touch-icon" href={withBase(settings.data.favicon)} />
+				</>
+			)
+		}
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -33,6 +50,7 @@ const pageDescription = description ?? seo?.data.defaultDescription;
 	</head>
 	<body>
 		<Header />
+		{breadcrumb && breadcrumb.length > 0 && <Breadcrumb items={breadcrumb} />}
 		<main>
 			<slot />
 		</main>

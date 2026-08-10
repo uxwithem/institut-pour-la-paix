@@ -2,6 +2,7 @@
 import { getCollection, getEntry, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { withBase } from '../../lib/url';
+import { youtubeEmbedUrl } from '../../lib/youtube';
 
 export async function getStaticPaths() {
 	const resources = await getCollection('ressources');
@@ -15,16 +16,15 @@ const { resource } = Astro.props;
 const { Content } = await render(resource);
 const type = await getEntry('resourceTypes', resource.data.type);
 
-function youtubeEmbedUrl(url: string): string | undefined {
-	const m = url.match(/(?:v=|youtu\.be\/|embed\/)([\w-]{11})/);
-	return m ? `https://www.youtube.com/embed/${m[1]}` : undefined;
-}
-
 const embedUrl = resource.data.youtubeUrl ? youtubeEmbedUrl(resource.data.youtubeUrl) : undefined;
 const downloadLink = resource.data.externalUrl ?? (resource.data.file ? withBase(resource.data.file) : undefined);
 ---
 
-<BaseLayout title={resource.data.title} description={resource.data.description}>
+<BaseLayout
+	title={resource.data.title}
+	description={resource.data.description}
+	breadcrumb={[{ label: 'Ressources', url: '/ressources/' }, { label: resource.data.title }]}
+>
 	<article class="section wrap-prose">
 		<p class="eyebrow">{type?.data.label ?? resource.data.type}</p>
 		<h1>{resource.data.title}</h1>

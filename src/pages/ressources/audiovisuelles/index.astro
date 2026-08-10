@@ -17,15 +17,26 @@ const filters = [
 ];
 ---
 
-<BaseLayout title={`Ressources audiovisuelles — ${settings?.data.siteName}`}>
+<BaseLayout
+	title={`Ressources audiovisuelles — ${settings?.data.siteName}`}
+	breadcrumb={[{ label: 'Ressources', url: '/ressources/' }, { label: 'Audiovisuelles' }]}
+>
 	<section class="section">
 		<div class="wrap">
 			<h1>Ressources</h1>
 			<FilterTabs items={filters} />
 			<h2>Audiovisuelles</h2>
-			<div class="card-grid">
-				{resources.map((resource) => <ResourceCard resource={resource} />)}
-			</div>
+			{
+				resources.length > 0 ? (
+					<div class="card-grid">
+						{resources.map((resource) => (
+							<ResourceCard resource={resource} />
+						))}
+					</div>
+				) : (
+					<p>Aucune ressource audiovisuelle publiée pour le moment.</p>
+				)
+			}
 		</div>
 	</section>
 </BaseLayout>

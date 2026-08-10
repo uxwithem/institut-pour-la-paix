@@ -3,9 +3,14 @@ import { getCollection, getEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import EventCard from '../components/EventCard.astro';
+import NewsletterForm from '../components/NewsletterForm.astro';
 import { withBase } from '../lib/url';
+import { youtubeEmbedUrl } from '../lib/youtube';
 
 const settings = await getEntry('siteSettings', 'main');
+const presentationVideo = settings?.data.presentationVideoUrl
+	? youtubeEmbedUrl(settings.data.presentationVideoUrl)
+	: undefined;
 
 const articles = (await getCollection('actualites')).sort(
 	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
@@ -81,19 +86,73 @@ const upcomingEvents = (await getCollection('evenements'))
 		</div>
 	</section>
 
+	{
+		presentationVideo && (
+			<section class="section">
+				<div class="wrap video-grid">
+					<div>
+						<h2>L'IPP en 3 minutes</h2>
+						{settings?.data.presentationVideoCaption && <p>{settings.data.presentationVideoCaption}</p>}
+						<a class="btn" href={withBase('/devenir-membre/')}>
+							Devenez membre
+						</a>
+					</div>
+					<div class="video-embed">
+						<iframe
+							src={presentationVideo}
+							title="L'IPP en 3 minutes"
+							loading="lazy"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen
+						/>
+					</div>
+				</div>
+			</section>
+		)
+	}
+
 	<section class="cta">
 		<div class="wrap">
-			<h2>Rejoindre le réseau</h2>
-			<p>Devenez membre de l'Institut pour la Paix.</p>
-			<a class="btn" href={withBase('/devenir-membre/')}>Devenir membre</a>
+			<NewsletterForm />
 		</div>
 	</section>
 </BaseLayout>
 
 <style>
+	.video-grid {
+		display: grid;
+		gap: 2rem;
+		align-items: center;
+	}
+
+	@media (min-width: 48rem) {
+		.video-grid {
+			grid-template-columns: 1fr 1fr;
+			gap: 3rem;
+		}
+	}
+
+	.video-embed {
+		position: relative;
+		aspect-ratio: 16 / 9;
+		border-radius: var(--radius);
+		overflow: hidden;
+	}
+
+	.video-embed iframe {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		border: 0;
+	}
+
 	.hero {
 		background: var(--color-fg);
 		color: var(--color-bg);
+		display: flex;
+		align-items: center;
+		min-height: 100svh;
 	}
 
 	.hero :focus-visible,
@@ -103,12 +162,12 @@ const upcomingEvents = (await getCollection('evenements'))
 	}
 
 	.hero-inner {
-		padding-block: var(--space-5) var(--space-4);
+		padding-block: var(--space-5);
 	}
 
 	@media (min-width: 48rem) {
-		.hero-inner {
-			padding-block: 6rem;
+		.hero {
+			min-height: 80svh;
 		}
 	}
 

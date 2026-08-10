@@ -36,7 +36,10 @@ const filters = [
 ];
 ---
 
-<BaseLayout title={`${groupLabels[type!]} — Équipe et réseau — ${settings?.data.siteName}`}>
+<BaseLayout
+	title={`${groupLabels[type!]} — Équipe et réseau — ${settings?.data.siteName}`}
+	breadcrumb={[{ label: 'Équipe et réseau', url: '/equipe-reseau/' }, { label: groupLabels[type!] }]}
+>
 	<section class="section">
 		<div class="wrap">
 			<h1>Équipe & réseau</h1>

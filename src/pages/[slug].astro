@@ -15,7 +15,11 @@ const { page } = Astro.props;
 const { Content } = await render(page);
 ---
 
-<BaseLayout title={page.data.seoTitle ?? page.data.title} description={page.data.seoDescription}>
+<BaseLayout
+	title={page.data.seoTitle ?? page.data.title}
+	description={page.data.seoDescription}
+	breadcrumb={[{ label: page.data.title }]}
+>
 	<article class="section wrap-prose">
 		<h1>{page.data.title}</h1>
 		{

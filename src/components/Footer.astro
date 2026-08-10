@@ -5,7 +5,6 @@ import { withBase } from '../lib/url';
 const settings = await getEntry('siteSettings', 'main');
 const footer = await getEntry('footer', 'main');
 const social = await getEntry('socialLinks', 'main');
-const newsletter = await getEntry('newsletter', 'main');
 const year = new Date().getFullYear();
 ---
 
@@ -46,14 +45,6 @@ const year = new Date().getFullYear();
 					</ul>
 				</div>
 			))
-		}
-		{
-			newsletter && (newsletter.data.heading || newsletter.data.description) && (
-				<div class="col">
-					<p class="eyebrow">{newsletter.data.heading}</p>
-					<p>{newsletter.data.description}</p>
-				</div>
-			)
 		}
 	</div>
 	<div class="wrap copyright">

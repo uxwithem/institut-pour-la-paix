@@ -225,9 +225,12 @@ const siteSettings = defineCollection({
 		tagline: z.string().optional(),
 		description: z.string().optional(),
 		logo: z.string().optional(),
+		favicon: z.string().optional(),
 		email: z.email().optional(),
 		phone: z.string().optional(),
 		address: z.string().optional(),
+		presentationVideoUrl: z.url().optional(),
+		presentationVideoCaption: z.string().optional(),
 	}),
 });
 

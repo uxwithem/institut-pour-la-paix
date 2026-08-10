@@ -29,7 +29,10 @@ const filters = [
 ];
 ---
 
-<BaseLayout title={`${category?.data.label} — Actualités — ${settings?.data.siteName}`}>
+<BaseLayout
+	title={`${category?.data.label} — Actualités — ${settings?.data.siteName}`}
+	breadcrumb={[{ label: 'Actualités', url: '/actualites/' }, { label: category?.data.label ?? '' }]}
+>
 	<section class="section">
 		<div class="wrap">
 			<h1>Actualités</h1>

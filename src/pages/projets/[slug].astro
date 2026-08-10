@@ -26,7 +26,11 @@ const [team, resources, events, articles] = await Promise.all([
 ]);
 ---
 
-<BaseLayout title={project.data.title} description={project.data.description}>
+<BaseLayout
+	title={project.data.title}
+	description={project.data.description}
+	breadcrumb={[{ label: 'Projets', url: '/projets/' }, { label: project.data.title }]}
+>
 	<article class="section wrap-prose">
 		<p class="eyebrow">Projet · {project.data.status}</p>
 		<h1>{project.data.title}</h1>

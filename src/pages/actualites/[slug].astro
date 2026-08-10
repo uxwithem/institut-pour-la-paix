@@ -21,7 +21,11 @@ const dateLabel = article.data.date.toLocaleDateString('fr-FR', {
 });
 ---
 
-<BaseLayout title={article.data.seoTitle ?? article.data.title} description={article.data.seoDescription ?? article.data.excerpt}>
+<BaseLayout
+	title={article.data.seoTitle ?? article.data.title}
+	description={article.data.seoDescription ?? article.data.excerpt}
+	breadcrumb={[{ label: 'Actualités', url: '/actualites/' }, { label: article.data.title }]}
+>
 	<article class="section wrap-prose">
 		{category && <p class="eyebrow">{category.data.label}</p>}
 		<h1>{article.data.title}</h1>

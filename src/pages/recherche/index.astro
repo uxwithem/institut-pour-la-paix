@@ -9,7 +9,7 @@ const groups = await getCollection('groupes', ({ data }) => data.status === 'act
 const projects = await getCollection('projets');
 ---
 
-<BaseLayout title={`Recherche — ${settings?.data.siteName}`}>
+<BaseLayout title={`Recherche — ${settings?.data.siteName}`} breadcrumb={[{ label: 'Recherche' }]}>
 	<section class="section">
 		<div class="wrap">
 			<h1>La paix comme objet d'étude</h1>

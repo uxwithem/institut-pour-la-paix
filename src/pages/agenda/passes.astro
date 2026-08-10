@@ -18,7 +18,10 @@ const filters = [
 ];
 ---
 
-<BaseLayout title={`Événements passés — Agenda — ${settings?.data.siteName}`}>
+<BaseLayout
+	title={`Événements passés — Agenda — ${settings?.data.siteName}`}
+	breadcrumb={[{ label: 'Agenda', url: '/agenda/' }, { label: 'Passés' }]}
+>
 	<section class="section">
 		<div class="wrap">
 			<h1>Agenda</h1>

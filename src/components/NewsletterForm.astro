@@ -1,0 +1,50 @@
+---
+import { getEntry } from 'astro:content';
+
+const newsletter = await getEntry('newsletter', 'main');
+---
+
+{
+	newsletter?.data.formAction && (
+		<div class="newsletter-form">
+			{newsletter.data.heading && <h2>{newsletter.data.heading}</h2>}
+			{newsletter.data.description && <p>{newsletter.data.description}</p>}
+			<form method="post" action={newsletter.data.formAction}>
+				<input type="text" name="nom" placeholder="Prénom / Nom" required aria-label="Prénom et nom" />
+				<input type="email" name="email" placeholder="Adresse e-mail" required aria-label="Adresse e-mail" />
+				<button type="submit" class="btn">S'abonner</button>
+			</form>
+		</div>
+	)
+}
+
+<style>
+	.newsletter-form form {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		margin-top: 1.25rem;
+	}
+
+	.newsletter-form input {
+		flex: 1 1 12rem;
+		font: inherit;
+		padding: 0.7rem 1rem;
+		border: 1px solid var(--color-line);
+		border-radius: var(--radius);
+		background: var(--color-surface);
+		color: var(--color-fg);
+	}
+
+	.newsletter-form input:focus-visible {
+		outline: 3px solid var(--color-accent);
+		outline-offset: 2px;
+	}
+
+	.newsletter-form button {
+		flex: none;
+		border: none;
+		cursor: pointer;
+		font: inherit;
+	}
+</style>

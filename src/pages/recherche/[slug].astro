@@ -38,7 +38,11 @@ const relatedProjects = allProjects.filter((p) => p.data.researchGroup?.id === g
 const associatedGroups = allGroups.filter((g) => g.id !== group.id && g.data.status === 'active').slice(0, 3);
 ---
 
-<BaseLayout title={group.data.seoTitle ?? group.data.title} description={group.data.seoDescription ?? group.data.intro}>
+<BaseLayout
+	title={group.data.seoTitle ?? group.data.title}
+	description={group.data.seoDescription ?? group.data.intro}
+	breadcrumb={[{ label: 'Recherche', url: '/recherche/' }, { label: group.data.title }]}
+>
 	<section class="section wrap-prose">
 		<p class="eyebrow">Groupe de recherche</p>
 		<h1>{group.data.title}</h1>
