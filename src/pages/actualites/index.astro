@@ -2,17 +2,26 @@
 import { getCollection, getEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
+import FilterTabs from '../../components/FilterTabs.astro';
 
 const settings = await getEntry('siteSettings', 'main');
 const articles = (await getCollection('actualites')).sort(
 	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
+
+const usedCategorySlugs = [...new Set(articles.map((a) => a.data.category).filter(Boolean))];
+const categories = await getCollection('categories', ({ id }) => usedCategorySlugs.includes(id));
+const filters = [
+	{ label: 'Tous', url: '/actualites/' },
+	...categories.map((c) => ({ label: c.data.label, url: `/actualites/categorie/${c.id}/` })),
+];
 ---
 
 <BaseLayout title={`Actualités — ${settings?.data.siteName}`}>
 	<section class="section">
 		<div class="wrap">
 			<h1>Actualités</h1>
+			<FilterTabs items={filters} />
 			<div class="card-grid">
 				{articles.map((article) => <ArticleCard article={article} />)}
 			</div>

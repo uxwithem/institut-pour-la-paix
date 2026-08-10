@@ -2,6 +2,7 @@
 import { getEntry } from 'astro:content';
 import { withBase } from '../lib/url';
 
+const settings = await getEntry('siteSettings', 'main');
 const footer = await getEntry('footer', 'main');
 const social = await getEntry('socialLinks', 'main');
 const newsletter = await getEntry('newsletter', 'main');
@@ -11,7 +12,13 @@ const year = new Date().getFullYear();
 <footer class="site-footer">
 	<div class="wrap grid">
 		<div class="about">
-			<p class="wordmark">{footer?.data.text}</p>
+			{
+				settings?.data.logo ? (
+					<img class="footer-logo" src={withBase(settings.data.logo)} alt={settings.data.siteName} />
+				) : (
+					<p class="wordmark">{footer?.data.text}</p>
+				)
+			}
 			{
 				social?.data.items.length ? (
 					<ul class="social">
@@ -55,14 +62,17 @@ const year = new Date().getFullYear();
 </footer>
 
 <style>
+	/* An intentionally-inverted section: swap fg/bg rather than introduce a new
+	   color, so it stays dark-on-light-page in light mode and light-on-dark-page
+	   in dark mode — always the opposite of the surrounding page, on purpose. */
 	.site-footer {
-		background: var(--color-indigo-deep);
-		color: #fff;
+		background: var(--color-fg);
+		color: var(--color-bg);
 		margin-top: var(--space-5);
 	}
 
 	.site-footer :focus-visible {
-		outline-color: var(--color-signal-bright);
+		outline-color: var(--color-accent);
 	}
 
 	.grid {
@@ -78,12 +88,29 @@ const year = new Date().getFullYear();
 		margin: 0 0 0.75rem;
 	}
 
+	.footer-logo {
+		height: 2.75rem;
+		width: auto;
+		margin-bottom: 0.9rem;
+		/* Light theme: footer bg is near-black, so invert the dark-ink logo to
+		   read white. Dark theme: footer bg is near-white, so its natural dark
+		   ink already reads fine — no invert. */
+		filter: brightness(0) invert(1);
+		opacity: 0.92;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.footer-logo {
+			filter: none;
+		}
+	}
+
 	.eyebrow {
-		color: #cfccee;
+		color: color-mix(in srgb, var(--color-bg) 70%, var(--color-fg));
 	}
 
 	.eyebrow::before {
-		background: var(--color-signal-bright);
+		background: var(--color-accent);
 	}
 
 	.col ul {
@@ -100,11 +127,11 @@ const year = new Date().getFullYear();
 	}
 
 	.col a {
-		color: #ece9fb;
+		color: color-mix(in srgb, var(--color-bg) 88%, var(--color-fg));
 	}
 
 	.col a:hover {
-		color: var(--color-signal-bright);
+		color: var(--color-accent);
 	}
 
 	.social {
@@ -114,17 +141,17 @@ const year = new Date().getFullYear();
 	}
 
 	.social a {
-		color: #cfccee;
+		color: color-mix(in srgb, var(--color-bg) 70%, var(--color-fg));
 	}
 
 	.social a:hover {
-		color: var(--color-signal-bright);
+		color: var(--color-accent);
 	}
 
 	.copyright {
-		border-top: 1px solid rgba(255, 255, 255, 0.15);
+		border-top: 1px solid color-mix(in srgb, var(--color-bg) 15%, transparent);
 		padding-block: 1.1rem;
 		font-size: 0.82rem;
-		color: #a9a5d1;
+		color: color-mix(in srgb, var(--color-bg) 55%, var(--color-fg));
 	}
 </style>

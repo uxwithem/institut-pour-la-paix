@@ -1,0 +1,50 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PersonCard from '../../../components/PersonCard.astro';
+import FilterTabs from '../../../components/FilterTabs.astro';
+
+const groupLabels: Record<string, string> = {
+	equipe: 'Équipe',
+	copil: 'Comité de pilotage',
+	'membre-reseau': 'Réseau scientifique',
+	chercheur: 'Chercheurs associés',
+	partenaire: 'Partenaires',
+};
+const groupOrder = ['equipe', 'copil', 'membre-reseau', 'chercheur', 'partenaire'] as const;
+
+export async function getStaticPaths() {
+	const people = await getCollection('personnes', ({ data }) => data.active);
+	const usedTypes = [...new Set(people.map((p) => p.data.type))];
+	return usedTypes.map((type) => ({
+		params: { type },
+		props: { people: people.filter((p) => p.data.type === type) },
+	}));
+}
+
+const { type } = Astro.params;
+const { people } = Astro.props;
+const settings = await getEntry('siteSettings', 'main');
+
+const allPeople = await getCollection('personnes', ({ data }) => data.active);
+const groups = groupOrder
+	.map((t) => ({ type: t, label: groupLabels[t], count: allPeople.filter((p) => p.data.type === t).length }))
+	.filter((g) => g.count > 0);
+const filters = [
+	{ label: 'Tous', url: '/equipe-reseau/' },
+	...groups.map((g) => ({ label: g.label, url: `/equipe-reseau/type/${g.type}/` })),
+];
+---
+
+<BaseLayout title={`${groupLabels[type!]} — Équipe et réseau — ${settings?.data.siteName}`}>
+	<section class="section">
+		<div class="wrap">
+			<h1>Équipe & réseau</h1>
+			<FilterTabs items={filters} />
+			<h2>{groupLabels[type!]}</h2>
+			<div class="card-grid">
+				{people.map((person) => <PersonCard person={person} />)}
+			</div>
+		</div>
+	</section>
+</BaseLayout>

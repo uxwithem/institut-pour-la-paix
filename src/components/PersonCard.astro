@@ -15,19 +15,67 @@ const typeLabels: Record<string, string> = {
 	chercheur: 'Chercheur associé',
 	partenaire: 'Partenaire',
 };
+
+const initials = person.data.name
+	.split(/\s+/)
+	.map((w) => w[0])
+	.slice(0, 2)
+	.join('')
+	.toUpperCase();
 ---
 
-<a class="card" href={withBase(`/equipe-reseau/${person.id}/`)}>
-	{
-		person.data.photo && (
-			<div class="card-media card-media--portrait">
+<a class="card person-card" href={withBase(`/equipe-reseau/${person.id}/`)}>
+	<div class="avatar">
+		{
+			person.data.photo ? (
 				<img src={withBase(person.data.photo)} alt="" loading="lazy" />
-			</div>
-		)
-	}
+			) : (
+				<span class="initials">{initials}</span>
+			)
+		}
+	</div>
 	<div class="card-body">
-		<span class="eyebrow">{typeLabels[person.data.type] ?? person.data.type}</span>
 		<h3>{person.data.name}</h3>
 		{person.data.role && <p class="meta">{person.data.role}</p>}
+		<span class="eyebrow">{typeLabels[person.data.type] ?? person.data.type}</span>
 	</div>
 </a>
+
+<style>
+	.person-card {
+		align-items: center;
+		text-align: center;
+		padding: 1.6rem 1.25rem;
+		gap: 0.9rem;
+	}
+
+	.avatar {
+		width: 5.5rem;
+		height: 5.5rem;
+		border-radius: 50%;
+		overflow: hidden;
+		background: color-mix(in srgb, var(--color-fg) 8%, var(--color-bg));
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.avatar img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.initials {
+		font-family: var(--font-display);
+		font-size: 1.6rem;
+		font-weight: 600;
+		color: var(--color-muted);
+	}
+
+	.person-card .card-body {
+		padding: 0;
+		align-items: center;
+		gap: 0.3rem;
+	}
+</style>

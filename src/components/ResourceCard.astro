@@ -8,13 +8,21 @@ interface Props {
 
 const { resource } = Astro.props;
 const type = await getEntry('resourceTypes', resource.data.type);
+const isPlayable = ['video', 'audio', 'podcast'].includes(resource.data.type);
 ---
 
-<a class="card" href={withBase(`/ressources/${resource.id}/`)}>
+<a class="card resource-card" href={withBase(`/ressources/${resource.id}/`)}>
 	{
-		resource.data.thumbnail && (
+		(resource.data.thumbnail || isPlayable) && (
 			<div class="card-media">
-				<img src={withBase(resource.data.thumbnail)} alt="" loading="lazy" />
+				{resource.data.thumbnail && <img src={withBase(resource.data.thumbnail)} alt="" loading="lazy" />}
+				{isPlayable && (
+					<span class="play" aria-hidden="true">
+						<svg viewBox="0 0 24 24" width="18" height="18">
+							<path d="M8 5v14l11-7z" fill="currentColor" />
+						</svg>
+					</span>
+				)}
 			</div>
 		)
 	}
@@ -24,3 +32,25 @@ const type = await getEntry('resourceTypes', resource.data.type);
 		{resource.data.description && <p>{resource.data.description}</p>}
 	</div>
 </a>
+
+<style>
+	.resource-card .card-media {
+		position: relative;
+	}
+
+	.play {
+		position: absolute;
+		inset: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.play svg {
+		background: var(--color-fg);
+		color: var(--color-bg);
+		border-radius: 50%;
+		padding: 0.9rem;
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+	}
+</style>

@@ -13,14 +13,17 @@ const dateLabel = publication.data.date.toLocaleDateString('fr-FR', {
 });
 ---
 
-<a class="card" href={withBase(`/ressources/publications/${publication.id}/`)}>
-	{
-		publication.data.coverImage && (
-			<div class="card-media card-media--portrait">
+<a class="card publication-card" href={withBase(`/ressources/publications/${publication.id}/`)}>
+	<div class="cover">
+		{
+			publication.data.coverImage ? (
 				<img src={withBase(publication.data.coverImage)} alt="" loading="lazy" />
-			</div>
-		)
-	}
+			) : (
+				<span class="cover-fallback" aria-hidden="true" />
+			)
+		}
+		{publication.data.file && <span class="file-badge">PDF</span>}
+	</div>
 	<div class="card-body">
 		<span class="eyebrow">{dateLabel}</span>
 		<h3>{publication.data.title}</h3>
@@ -28,3 +31,53 @@ const dateLabel = publication.data.date.toLocaleDateString('fr-FR', {
 		{publication.data.description && <p>{publication.data.description}</p>}
 	</div>
 </a>
+
+<style>
+	.publication-card {
+		flex-direction: row;
+		align-items: stretch;
+	}
+
+	.cover {
+		position: relative;
+		flex: none;
+		width: 6rem;
+		background: color-mix(in srgb, var(--color-fg) 6%, var(--color-bg));
+	}
+
+	.cover img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+	}
+
+	.cover-fallback {
+		display: block;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(
+			135deg,
+			color-mix(in srgb, var(--color-fg) 10%, var(--color-bg)),
+			color-mix(in srgb, var(--color-fg) 4%, var(--color-bg))
+		);
+	}
+
+	.file-badge {
+		position: absolute;
+		bottom: 0.4rem;
+		left: 0.4rem;
+		font-family: var(--font-mono);
+		font-size: 0.6rem;
+		font-weight: 600;
+		letter-spacing: 0.04em;
+		background: var(--color-fg);
+		color: var(--color-bg);
+		padding: 0.15rem 0.4rem;
+		border-radius: 3px;
+	}
+
+	.publication-card .card-body {
+		justify-content: center;
+	}
+</style>

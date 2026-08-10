@@ -5,41 +5,18 @@ heroImage: /uploads/wp-import/INSTITUT-rvb-couv-YT.jpg
 
 ## Devenir membre : conditions et modalités
 
-L’Institut Pour la Paix (IPP) est une association Loi 1901 ayant pour objet l’introduction des études de paix dans l’espace francophone, européen et international.
+L'Institut Pour la Paix (IPP) est une association Loi 1901 ayant pour objet l'introduction des études de paix dans l'espace francophone, européen et international.
 
-Toute personne souhaitant contribuer aux recherches sur la paix dans l’espace francophone peut rejoindre l’association en tant que membre.
+Toute personne souhaitant contribuer aux recherches sur la paix dans l'espace francophone peut rejoindre l'association en tant que membre.
 
-L’adhésion est soumise à l’acceptation de la charte éthique de l’association.
-
-*L’adhésion est gratuite*
+L'adhésion est soumise à l'acceptation de la charte éthique de l'association et est gratuite.
 
 [Lire la Charte éthique](https://www.institutpourlapaix.org/wp-content/uploads/2023/09/Charte_ethique_IPP.pdf)
 
-## Formulaire d'adhésion
+## Comment adhérer
 
-Remplissez ces champs pour formaliser votre adhésion à l’IPP. Vous recevrez un email de confirmation lorsque votre demande aura été traitée par notre équipe.
-
-Veuillez activer JavaScript dans votre navigateur pour remplir ce formulaire.
-
-Nom complet \*
-
-Prénom
-
-Nom
-
-E-mail \*
-
-Je confirme avoir pris connaissance de la Charte éthique de l'IPP et accepte ses conditions \*
-
--   Oui
-
-Je souhaite m'inscrire à la newsletter de l'IPP \*
-
--   Oui
--   Non merci
-
-J'adhère à l'IPP![Chargement en cours](/institut-pour-la-paix/uploads/wp-import/submit-spin.svg)
+Pour adhérer, écrivez-nous à [contact@institutpourlapaix.org](mailto:contact@institutpourlapaix.org) en précisant votre nom et votre intérêt pour les études de paix. Vous recevrez un email de confirmation une fois votre demande traitée par notre équipe.
 
 ## Vous avez des questions ?
 
-[Contactez-nous](#contact@institutpourlapaix.org)
+[Contactez-nous](mailto:contact@institutpourlapaix.org)

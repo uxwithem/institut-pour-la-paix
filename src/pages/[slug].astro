@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { withBase } from '../lib/url';
 
 export async function getStaticPaths() {
 	const pages = await getCollection('pages');
@@ -17,6 +18,13 @@ const { Content } = await render(page);
 <BaseLayout title={page.data.seoTitle ?? page.data.title} description={page.data.seoDescription}>
 	<article class="section wrap-prose">
 		<h1>{page.data.title}</h1>
+		{
+			page.data.heroImage && (
+				<div class="detail-image">
+					<img src={withBase(page.data.heroImage)} alt="" />
+				</div>
+			)
+		}
 		<div class="prose">
 			<Content />
 		</div>

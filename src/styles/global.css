@@ -1,20 +1,22 @@
 /*
-  Palette concept: "dusk to dawn" — indigo (the work: conflict, depth, research)
-  resolving into a vermilion signal (the pulse: urgency, the human element).
-  Chosen against the peace-studies clichés (dove blue, olive branch, pastel
-  cream+serif) precisely because the IPP studies conflict as much as peace.
-  All text/background pairs below are contrast-checked for WCAG AA.
+  Palette: black, white, and one accent — a vermilion "signal" (the institute's
+  own recurring motif for labels/dates/active-states). --color-accent sits at
+  the mathematical optimum for a single warm hue against both a white and a
+  near-black background (~4.4:1 each — a hair under AA's 4.5 on pure body
+  text, comfortably past it for anything bold/large/UI); everything else
+  (muted text, hairline borders, card surfaces) is derived from --color-fg/
+  --color-bg via color-mix rather than being its own hand-picked value, so
+  the whole site only has three real color decisions. Dark/light both
+  supported: swap by OS preference, no toggle.
 */
 :root {
-	--color-ink: #16141f;
-	--color-paper: #faf9fc;
-	--color-indigo: #3d3a8c;
-	--color-indigo-deep: #201d54;
-	--color-signal: #c6371e; /* text-safe on paper: 5.05:1 */
-	--color-signal-bright: #ff6b4a; /* large/decorative use only (3:1 class) */
-	--color-muted: #6b6780;
-	--color-line: #e4e1ec;
-	--color-surface: #ffffff;
+	--color-bg: #ffffff;
+	--color-fg: #0d0d0f;
+	--color-accent: #d4482e;
+
+	--color-muted: color-mix(in srgb, var(--color-fg) 58%, var(--color-bg));
+	--color-line: color-mix(in srgb, var(--color-fg) 14%, var(--color-bg));
+	--color-surface: color-mix(in srgb, var(--color-fg) 4%, var(--color-bg));
 
 	--font-display: 'Fraunces', 'Iowan Old Style', serif;
 	--font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -32,6 +34,13 @@
 	--radius-lg: 1.15rem;
 }
 
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-bg: #0d0d0f;
+		--color-fg: #f2f2f4;
+	}
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -47,8 +56,8 @@ body {
 }
 
 body {
-	background: var(--color-paper);
-	color: var(--color-ink);
+	background: var(--color-bg);
+	color: var(--color-fg);
 	font-family: var(--font-sans);
 	font-size: 1.03rem;
 	line-height: 1.65;
@@ -68,17 +77,17 @@ body {
 }
 
 a {
-	color: var(--color-indigo);
+	color: var(--color-accent);
 	text-decoration-thickness: 0.08em;
 	text-underline-offset: 0.15em;
 }
 
 a:hover {
-	color: var(--color-signal);
+	color: color-mix(in srgb, var(--color-accent) 80%, var(--color-fg));
 }
 
 :focus-visible {
-	outline: 3px solid var(--color-signal);
+	outline: 3px solid var(--color-accent);
 	outline-offset: 2px;
 	border-radius: 2px;
 }
@@ -160,7 +169,7 @@ img {
 	flex: none;
 	width: 0.9em;
 	height: 2px;
-	background: var(--color-signal-bright);
+	background: var(--color-accent);
 }
 
 .section {
@@ -237,7 +246,7 @@ audio {
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-	color: var(--color-ink);
+	color: var(--color-fg);
 	box-shadow: 0 1px 2px rgba(22, 20, 31, 0.04);
 	text-decoration: none;
 }
@@ -252,10 +261,10 @@ audio {
 }
 
 a.card:hover {
-	border-color: var(--color-signal-bright);
+	border-color: var(--color-accent);
 	transform: translateY(-3px);
 	box-shadow: 0 10px 24px rgba(22, 20, 31, 0.1);
-	color: var(--color-ink);
+	color: var(--color-fg);
 }
 
 .card-media {
@@ -328,7 +337,7 @@ a.card:hover {
 
 .btn {
 	display: inline-block;
-	background: var(--color-signal);
+	background: var(--color-accent);
 	color: #fff;
 	padding: 0.75rem 1.4rem;
 	border-radius: 999px;
@@ -345,7 +354,7 @@ a.card:hover {
 }
 
 .btn:hover {
-	background: var(--color-indigo-deep);
+	background: color-mix(in srgb, var(--color-accent) 78%, black);
 	color: #fff;
 	transform: translateY(-1px);
 }

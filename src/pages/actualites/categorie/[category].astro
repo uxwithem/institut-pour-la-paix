@@ -1,0 +1,42 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ArticleCard from '../../../components/ArticleCard.astro';
+import FilterTabs from '../../../components/FilterTabs.astro';
+
+export async function getStaticPaths() {
+	const articles = await getCollection('actualites');
+	const usedSlugs = [...new Set(articles.map((a) => a.data.category).filter(Boolean))];
+	return usedSlugs.map((slug) => ({
+		params: { category: slug },
+		props: { articles: articles.filter((a) => a.data.category === slug) },
+	}));
+}
+
+const { category: categorySlug } = Astro.params;
+const { articles } = Astro.props;
+const settings = await getEntry('siteSettings', 'main');
+const category = await getEntry('categories', categorySlug!);
+
+const sorted = [...articles].sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const allArticles = await getCollection('actualites');
+const usedCategorySlugs = [...new Set(allArticles.map((a) => a.data.category).filter(Boolean))];
+const allCategories = await getCollection('categories', ({ id }) => usedCategorySlugs.includes(id));
+const filters = [
+	{ label: 'Tous', url: '/actualites/' },
+	...allCategories.map((c) => ({ label: c.data.label, url: `/actualites/categorie/${c.id}/` })),
+];
+---
+
+<BaseLayout title={`${category?.data.label} — Actualités — ${settings?.data.siteName}`}>
+	<section class="section">
+		<div class="wrap">
+			<h1>Actualités</h1>
+			<FilterTabs items={filters} />
+			<div class="card-grid">
+				{sorted.map((article) => <ArticleCard article={article} />)}
+			</div>
+		</div>
+	</section>
+</BaseLayout>

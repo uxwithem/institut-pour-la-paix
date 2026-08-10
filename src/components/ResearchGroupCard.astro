@@ -4,12 +4,13 @@ import { withBase } from '../lib/url';
 
 interface Props {
 	group: CollectionEntry<'groupes'>;
+	index?: number;
 }
 
-const { group } = Astro.props;
+const { group, index } = Astro.props;
 ---
 
-<a class="card" href={withBase(`/recherche/${group.id}/`)}>
+<a class="card group-card" href={withBase(`/recherche/${group.id}/`)}>
 	{
 		group.data.image && (
 			<div class="card-media">
@@ -18,7 +19,7 @@ const { group } = Astro.props;
 		)
 	}
 	<div class="card-body">
-		<span class="eyebrow">Groupe de recherche</span>
+		<span class="eyebrow">{index !== undefined ? `Groupe ${String(index + 1).padStart(2, '0')}` : 'Groupe de recherche'}</span>
 		<h3>{group.data.title}</h3>
 		{group.data.intro && <p>{group.data.intro}</p>}
 	</div>

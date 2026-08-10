@@ -2,6 +2,7 @@
 import { getCollection, getEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PersonCard from '../../components/PersonCard.astro';
+import FilterTabs from '../../components/FilterTabs.astro';
 
 const settings = await getEntry('siteSettings', 'main');
 const people = await getCollection('personnes', ({ data }) => data.active);
@@ -18,6 +19,11 @@ const groupOrder = ['equipe', 'copil', 'membre-reseau', 'chercheur', 'partenaire
 const groups = groupOrder
 	.map((type) => ({ type, label: groupLabels[type], people: people.filter((p) => p.data.type === type) }))
 	.filter((group) => group.people.length > 0);
+
+const filters = [
+	{ label: 'Tous', url: '/equipe-reseau/' },
+	...groups.map((g) => ({ label: g.label, url: `/equipe-reseau/type/${g.type}/` })),
+];
 ---
 
 <BaseLayout title={`Équipe et réseau — ${settings?.data.siteName}`}>
@@ -25,6 +31,7 @@ const groups = groupOrder
 		<div class="wrap">
 			<h1>Équipe & réseau</h1>
 			<p class="lead">Notre fonctionnement repose sur une équipe permanente, un comité de pilotage et un réseau scientifique élargi.</p>
+			<FilterTabs items={filters} />
 		</div>
 	</section>
 

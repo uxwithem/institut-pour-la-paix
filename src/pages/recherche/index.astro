@@ -24,7 +24,7 @@ const projects = await getCollection('projets');
 		<div class="wrap">
 			<h2>Nos groupes de recherche</h2>
 			<div class="card-grid">
-				{groups.map((group) => <ResearchGroupCard group={group} />)}
+				{groups.map((group, i) => <ResearchGroupCard group={group} index={i} />)}
 			</div>
 		</div>
 	</section>

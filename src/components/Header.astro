@@ -8,15 +8,7 @@ const nav = await getEntry('navigation', 'main');
 
 <header class="site-header">
 	<div class="wrap bar">
-		<a class="brand" href={withBase('/')} aria-label={settings?.data.siteName}>
-			{
-				settings?.data.logo ? (
-					<img class="brand-logo" src={withBase(settings.data.logo)} alt={settings.data.siteName} />
-				) : (
-					settings?.data.siteName
-				)
-			}
-		</a>
+		<a class="brand" href={withBase('/')}>{settings?.data.siteName}</a>
 		<nav class="top-nav" aria-label="Navigation principale">
 			<ul>
 				{
@@ -28,7 +20,15 @@ const nav = await getEntry('navigation', 'main');
 				}
 			</ul>
 		</nav>
-		<a class="btn join" href={withBase('/devenir-membre/')}>Devenir membre</a>
+		<div class="actions">
+			<a class="search-link" href={withBase('/rechercher/')} aria-label="Rechercher">
+				<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+					<circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2" />
+					<line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+				</svg>
+			</a>
+			<a class="btn join" href={withBase('/devenir-membre/')}>Devenir membre</a>
+		</div>
 	</div>
 </header>
 
@@ -53,18 +53,30 @@ const nav = await getEntry('navigation', 'main');
 		display: block;
 		font-family: var(--font-display);
 		font-weight: 600;
-		font-size: 1.1rem;
-		color: var(--color-ink);
+		font-size: 1.25rem;
+		letter-spacing: -0.01em;
+		color: var(--color-fg);
 		text-decoration: none;
-	}
-
-	.brand-logo {
-		height: 2.25rem;
-		width: auto;
 	}
 
 	.top-nav {
 		display: none;
+	}
+
+	.actions {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	.search-link {
+		display: flex;
+		color: var(--color-fg);
+		padding: 0.4rem;
+	}
+
+	.search-link:hover {
+		color: var(--color-accent);
 	}
 
 	.join {
@@ -87,14 +99,14 @@ const nav = await getEntry('navigation', 'main');
 		}
 
 		.top-nav a {
-			color: var(--color-ink);
+			color: var(--color-fg);
 			font-weight: 500;
 			font-size: 0.92rem;
 			text-decoration: none;
 		}
 
 		.top-nav a:hover {
-			color: var(--color-signal);
+			color: var(--color-accent);
 		}
 	}
 </style>

@@ -7,24 +7,61 @@ interface Props {
 }
 
 const { event } = Astro.props;
-const dateLabel = event.data.startDate.toLocaleDateString('fr-FR', {
-	day: 'numeric',
-	month: 'long',
-	year: 'numeric',
-});
+const day = event.data.startDate.toLocaleDateString('fr-FR', { day: '2-digit' });
+const month = event.data.startDate.toLocaleDateString('fr-FR', { month: 'short' });
+const year = event.data.startDate.getFullYear();
 ---
 
-<a class="card" href={withBase(`/agenda/${event.id}/`)}>
-	{
-		event.data.image && (
-			<div class="card-media">
-				<img src={withBase(event.data.image)} alt="" loading="lazy" />
-			</div>
-		)
-	}
+<a class="card event-card" href={withBase(`/agenda/${event.id}/`)}>
+	<div class="date-block">
+		<span class="day">{day}</span>
+		<span class="month">{month}<br />{year}</span>
+	</div>
 	<div class="card-body">
-		<span class="eyebrow">{dateLabel}{event.data.cancelled && ' · Annulé'}</span>
+		{event.data.cancelled && <span class="eyebrow">Annulé</span>}
 		<h3>{event.data.title}</h3>
+		{event.data.startTime && <p class="meta">{event.data.startTime}{event.data.endTime && ` → ${event.data.endTime}`}</p>}
 		{event.data.location?.name && <p class="meta">{event.data.location.name}</p>}
 	</div>
 </a>
+
+<style>
+	.event-card {
+		flex-direction: row;
+		align-items: stretch;
+	}
+
+	.date-block {
+		flex: none;
+		width: 5rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 0.15rem;
+		background: var(--color-fg);
+		color: var(--color-bg);
+		padding: 1rem 0.5rem;
+	}
+
+	.day {
+		font-family: var(--font-display);
+		font-size: 2rem;
+		font-weight: 600;
+		line-height: 1;
+	}
+
+	.month {
+		font-family: var(--font-mono);
+		font-size: 0.66rem;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		text-align: center;
+		line-height: 1.3;
+		color: color-mix(in srgb, var(--color-bg) 80%, var(--color-fg));
+	}
+
+	.event-card .card-body {
+		justify-content: center;
+	}
+</style>

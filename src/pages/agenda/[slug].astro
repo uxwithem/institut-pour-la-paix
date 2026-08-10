@@ -14,23 +14,51 @@ export async function getStaticPaths() {
 const { event } = Astro.props;
 const { Content } = await render(event);
 
-const dateLabel = event.data.startDate.toLocaleDateString('fr-FR', {
-	day: 'numeric',
-	month: 'long',
-	year: 'numeric',
-});
+const day = event.data.startDate.toLocaleDateString('fr-FR', { day: '2-digit' });
+const monthYear = event.data.startDate.toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' });
+const weekday = event.data.startDate.toLocaleDateString('fr-FR', { weekday: 'long' });
 ---
 
 <BaseLayout title={event.data.title} description={event.data.description}>
 	<article class="section wrap-prose">
-		{event.data.cancelled && <p class="eyebrow">Événement annulé</p>}
-		<h1>{event.data.title}</h1>
-		<p class="meta">
-			{dateLabel}
-			{event.data.startTime && ` · ${event.data.startTime}${event.data.endTime ? ` → ${event.data.endTime}` : ''}`}
-		</p>
-		{event.data.location?.name && <p class="meta">{event.data.location.name}</p>}
-		{event.data.description && <p>{event.data.description}</p>}
+		<div class="event-header">
+			<div class="date-block">
+				<span class="day">{day}</span>
+				<span class="month">{monthYear}</span>
+			</div>
+			<div>
+				{event.data.cancelled && <p class="eyebrow">Événement annulé</p>}
+				<h1>{event.data.title}</h1>
+				<p class="meta">
+					{weekday}
+					{event.data.startTime && ` · ${event.data.startTime}${event.data.endTime ? ` → ${event.data.endTime}` : ''}`}
+				</p>
+			</div>
+		</div>
+
+		{
+			(event.data.location?.name || event.data.registrationUrl) && (
+				<div class="practical">
+					{event.data.location?.name && (
+						<div>
+							<span class="eyebrow">Lieu</span>
+							<p>
+								{event.data.location.name}
+								{event.data.location.address && <br />}
+								{event.data.location.address}
+							</p>
+						</div>
+					)}
+					{event.data.registrationUrl && (
+						<a class="btn" href={event.data.registrationUrl}>
+							S'inscrire
+						</a>
+					)}
+				</div>
+			)
+		}
+
+		{event.data.description && <p class="lead">{event.data.description}</p>}
 		{
 			event.data.image && (
 				<div class="detail-image">
@@ -41,14 +69,64 @@ const dateLabel = event.data.startDate.toLocaleDateString('fr-FR', {
 		<div class="prose">
 			<Content />
 		</div>
-		{
-			event.data.registrationUrl && (
-				<p>
-					<a class="btn" href={event.data.registrationUrl}>
-						S'inscrire
-					</a>
-				</p>
-			)
-		}
 	</article>
 </BaseLayout>
+
+<style>
+	.event-header {
+		display: flex;
+		align-items: center;
+		gap: 1.25rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.date-block {
+		flex: none;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 0.15rem;
+		background: var(--color-fg);
+		color: var(--color-bg);
+		width: 5.5rem;
+		height: 5.5rem;
+		border-radius: var(--radius);
+	}
+
+	.day {
+		font-family: var(--font-display);
+		font-size: 2rem;
+		font-weight: 600;
+		line-height: 1;
+	}
+
+	.month {
+		font-family: var(--font-mono);
+		font-size: 0.6rem;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		text-align: center;
+		color: color-mix(in srgb, var(--color-bg) 80%, var(--color-fg));
+	}
+
+	.event-header h1 {
+		margin-bottom: 0.2em;
+	}
+
+	.practical {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		border: 1px solid var(--color-line);
+		border-radius: var(--radius);
+		padding: 1.25rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.practical p {
+		margin: 0.35rem 0 0;
+	}
+</style>

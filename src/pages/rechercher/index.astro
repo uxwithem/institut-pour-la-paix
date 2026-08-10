@@ -1,0 +1,161 @@
+---
+import { getEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const settings = await getEntry('siteSettings', 'main');
+---
+
+<BaseLayout title={`Rechercher — ${settings?.data.siteName}`}>
+	<section class="section wrap-prose">
+		<h1>Rechercher</h1>
+		<p class="lead">
+			Actualités, événements, groupes de recherche, personnes, publications, ressources, projets et
+			pages — en un seul endroit.
+		</p>
+		<input
+			type="search"
+			id="search-input"
+			class="search-input"
+			placeholder="Rechercher sur le site…"
+			autocomplete="off"
+		/>
+		<p id="search-status" class="meta" aria-live="polite"></p>
+		<ul id="search-results" class="results"></ul>
+	</section>
+</BaseLayout>
+
+<script>
+	interface SearchEntry {
+		title: string;
+		type: string;
+		url: string;
+		meta?: string;
+	}
+
+	function normalize(text: string): string {
+		return text
+			.normalize('NFD')
+			.replace(/[̀-ͯ]/g, '')
+			.toLowerCase();
+	}
+
+	const input = document.getElementById('search-input') as HTMLInputElement;
+	const status = document.getElementById('search-status') as HTMLParagraphElement;
+	const results = document.getElementById('search-results') as HTMLUListElement;
+
+	let index: SearchEntry[] = [];
+
+	async function loadIndex() {
+		const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+		const res = await fetch(`${base}/search-index.json`);
+		index = await res.json();
+	}
+
+	function render(entries: SearchEntry[], query: string) {
+		results.innerHTML = '';
+		if (!query) {
+			status.textContent = '';
+			return;
+		}
+		status.textContent =
+			entries.length === 0
+				? 'Aucun résultat.'
+				: `${entries.length} résultat${entries.length > 1 ? 's' : ''}`;
+		for (const entry of entries.slice(0, 40)) {
+			const li = document.createElement('li');
+			const a = document.createElement('a');
+			a.href = entry.url;
+			a.innerHTML = `<span class="eyebrow">${entry.type}</span><strong>${entry.title}</strong>${
+				entry.meta ? `<span class="meta">${entry.meta}</span>` : ''
+			}`;
+			li.appendChild(a);
+			results.appendChild(li);
+		}
+	}
+
+	let debounceTimer: ReturnType<typeof setTimeout>;
+	input.addEventListener('input', () => {
+		clearTimeout(debounceTimer);
+		debounceTimer = setTimeout(async () => {
+			const query = input.value.trim();
+			if (!query) {
+				render([], '');
+				return;
+			}
+			if (index.length === 0) await loadIndex();
+			const q = normalize(query);
+			const matches = index.filter(
+				(e) => normalize(e.title).includes(q) || (e.meta && normalize(e.meta).includes(q)),
+			);
+			render(matches, query);
+		}, 120);
+	});
+
+	loadIndex();
+
+	const params = new URLSearchParams(location.search);
+	const initialQuery = params.get('q');
+	if (initialQuery) {
+		input.value = initialQuery;
+		input.dispatchEvent(new Event('input'));
+	}
+</script>
+
+<style>
+	.search-input {
+		display: block;
+		width: 100%;
+		font: inherit;
+		font-size: 1.1rem;
+		padding: 0.9rem 1.1rem;
+		border: 1px solid var(--color-line);
+		border-radius: var(--radius);
+		background: var(--color-surface);
+		color: var(--color-fg);
+		margin-top: 1.5rem;
+	}
+
+	.search-input:focus-visible {
+		outline: 3px solid var(--color-accent);
+		outline-offset: 2px;
+	}
+
+	#search-status {
+		margin-top: 0.75rem;
+	}
+
+	.results {
+		list-style: none;
+		margin: 1rem 0 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.results a {
+		display: flex;
+		flex-direction: column;
+		gap: 0.3rem;
+		text-decoration: none;
+		color: var(--color-fg);
+		border: 1px solid var(--color-line);
+		border-radius: var(--radius);
+		padding: 1rem 1.15rem;
+	}
+
+	.results a:hover {
+		border-color: var(--color-accent);
+	}
+
+	.results strong {
+		font-family: var(--font-display);
+		font-weight: 600;
+		font-size: 1.05rem;
+	}
+
+	.results .meta {
+		font-size: 0.85rem;
+		color: var(--color-muted);
+	}
+</style>
