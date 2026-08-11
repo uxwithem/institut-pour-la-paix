@@ -4,6 +4,7 @@ image: /uploads/wp-import/approches-regionales-de-la-paix-1-1-1.png
 status: active
 featured: true
 coordinators:
+  - raphael-porteilla
   - laura-lema-silva
 participants: []
 ---

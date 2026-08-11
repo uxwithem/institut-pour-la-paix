@@ -13,7 +13,7 @@ const { group, index } = Astro.props;
 <a class="card group-card" href={withBase(`/recherche/${group.id}/`)}>
 	{
 		group.data.image && (
-			<div class="card-media">
+			<div class="card-media card-media--wide">
 				<img src={withBase(group.data.image)} alt="" loading="lazy" />
 			</div>
 		)

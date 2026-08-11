@@ -50,11 +50,21 @@ function findZone(text: string, startMarker: RegExp, endMarker: RegExp): string 
 	return rest.slice(0, to);
 }
 
+// Names get transcribed inconsistently between the source page body and the
+// separately-scraped personnes entries (e.g. "Belaïdi" vs "Belaidi") — compare
+// with accents stripped so those don't cause a false miss.
+function normalize(text: string): string {
+	return text
+		.normalize('NFD')
+		.replace(/[̀-ͯ]/g, '')
+		.toLowerCase();
+}
+
 function namesIn(zone: string): string[] {
-	const lower = zone.toLowerCase();
+	const normalizedZone = normalize(zone);
 	const found: string[] = [];
 	for (const person of people) {
-		if (lower.includes(person.name.toLowerCase())) found.push(person.slug);
+		if (normalizedZone.includes(normalize(person.name))) found.push(person.slug);
 	}
 	return found;
 }
@@ -69,7 +79,8 @@ for (const file of await readdir(groupesDir)) {
 	const raw = await readFile(filePath, 'utf-8');
 	const { fm, body } = splitFrontmatter(raw);
 
-	const animateursZone = findZone(body, /Animateurs?\s*:/i, /Participant|^##\s/m);
+	// "Animateur(s)" / "Animatrice(s)" — French grammatical gender varies by group.
+	const animateursZone = findZone(body, /Animat(?:eur|rice)s?\s*:/i, /Participant|^##\s/m);
 	const participantsZone = findZone(body, /Participant\.?e?\.?s?\s*:/i, /^##\s/m);
 
 	const coordinators = namesIn(animateursZone);

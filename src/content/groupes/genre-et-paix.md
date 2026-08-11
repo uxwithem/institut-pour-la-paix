@@ -1,7 +1,12 @@
 ---
 title: Genre et paix
+image: /uploads/wp-import/GT-Genre.png
 status: active
 featured: true
+coordinators:
+  - camille-boutron
+  - valerie-pouzol
+participants: []
 ---
 
 ## La mission du groupe de travail Genre et Paix

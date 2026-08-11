@@ -1,7 +1,11 @@
 ---
 title: Paix, conflits et environnement
+image: /uploads/wp-import/GT-environnement.png
 status: active
 featured: true
+coordinators:
+  - nadia-belaidi
+participants: []
 ---
 
 ## La mission du groupe de travail Paix, Conflits et Environnement

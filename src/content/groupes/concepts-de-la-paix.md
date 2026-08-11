@@ -1,5 +1,6 @@
 ---
 title: Concepts de la paix
+image: /uploads/wp-import/GT-concept.png
 status: active
 featured: true
 coordinators:
