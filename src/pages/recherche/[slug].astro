@@ -43,7 +43,7 @@ const associatedGroups = allGroups.filter((g) => g.id !== group.id && g.data.sta
 	description={group.data.seoDescription ?? group.data.intro}
 	breadcrumb={[{ label: 'Recherche', url: '/recherche/' }, { label: group.data.title }]}
 >
-	<section class="section wrap-prose">
+	<section class="section wrap-article">
 		<p class="eyebrow">Groupe de recherche</p>
 		<h1>{group.data.title}</h1>
 		{group.data.mission && <p class="lead">{group.data.mission}</p>}

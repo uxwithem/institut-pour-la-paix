@@ -26,7 +26,7 @@ const downloadLink = resource.data.externalUrl ?? (resource.data.file ? withBase
 	description={resource.data.description}
 	breadcrumb={[{ label: 'Ressources', url: '/ressources/' }, { label: resource.data.title }]}
 >
-	<article class="section wrap-prose">
+	<article class="section wrap-article">
 		<p class="eyebrow">
 			{type?.data.label ?? resource.data.type}
 			<span class="lang-badge">{languageLabel(resource.data.language)}</span>

@@ -21,8 +21,6 @@ featured: true
 
 Durant les Rencontres 2023, nous avons eu le plaisir de vous présenter “Les mots de la paix”, une activité participative faisant dialoguer le monde des arts avec la recherche universitaire.
 
-![](/institut-pour-la-paix/uploads/wp-import/1698268353649-1-768x1024.jpeg)
-
 ![](/institut-pour-la-paix/uploads/wp-import/1698268353842-1-1024x787.jpeg)
 
 ![](/institut-pour-la-paix/uploads/wp-import/1698268353778-768x1024.jpeg)

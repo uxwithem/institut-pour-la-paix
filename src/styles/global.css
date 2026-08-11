@@ -39,6 +39,7 @@
 
 	--max-width: 88rem;
 	--measure: 42rem;
+	--width-article: 64rem;
 	--radius: 0.6rem;
 	--radius-lg: 1.15rem;
 }
@@ -147,12 +148,35 @@ img {
 	padding-inline: clamp(1.25rem, 4vw, 4rem);
 }
 
-/* Reading measure for article/detail pages — a title and body stretched to the
-   full site width is hard to read. Comfortably narrower, still centered. */
+/* Reading measure for pages that are just text (search, no embedded media) —
+   a title and body stretched to the full site width is hard to read. */
 .wrap-prose {
 	max-width: var(--measure);
 	margin: 0 auto;
 	padding-inline: clamp(1.25rem, 4vw, 4rem);
+}
+
+/* Collection detail pages (article/event/resource/person/…): wider than the
+   reading measure so photos, embeds, and audio players can breathe, while
+   text elements narrow themselves back down to a comfortable line length —
+   both share the same centering axis, so media "bleeds" evenly on either
+   side of the text column beneath it, instead of the whole page being
+   squeezed to reading width. */
+.wrap-article {
+	max-width: var(--width-article);
+	margin: 0 auto;
+	padding-inline: clamp(1.25rem, 4vw, 4rem);
+}
+
+.wrap-article > :where(h1, .meta, .lead, .eyebrow, .event-header, .practical, .profile-header, .interests, audio),
+.wrap-article .prose > :where(p, ul, ol, h2, h3, h4, blockquote) {
+	max-width: var(--measure);
+	margin-inline: auto;
+}
+
+.wrap-article .prose > p:has(> img:only-child),
+.wrap-article .prose > p:has(> a:only-child > img:only-child) {
+	max-width: none;
 }
 
 .eyebrow {

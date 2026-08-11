@@ -26,7 +26,7 @@ const dateLabel = article.data.date.toLocaleDateString('fr-FR', {
 	description={article.data.seoDescription ?? article.data.excerpt}
 	breadcrumb={[{ label: 'Actualités', url: '/actualites/' }, { label: article.data.title }]}
 >
-	<article class="section wrap-prose">
+	<article class="section wrap-article">
 		{category && <p class="eyebrow">{category.data.label}</p>}
 		<h1>{article.data.title}</h1>
 		<p class="meta">{dateLabel}</p>

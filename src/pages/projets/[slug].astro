@@ -31,7 +31,7 @@ const [team, resources, events, articles] = await Promise.all([
 	description={project.data.description}
 	breadcrumb={[{ label: 'Projets', url: '/projets/' }, { label: project.data.title }]}
 >
-	<article class="section wrap-prose">
+	<article class="section wrap-article">
 		<p class="eyebrow">Projet · {project.data.status}</p>
 		<h1>{project.data.title}</h1>
 		{project.data.description && <p class="lead">{project.data.description}</p>}
