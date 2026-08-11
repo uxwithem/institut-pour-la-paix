@@ -9,6 +9,7 @@ description: >-
   Audio de la Journée d'études « La mobilisation non militaire : un pilier invisibilisé de la
   résilience sociétale »
 audioUrl: https://www.institutpourlapaix.org/wp-content/uploads/2026/03/Felip_Montage_V1.mp3
+language: fr
 featured: false
 ---
 

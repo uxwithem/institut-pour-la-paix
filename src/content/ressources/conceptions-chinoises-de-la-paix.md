@@ -9,6 +9,7 @@ description: >-
   notions-clés telles que le concept du “Tian Xia”, la relation ente Confucianisme et Paix, ou
   encore l'universalisme et l'unicité.
 audioUrl: https://www.institutpourlapaix.org/wp-content/uploads/2024/12/Entretien-avec-Bart-Dessein-1-1.mp3
+language: fr
 featured: false
 ---
 

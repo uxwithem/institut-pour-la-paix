@@ -339,6 +339,7 @@ collections:
         value_field: "{{slug}}"
         display_fields: [title]
         required: false
+      - { label: Langue, name: language, widget: select, options: [fr, en, es], default: fr }
       - label: Tags
         name: tags
         widget: relation

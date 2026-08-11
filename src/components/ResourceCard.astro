@@ -1,6 +1,7 @@
 ---
 import { getEntry, type CollectionEntry } from 'astro:content';
 import { withBase } from '../lib/url';
+import { languageLabel } from '../lib/language';
 
 interface Props {
 	resource: CollectionEntry<'ressources'>;
@@ -23,6 +24,7 @@ const isPlayable = ['video', 'audio', 'podcast'].includes(resource.data.type);
 						</svg>
 					</span>
 				)}
+				{resource.data.language !== 'fr' && <span class="lang-chip">{languageLabel(resource.data.language)}</span>}
 			</div>
 		)
 	}
@@ -47,10 +49,28 @@ const isPlayable = ['video', 'audio', 'podcast'].includes(resource.data.type);
 	}
 
 	.play svg {
+		/* Global `* { box-sizing: border-box }` would otherwise force this padding
+		   to eat into the 18px attribute-sized icon itself (shrinking the triangle
+		   to invisible) instead of expanding the circle outward around it. */
+		box-sizing: content-box;
 		background: var(--color-fg);
 		color: var(--color-bg);
 		border-radius: 50%;
 		padding: 0.9rem;
 		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+	}
+
+	.lang-chip {
+		position: absolute;
+		top: 0.6rem;
+		left: 0.6rem;
+		font-family: var(--font-mono);
+		font-size: 0.65rem;
+		font-weight: 600;
+		letter-spacing: 0.03em;
+		color: var(--color-bg);
+		background: color-mix(in srgb, var(--color-fg) 82%, transparent);
+		border-radius: 999px;
+		padding: 0.15rem 0.5rem;
 	}
 </style>

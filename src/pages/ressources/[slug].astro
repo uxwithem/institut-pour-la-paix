@@ -3,6 +3,7 @@ import { getCollection, getEntry, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { withBase } from '../../lib/url';
 import { youtubeEmbedUrl } from '../../lib/youtube';
+import { languageLabel } from '../../lib/language';
 
 export async function getStaticPaths() {
 	const resources = await getCollection('ressources');
@@ -26,7 +27,10 @@ const downloadLink = resource.data.externalUrl ?? (resource.data.file ? withBase
 	breadcrumb={[{ label: 'Ressources', url: '/ressources/' }, { label: resource.data.title }]}
 >
 	<article class="section wrap-prose">
-		<p class="eyebrow">{type?.data.label ?? resource.data.type}</p>
+		<p class="eyebrow">
+			{type?.data.label ?? resource.data.type}
+			<span class="lang-badge">{languageLabel(resource.data.language)}</span>
+		</p>
 		<h1>{resource.data.title}</h1>
 		{resource.data.authors.length > 0 && <p class="meta">{resource.data.authors.join(', ')}</p>}
 		{
@@ -86,5 +90,17 @@ const downloadLink = resource.data.externalUrl ?? (resource.data.file ? withBase
 	audio {
 		display: block;
 		margin-block: 1.25rem;
+	}
+
+	.lang-badge {
+		font-family: var(--font-mono);
+		font-size: 0.68rem;
+		font-weight: 600;
+		letter-spacing: 0.03em;
+		color: var(--color-muted);
+		border: 1px solid var(--color-line);
+		border-radius: 999px;
+		padding: 0.1rem 0.5rem;
+		margin-left: 0.5rem;
 	}
 </style>

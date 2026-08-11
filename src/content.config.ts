@@ -144,6 +144,7 @@ const ressources = defineCollection({
 		audioUrl: z.url().optional(),
 		researchGroup: reference('groupes').optional(),
 		project: reference('projets').optional(),
+		language: z.enum(['fr', 'en', 'es']).default('fr'),
 		tags: z.array(z.string()).default([]),
 		featured: z.boolean().default(false),
 	}),

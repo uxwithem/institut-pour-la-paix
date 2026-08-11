@@ -6,6 +6,7 @@ thumbnail: /uploads/wp-import/Workshop-Warmikuna.png
 description: Audio workshop - Épistémologies féministes, paix et co-construction de la recherche
 audioUrl: >-
   https://www.institutpourlapaix.org/wp-content/uploads/2025/07/Tania-Romero-Barrios-Warmikuna_01.mp3
+language: fr
 featured: false
 ---
 

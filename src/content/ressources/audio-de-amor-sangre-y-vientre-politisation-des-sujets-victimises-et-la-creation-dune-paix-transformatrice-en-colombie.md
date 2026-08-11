@@ -9,6 +9,7 @@ description: >-
   Audio « De amor, sangre y vientre : politisation des sujets victimisés et la création d’une paix
   transformatrice en Colombie »
 audioUrl: https://www.institutpourlapaix.org/wp-content/uploads/2025/07/Presentation-Diana-Gomez.mp3
+language: es
 featured: false
 ---
 
