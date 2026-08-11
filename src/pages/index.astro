@@ -148,7 +148,7 @@ const upcomingEvents = (await getCollection('evenements'))
 	}
 
 	.hero {
-		background: var(--color-fg);
+		background: var(--gradient-ink);
 		color: var(--color-bg);
 		display: flex;
 		align-items: center;
@@ -222,12 +222,13 @@ const upcomingEvents = (await getCollection('evenements'))
 	}
 
 	.pillar-action {
-		background: var(--color-fg);
+		background: var(--gradient-ink);
 		color: var(--color-bg);
 	}
 
 	.pillar-action:hover {
-		background: color-mix(in srgb, var(--color-fg) 85%, var(--color-accent));
+		background: var(--gradient-ink);
+		filter: brightness(1.08);
 		color: var(--color-bg);
 	}
 
@@ -266,7 +267,7 @@ const upcomingEvents = (await getCollection('evenements'))
 	}
 
 	.cta {
-		background: var(--color-fg);
+		background: var(--gradient-ink);
 		color: var(--color-bg);
 		text-align: center;
 		padding-block: var(--space-5);

@@ -18,6 +18,15 @@
 	--color-line: color-mix(in srgb, var(--color-fg) 14%, var(--color-bg));
 	--color-surface: color-mix(in srgb, var(--color-fg) 4%, var(--color-bg));
 
+	/* The one "signature" surface: still only fg/accent under the hood (no new
+	   hue), used for hero/footer/CTA moments instead of a flat near-black fill
+	   so those sections read as warm and branded rather than stark black/white. */
+	--gradient-ink: linear-gradient(
+		155deg,
+		var(--color-fg) 0%,
+		color-mix(in srgb, var(--color-fg) 62%, var(--color-accent)) 130%
+	);
+
 	--font-display: 'Fraunces', 'Iowan Old Style', serif;
 	--font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
 	--font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', monospace;
@@ -28,7 +37,7 @@
 	--space-4: 2.75rem;
 	--space-5: 4.5rem;
 
-	--max-width: 72rem;
+	--max-width: 88rem;
 	--measure: 42rem;
 	--radius: 0.6rem;
 	--radius-lg: 1.15rem;
@@ -135,27 +144,15 @@ img {
 .wrap {
 	max-width: var(--max-width);
 	margin: 0 auto;
-	padding-inline: 1.25rem;
-}
-
-@media (min-width: 48rem) {
-	.wrap {
-		padding-inline: 2rem;
-	}
+	padding-inline: clamp(1.25rem, 4vw, 4rem);
 }
 
 /* Reading measure for article/detail pages — a title and body stretched to the
-   full 72rem site width is hard to read. Comfortably narrower, still centered. */
+   full site width is hard to read. Comfortably narrower, still centered. */
 .wrap-prose {
 	max-width: var(--measure);
 	margin: 0 auto;
-	padding-inline: 1.25rem;
-}
-
-@media (min-width: 48rem) {
-	.wrap-prose {
-		padding-inline: 2rem;
-	}
+	padding-inline: clamp(1.25rem, 4vw, 4rem);
 }
 
 .eyebrow {
@@ -240,8 +237,15 @@ audio {
 @media (min-width: 34rem) {
 	.card-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
 		gap: var(--space-3);
+	}
+}
+
+@media (min-width: 90rem) {
+	.card-grid {
+		grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+		gap: var(--space-4);
 	}
 }
 
@@ -280,6 +284,10 @@ a.card:hover {
 
 .card-media--portrait {
 	aspect-ratio: 4 / 5;
+}
+
+.card-media--wide {
+	aspect-ratio: 3 / 1;
 }
 
 .card-media img {
